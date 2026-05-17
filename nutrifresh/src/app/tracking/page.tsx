@@ -1,11 +1,14 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, MoreHorizontal, ExternalLink, ChefHat, GlassWater, Trophy, Dumbbell, Sparkles, Camera, Loader2 } from "lucide-react";
+import { Plus, MoreHorizontal, ExternalLink, ChefHat, GlassWater, Trophy, Dumbbell, Sparkles, Camera, Loader2, Trash2 } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { userProgress } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
 import { useState, useEffect } from "react";
+import { useAuth } from "@/context/AuthContext";
+import { db } from "@/lib/firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
 // Local storage keys
 const STORAGE_KEY = "nutrifresh_meals";
@@ -22,12 +25,20 @@ const weeklyData = [
 ];
 
 export default function TrackingPage() {
+  const { user } = useAuth();
   const [formattedDate, setFormattedDate] = useState("");
-  const [waterIntake, setWaterIntake] = useState(4); // 4 cups logged
-  const [recentMealsList, setRecentMealsList] = useState(userProgress.recentMeals);
-  const [kcalEaten, setKcalEaten] = useState(userProgress.kcalEaten);
+  const [waterIntake, setWaterIntake] = useState(0); // Default to 0 before login
+  const [recentMealsList, setRecentMealsList] = useState<any[]>([]); // Default to empty before login
+  const [kcalEaten, setKcalEaten] = useState(0); // Default to 0 before login
+  
+  // Macros as states
+  const [protein, setProtein] = useState(0);
+  const [carbs, setCarbs] = useState(0);
+  const [fat, setFat] = useState(0);
+
   const [smartInput, setSmartInput] = useState("");
   const [showLogEffect, setShowLogEffect] = useState(false);
+  const [loadingDb, setLoadingDb] = useState(false);
 
   // Custom Image Uploading states
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
@@ -50,24 +61,103 @@ export default function TrackingPage() {
     setImagePreview(null);
   };
 
-  // Fetch meals from local storage on mount
+  // Firestore & local storage sync when user changes
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        try {
-          const meals = JSON.parse(stored);
-          if (meals && meals.length > 0) {
-            setRecentMealsList(meals);
-            const total = meals.reduce((sum: number, m: any) => sum + (m.kcal || 0), 0);
-            setKcalEaten(total);
-          }
-        } catch (e) {
-          console.error("Local load meals error: ", e);
-        }
-      }
+    if (!user) {
+      // Guest / Before login: keep all tracked data strictly at 0 / defaults
+      setWaterIntake(0);
+      setRecentMealsList([]);
+      setKcalEaten(0);
+      setProtein(0);
+      setCarbs(0);
+      setFat(0);
+      return;
     }
-  }, []);
+
+    // Logged in: Load from Firestore database
+    const loadTrackingData = async () => {
+      setLoadingDb(true);
+      try {
+        const docRef = doc(db, "users", user.uid, "tracking", "daily");
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          setWaterIntake(data.waterIntake ?? 0);
+          setRecentMealsList(data.recentMeals ?? []);
+          setKcalEaten(data.kcalEaten ?? 0);
+          setProtein(data.protein ?? 0);
+          setCarbs(data.carbs ?? 0);
+          setFat(data.fat ?? 0);
+        } else {
+          // Document doesn't exist yet -> set defaults and initialize Firestore document
+          setWaterIntake(0);
+          setRecentMealsList([]);
+          setKcalEaten(0);
+          setProtein(0);
+          setCarbs(0);
+          setFat(0);
+          await setDoc(docRef, {
+            waterIntake: 0,
+            recentMeals: [],
+            kcalEaten: 0,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            updatedAt: new Date().toISOString()
+          });
+        }
+      } catch (err) {
+        console.error("Firestore tracking load error: ", err);
+        // Fallback to local storage for offline tolerance
+        const stored = localStorage.getItem(`${STORAGE_KEY}_${user.uid}`);
+        if (stored) {
+          try {
+            const meals = JSON.parse(stored);
+            setRecentMealsList(meals);
+            setKcalEaten(meals.reduce((sum: number, m: any) => sum + (m.kcal || 0), 0));
+            
+            const waterStored = localStorage.getItem(`nutrifresh_water_${user.uid}`);
+            setWaterIntake(waterStored ? Number(waterStored) : 0);
+          } catch (e) {}
+        }
+      } finally {
+        setLoadingDb(false);
+      }
+    };
+
+    loadTrackingData();
+  }, [user]);
+
+  // Synchronize tracking data back to Firestore & Local Storage
+  const syncToFirestore = async (
+    newWater: number,
+    newMeals: any[],
+    newKcal: number,
+    newP: number,
+    newC: number,
+    newF: number
+  ) => {
+    if (!user) return;
+    try {
+      const docRef = doc(db, "users", user.uid, "tracking", "daily");
+      await setDoc(docRef, {
+        waterIntake: newWater,
+        recentMeals: newMeals,
+        kcalEaten: newKcal,
+        protein: newP,
+        carbs: newC,
+        fat: newF,
+        updatedAt: new Date().toISOString()
+      }, { merge: true });
+
+      // Save to localStorage for robust resilience
+      localStorage.setItem(`${STORAGE_KEY}_${user.uid}`, JSON.stringify(newMeals));
+      localStorage.setItem(`nutrifresh_water_${user.uid}`, String(newWater));
+    } catch (err) {
+      console.error("Firestore sync error: ", err);
+    }
+  };
 
   // Parse smart logs (e.g. typing "1 bowl of oatmeal" or just adding a numeric calorie)
   const handleSmartLog = async (e: React.FormEvent) => {
@@ -77,7 +167,6 @@ export default function TrackingPage() {
     let cal = 250; // default estimated calories
     const mealName = smartInput;
 
-    // A simple intelligent keyword parser
     const lowerInput = smartInput.toLowerCase();
     if (lowerInput.includes("egg")) {
       cal = 140;
@@ -93,7 +182,6 @@ export default function TrackingPage() {
       cal = 550;
     }
 
-    // Since we don't use Firebase, preview URL is directly used
     const imageUrl = imagePreview || "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=10&w=100";
 
     const newMeal = {
@@ -107,10 +195,25 @@ export default function TrackingPage() {
 
     const updatedList = [newMeal, ...recentMealsList];
     setRecentMealsList(updatedList);
-    setKcalEaten(prev => prev + cal);
+    
+    const nextKcal = kcalEaten + cal;
+    setKcalEaten(nextKcal);
 
-    if (typeof window !== "undefined") {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedList));
+    // Calculate macros dynamically based on calorie content
+    const mealP = Math.round(cal * 0.08);
+    const mealC = Math.round(cal * 0.12);
+    const mealF = Math.round(cal * 0.04);
+
+    const nextP = protein + mealP;
+    const nextC = carbs + mealC;
+    const nextF = fat + mealF;
+
+    setProtein(nextP);
+    setCarbs(nextC);
+    setFat(nextF);
+
+    if (user) {
+      await syncToFirestore(waterIntake, updatedList, nextKcal, nextP, nextC, nextF);
     }
 
     setSmartInput("");
@@ -119,15 +222,51 @@ export default function TrackingPage() {
     setTimeout(() => setShowLogEffect(false), 2000);
   };
 
-  const addCupOfWater = () => {
+  const addCupOfWater = async () => {
     if (waterIntake < 12) {
-      setWaterIntake(prev => prev + 1);
+      const nextWater = waterIntake + 1;
+      setWaterIntake(nextWater);
+      if (user) {
+        await syncToFirestore(nextWater, recentMealsList, kcalEaten, protein, carbs, fat);
+      }
     }
   };
 
-  const removeCupOfWater = () => {
+  const removeCupOfWater = async () => {
     if (waterIntake > 0) {
-      setWaterIntake(prev => prev - 1);
+      const nextWater = waterIntake - 1;
+      setWaterIntake(nextWater);
+      if (user) {
+        await syncToFirestore(nextWater, recentMealsList, kcalEaten, protein, carbs, fat);
+      }
+    }
+  };
+
+  const deleteMeal = async (mealId: string) => {
+    const mealToDelete = recentMealsList.find(m => m.id === mealId);
+    if (!mealToDelete) return;
+
+    const updatedList = recentMealsList.filter(m => m.id !== mealId);
+    setRecentMealsList(updatedList);
+
+    const nextKcal = Math.max(0, kcalEaten - mealToDelete.kcal);
+    setKcalEaten(nextKcal);
+
+    // Subtract macro calculations based on calorie ratio
+    const mealP = Math.round(mealToDelete.kcal * 0.08);
+    const mealC = Math.round(mealToDelete.kcal * 0.12);
+    const mealF = Math.round(mealToDelete.kcal * 0.04);
+
+    const nextP = Math.max(0, protein - mealP);
+    const nextC = Math.max(0, carbs - mealC);
+    const nextF = Math.max(0, fat - mealF);
+
+    setProtein(nextP);
+    setCarbs(nextC);
+    setFat(nextF);
+
+    if (user) {
+      await syncToFirestore(waterIntake, updatedList, nextKcal, nextP, nextC, nextF);
     }
   };
 
@@ -340,6 +479,9 @@ export default function TrackingPage() {
               };
               const label = key === "protein" ? "Protein 🥩" : key === "carbs" ? "Carbs 🍞" : "Fat 🥑";
               
+              // Map to dynamic state variables
+              const currentVal = key === "protein" ? protein : key === "carbs" ? carbs : fat;
+              
               return (
                 <motion.div 
                   key={key}
@@ -351,13 +493,13 @@ export default function TrackingPage() {
                   <div className="flex justify-between items-center capitalize">
                     <span className="font-extrabold text-sm text-foreground">{label}</span>
                     <span className="text-xs text-secondary font-semibold">
-                      <span className="text-foreground font-black">{value.current}g</span> / {value.goal}g
+                      <span className="text-foreground font-black">{currentVal}g</span> / {value.goal}g
                     </span>
                   </div>
                   <div className="h-2 w-full bg-border/40 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
-                      animate={{ width: `${(value.current / value.goal) * 100}%` }}
+                      animate={{ width: `${Math.min(100, (currentVal / value.goal) * 100)}%` }}
                       transition={{ duration: 1.2, ease: "easeOut" }}
                       className={`h-full ${macroColors[key as keyof typeof macroColors] || "bg-primary"}`} 
                     />
@@ -522,8 +664,12 @@ export default function TrackingPage() {
                       <p className="text-xs text-secondary font-semibold mt-1">{meal.type} • {meal.kcal} kcal</p>
                     </div>
                   </div>
-                  <button className="p-2 text-secondary hover:text-primary hover:bg-primary/5 rounded-full transition-all cursor-pointer">
-                    <MoreHorizontal size={20} />
+                  <button 
+                    onClick={() => deleteMeal(meal.id)}
+                    className="p-2 text-secondary hover:text-rose-500 hover:bg-rose-500/10 rounded-full transition-all cursor-pointer"
+                    title="Remove meal log"
+                  >
+                    <Trash2 size={18} />
                   </button>
                 </motion.div>
               ))}

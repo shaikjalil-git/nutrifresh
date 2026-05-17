@@ -26,6 +26,9 @@ interface AuthContextType {
   verifyPhoneOtp: (otpCode: string) => Promise<void>;
   saveProfile: (profileData: Partial<UserProfileData>) => Promise<void>;
   logout: () => Promise<void>;
+  authError: { code: string; message: string } | null;
+  clearAuthError: () => void;
+  simulateSandboxLogin: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -46,6 +49,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<any>(null);
   const [profile, setProfile] = useState<UserProfileData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [authError, setAuthError] = useState<{ code: string; message: string } | null>(null);
 
   // Initialize and load from local storage first to render instantly
   useEffect(() => {
@@ -104,6 +108,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const loginWithGoogle = async () => {
+    setAuthError(null);
     try {
       const provider = new GoogleAuthProvider();
       provider.setCustomParameters({ prompt: "select_account" });
@@ -132,38 +137,49 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // Remove survey completed flag so they can fill it out on new login
         localStorage.removeItem("nutrifresh_survey_completed");
       }
-    } catch (err) {
-      console.warn("Firebase Auth popup or domain issue. Activating high-fidelity Google login simulation:", err);
-      
-      const mockGoogleUser = {
-        uid: "mock-google-uid-777",
-        displayName: "Jalil Shaik",
-        email: "jalilshaik2003@gmail.com",
-        photoURL: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100",
-      };
-      
-      setUser(mockGoogleUser);
-      
-      const stored = localStorage.getItem("nutrifresh_profile");
-      let currentProfile = DEFAULT_PROFILE;
-      if (stored) {
-        try {
-          currentProfile = JSON.parse(stored);
-        } catch (e) {}
-      }
-
-      const updatedProfile: UserProfileData = {
-        ...currentProfile,
-        firstName: "Jalil",
-        lastName: "Shaik",
-        email: mockGoogleUser.email,
-      };
-      setProfile(updatedProfile);
-      localStorage.setItem("nutrifresh_profile", JSON.stringify(updatedProfile));
-      
-      // Remove survey completed flag so they can fill it out on new login
-      localStorage.removeItem("nutrifresh_survey_completed");
+    } catch (err: any) {
+      console.error("Firebase Google Auth failed:", err);
+      setAuthError({
+        code: err.code || "auth/unknown",
+        message: err.message || "Failed to authenticate with Google."
+      });
     }
+  };
+
+  const simulateSandboxLogin = () => {
+    setAuthError(null);
+    const mockGoogleUser = {
+      uid: "mock-google-uid-777",
+      displayName: "Jalil Shaik",
+      email: "jalilshaik2003@gmail.com",
+      photoURL: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100",
+    };
+    
+    setUser(mockGoogleUser);
+    
+    const stored = localStorage.getItem("nutrifresh_profile");
+    let currentProfile = DEFAULT_PROFILE;
+    if (stored) {
+      try {
+        currentProfile = JSON.parse(stored);
+      } catch (e) {}
+    }
+
+    const updatedProfile: UserProfileData = {
+      ...currentProfile,
+      firstName: "Jalil",
+      lastName: "Shaik",
+      email: mockGoogleUser.email,
+    };
+    setProfile(updatedProfile);
+    localStorage.setItem("nutrifresh_profile", JSON.stringify(updatedProfile));
+    
+    // Remove survey completed flag so they can fill it out on new login
+    localStorage.removeItem("nutrifresh_survey_completed");
+  };
+
+  const clearAuthError = () => {
+    setAuthError(null);
   };
 
   const setupRecaptcha = async (containerId: string): Promise<any> => {
@@ -226,7 +242,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       sendPhoneOtp, 
       verifyPhoneOtp, 
       saveProfile,
-      logout 
+      logout,
+      authError,
+      clearAuthError,
+      simulateSandboxLogin
     }}>
       {children}
     </AuthContext.Provider>
