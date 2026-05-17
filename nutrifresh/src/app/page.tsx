@@ -12,10 +12,9 @@ import React from "react";
 const filters = ["All", "Breakfast", "Vegan", "Quick & Easy", "High Protein", "Keto"];
 
 export default function FeedPage() {
-  const { profile } = useAuth();
+  const { profile, waterIntake, setWaterIntake, kcalEaten } = useAuth();
   const [activeFilter, setActiveFilter] = useState("All");
   const [savedRecipes, setSavedRecipes] = useState<string[]>([]);
-  const [waterCups, setWaterCups] = useState(4);
 
   const { scrollY } = useScroll();
   const yParallax = useTransform(scrollY, [0, 300], [0, 40]);
@@ -93,13 +92,13 @@ export default function FeedPage() {
               </div>
               <div className="space-y-1">
                 <div className="flex items-baseline space-x-1">
-                  <span className="text-2xl font-black tracking-tight">{userProgress.kcalEaten}</span>
+                  <span className="text-2xl font-black tracking-tight">{kcalEaten}</span>
                   <span className="text-xs font-medium text-secondary">/ {profile?.kcalGoal || userProgress.kcalGoal} kcal</span>
                 </div>
                 <div className="h-2 w-full bg-border/40 rounded-full overflow-hidden">
                   <motion.div 
                     initial={{ width: 0 }}
-                    animate={{ width: `${(userProgress.kcalEaten / (profile?.kcalGoal || userProgress.kcalGoal)) * 100}%` }}
+                    animate={{ width: `${Math.min(100, (kcalEaten / (profile?.kcalGoal || userProgress.kcalGoal)) * 100)}%` }}
                     className="h-full bg-primary rounded-full"
                     transition={{ duration: 1.2, ease: "easeOut" }}
                   />
@@ -111,16 +110,16 @@ export default function FeedPage() {
             <div className="bg-card border border-border/60 p-4 rounded-2xl shadow-sm flex flex-col justify-between space-y-4 hover:border-primary/30 transition-all duration-300">
               <div className="flex justify-between items-center">
                 <span className="text-xs font-black uppercase tracking-wider text-secondary">Hydration</span>
-                <span className="text-xs font-bold text-primary">{waterCups}/8 cups</span>
+                <span className="text-xs font-bold text-primary">{waterIntake}/8 cups</span>
               </div>
               <div className="flex justify-between items-end gap-1">
                 {[...Array(8)].map((_, i) => (
                   <motion.button
                     key={i}
-                    onClick={() => setWaterCups(i + 1)}
+                    onClick={() => setWaterIntake(i + 1)}
                     whileTap={{ scale: 0.8 }}
                     className={`h-7 w-2.5 rounded-full transition-all border ${
-                      i < waterCups 
+                      i < waterIntake 
                         ? "bg-primary border-primary" 
                         : "bg-background border-border/60 hover:border-primary/40"
                     }`}
@@ -168,6 +167,7 @@ export default function FeedPage() {
             {activeFilter === "All" && (
               <motion.div 
                 layout
+                key="featured-recipe"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
@@ -255,6 +255,7 @@ export default function FeedPage() {
             {/* General Recipe Cards Grid */}
             <motion.div 
               layout
+              key="recipes-grid"
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             >
               {displayRecipes.map((recipe, index) => {

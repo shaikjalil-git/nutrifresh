@@ -1,17 +1,123 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, MoreHorizontal, ExternalLink, ChefHat, GlassWater, Trophy, Dumbbell, Sparkles, Camera, Loader2, Trash2 } from "lucide-react";
+import { Plus, MoreHorizontal, ExternalLink, ChefHat, GlassWater, Trophy, Dumbbell, Sparkles, Camera, Loader2, Trash2, Coffee, CupSoda, Milk, Droplet, RotateCcw, ListPlus, Info, Image } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { userProgress } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/context/AuthContext";
-import { db } from "@/lib/firebase";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { userProgress } from "@/lib/data";
 
-// Local storage keys
-const STORAGE_KEY = "nutrifresh_meals";
+const DEFAULT_MEAL_IMAGE = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%230c1417" rx="16"/><circle cx="50" cy="50" r="32" fill="none" stroke="%2310b981" stroke-width="4" stroke-dasharray="1 3"/><circle cx="50" cy="50" r="24" fill="%230f1e22" stroke="%2306b6d4" stroke-width="2"/><path d="M38 52 C38 62, 62 62, 62 52" stroke="%2310b981" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M42 42 L42 44" stroke="%2306b6d4" stroke-width="3" stroke-linecap="round"/><path d="M58 42 L58 44" stroke="%2306b6d4" stroke-width="3" stroke-linecap="round"/></svg>`;
+
+// Extensive Food Dictionary for the intelligent client-side AI estimator
+interface FoodItem {
+  kcal: number;
+  protein: number;
+  carbs: number;
+  fat: number;
+}
+
+const foodDictionary: Record<string, FoodItem> = {
+  egg: { kcal: 70, protein: 6, carbs: 0.6, fat: 5 },
+  eggs: { kcal: 70, protein: 6, carbs: 0.6, fat: 5 },
+  banana: { kcal: 105, protein: 1.3, carbs: 27, fat: 0.3 },
+  bananas: { kcal: 105, protein: 1.3, carbs: 27, fat: 0.3 },
+  apple: { kcal: 95, protein: 0.5, carbs: 25, fat: 0.3 },
+  apples: { kcal: 95, protein: 0.5, carbs: 25, fat: 0.3 },
+  chicken: { kcal: 165, protein: 31, carbs: 0, fat: 3.6 },
+  breast: { kcal: 165, protein: 31, carbs: 0, fat: 3.6 },
+  salmon: { kcal: 200, protein: 22, carbs: 0, fat: 13 },
+  steak: { kcal: 250, protein: 26, carbs: 0, fat: 17 },
+  beef: { kcal: 250, protein: 26, carbs: 0, fat: 17 },
+  oatmeal: { kcal: 150, protein: 6, carbs: 27, fat: 3 },
+  oats: { kcal: 150, protein: 6, carbs: 27, fat: 3 },
+  milk: { kcal: 120, protein: 8, carbs: 12, fat: 5 },
+  coffee: { kcal: 5, protein: 0.3, carbs: 0, fat: 0 },
+  salad: { kcal: 150, protein: 3, carbs: 10, fat: 11 },
+  rice: { kcal: 130, protein: 2.7, carbs: 28, fat: 0.3 },
+  bread: { kcal: 80, protein: 3, carbs: 15, fat: 1 },
+  toast: { kcal: 80, protein: 3, carbs: 15, fat: 1 },
+  avocado: { kcal: 160, protein: 2, carbs: 9, fat: 15 },
+  avocados: { kcal: 160, protein: 2, carbs: 9, fat: 15 },
+  protein: { kcal: 120, protein: 25, carbs: 3, fat: 1.5 },
+  shake: { kcal: 200, protein: 20, carbs: 15, fat: 4 },
+  smoothie: { kcal: 250, protein: 5, carbs: 45, fat: 2 },
+  yogurt: { kcal: 100, protein: 10, carbs: 6, fat: 2 },
+  almonds: { kcal: 160, protein: 6, carbs: 6, fat: 14 },
+  nuts: { kcal: 180, protein: 5, carbs: 6, fat: 16 },
+  tuna: { kcal: 130, protein: 28, carbs: 0, fat: 1 },
+  pasta: { kcal: 200, protein: 7, carbs: 42, fat: 1 },
+  pizza: { kcal: 280, protein: 12, carbs: 32, fat: 10 },
+  burger: { kcal: 500, protein: 25, carbs: 40, fat: 22 },
+  fries: { kcal: 365, protein: 4, carbs: 48, fat: 17 },
+  cookie: { kcal: 150, protein: 2, carbs: 20, fat: 7 },
+  chocolate: { kcal: 220, protein: 3, carbs: 25, fat: 12 }
+};
+
+const parseSmartLogText = (text: string) => {
+  if (!text.trim()) return { kcal: 0, protein: 0, carbs: 0, fat: 0, ingredients: [] };
+
+  // Support direct calorie detection (e.g., "hamburger 400 calories" or "salad 320 kcal")
+  const kcalMatch = text.match(/(\d+)\s*(kcal|calorie|calories)/i);
+  let extractedKcal = kcalMatch ? parseInt(kcalMatch[1]) : 0;
+
+  const words = text.toLowerCase().split(/\s+/);
+  let estimatedKcal = 0;
+  let estimatedP = 0;
+  let estimatedC = 0;
+  let estimatedF = 0;
+  let matchedIngredients: string[] = [];
+
+  let currentMultiplier = 1;
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+    
+    // Check if word is a number
+    const num = parseFloat(word);
+    if (!isNaN(num)) {
+      currentMultiplier = num;
+      continue;
+    }
+
+    // Check if word matches an ingredient in our dictionary
+    if (foodDictionary[word]) {
+      const item = foodDictionary[word];
+      estimatedKcal += Math.round(item.kcal * currentMultiplier);
+      estimatedP += Math.round(item.protein * currentMultiplier);
+      estimatedC += Math.round(item.carbs * currentMultiplier);
+      estimatedF += Math.round(item.fat * currentMultiplier);
+      matchedIngredients.push(`${currentMultiplier}x ${word}`);
+      currentMultiplier = 1; // reset multiplier
+    }
+  }
+
+  // If a specific calorie count was typed in directly, let it override/drive the estimation!
+  if (extractedKcal > 0) {
+    estimatedKcal = extractedKcal;
+    // Distribute macros standardly based on the specified calories
+    estimatedP = Math.round(extractedKcal * 0.08);
+    estimatedC = Math.round(extractedKcal * 0.12);
+    estimatedF = Math.round(extractedKcal * 0.04);
+  }
+
+  // Default fallback if no matched foods or direct calories found
+  if (estimatedKcal === 0 && text.trim().length > 0) {
+    estimatedKcal = 250;
+    estimatedP = 12;
+    estimatedC = 25;
+    estimatedF = 8;
+  }
+
+  return {
+    kcal: estimatedKcal,
+    protein: estimatedP,
+    carbs: estimatedC,
+    fat: estimatedF,
+    ingredients: matchedIngredients
+  };
+};
 
 // Weekly Mock Data for interactive progress bars
 const weeklyData = [
@@ -25,22 +131,39 @@ const weeklyData = [
 ];
 
 export default function TrackingPage() {
-  const { user } = useAuth();
-  const [formattedDate, setFormattedDate] = useState("");
-  const [waterIntake, setWaterIntake] = useState(0); // Default to 0 before login
-  const [recentMealsList, setRecentMealsList] = useState<any[]>([]); // Default to empty before login
-  const [kcalEaten, setKcalEaten] = useState(0); // Default to 0 before login
+  const { 
+    user, 
+    profile,
+    waterIntake, 
+    recentMeals: recentMealsList, 
+    kcalEaten, 
+    protein, 
+    carbs, 
+    fat,
+    addCupOfWater, 
+    removeCupOfWater, 
+    setWaterIntake,
+    logMeal, 
+    deleteMeal,
+    resetDailyTracking,
+    loading: loadingDb 
+  } = useAuth();
   
-  // Macros as states
-  const [protein, setProtein] = useState(0);
-  const [carbs, setCarbs] = useState(0);
-  const [fat, setFat] = useState(0);
-
+  const [formattedDate, setFormattedDate] = useState("");
   const [smartInput, setSmartInput] = useState("");
   const [showLogEffect, setShowLogEffect] = useState(false);
-  const [loadingDb, setLoadingDb] = useState(false);
 
-  // Custom Image Uploading states
+  // Tab control: "ai" (Smart Log) or "manual" (Direct Input Form)
+  const [activeLogMode, setActiveLogMode] = useState<"ai" | "manual">("ai");
+
+  // Manual input fields state
+  const [manualName, setManualName] = useState("");
+  const [manualKcal, setManualKcal] = useState("");
+  const [manualProtein, setManualProtein] = useState("");
+  const [manualCarbs, setManualCarbs] = useState("");
+  const [manualFat, setManualFat] = useState("");
+
+  // Base64 device capture / gallery states
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -49,225 +172,90 @@ export default function TrackingPage() {
     const file = e.target.files?.[0];
     if (file) {
       setSelectedImage(file);
-      setImagePreview(URL.createObjectURL(file));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        // Encodes file to Base64 format perfectly, preserving it locally and in cloud Firestore!
+        setImagePreview(reader.result as string);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
   const clearSelectedImage = () => {
     setSelectedImage(null);
-    if (imagePreview) {
-      URL.revokeObjectURL(imagePreview);
-    }
     setImagePreview(null);
   };
 
-  // Firestore & local storage sync when user changes
-  useEffect(() => {
-    if (!user) {
-      // Guest / Before login: keep all tracked data strictly at 0 / defaults
-      setWaterIntake(0);
-      setRecentMealsList([]);
-      setKcalEaten(0);
-      setProtein(0);
-      setCarbs(0);
-      setFat(0);
-      return;
-    }
-
-    // Logged in: Load from Firestore database
-    const loadTrackingData = async () => {
-      setLoadingDb(true);
-      try {
-        const docRef = doc(db, "users", user.uid, "tracking", "daily");
-        const docSnap = await getDoc(docRef);
-        
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          setWaterIntake(data.waterIntake ?? 0);
-          setRecentMealsList(data.recentMeals ?? []);
-          setKcalEaten(data.kcalEaten ?? 0);
-          setProtein(data.protein ?? 0);
-          setCarbs(data.carbs ?? 0);
-          setFat(data.fat ?? 0);
-        } else {
-          // Document doesn't exist yet -> set defaults and initialize Firestore document
-          setWaterIntake(0);
-          setRecentMealsList([]);
-          setKcalEaten(0);
-          setProtein(0);
-          setCarbs(0);
-          setFat(0);
-          await setDoc(docRef, {
-            waterIntake: 0,
-            recentMeals: [],
-            kcalEaten: 0,
-            protein: 0,
-            carbs: 0,
-            fat: 0,
-            updatedAt: new Date().toISOString()
-          });
-        }
-      } catch (err) {
-        console.error("Firestore tracking load error: ", err);
-        // Fallback to local storage for offline tolerance
-        const stored = localStorage.getItem(`${STORAGE_KEY}_${user.uid}`);
-        if (stored) {
-          try {
-            const meals = JSON.parse(stored);
-            setRecentMealsList(meals);
-            setKcalEaten(meals.reduce((sum: number, m: any) => sum + (m.kcal || 0), 0));
-            
-            const waterStored = localStorage.getItem(`nutrifresh_water_${user.uid}`);
-            setWaterIntake(waterStored ? Number(waterStored) : 0);
-          } catch (e) {}
-        }
-      } finally {
-        setLoadingDb(false);
-      }
-    };
-
-    loadTrackingData();
-  }, [user]);
-
-  // Synchronize tracking data back to Firestore & Local Storage
-  const syncToFirestore = async (
-    newWater: number,
-    newMeals: any[],
-    newKcal: number,
-    newP: number,
-    newC: number,
-    newF: number
-  ) => {
-    if (!user) return;
-    try {
-      const docRef = doc(db, "users", user.uid, "tracking", "daily");
-      await setDoc(docRef, {
-        waterIntake: newWater,
-        recentMeals: newMeals,
-        kcalEaten: newKcal,
-        protein: newP,
-        carbs: newC,
-        fat: newF,
-        updatedAt: new Date().toISOString()
-      }, { merge: true });
-
-      // Save to localStorage for robust resilience
-      localStorage.setItem(`${STORAGE_KEY}_${user.uid}`, JSON.stringify(newMeals));
-      localStorage.setItem(`nutrifresh_water_${user.uid}`, String(newWater));
-    } catch (err) {
-      console.error("Firestore sync error: ", err);
-    }
-  };
-
-  // Parse smart logs (e.g. typing "1 bowl of oatmeal" or just adding a numeric calorie)
+  // AI-assisted natural language log handler
   const handleSmartLog = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!smartInput.trim() || uploading) return;
 
-    let cal = 250; // default estimated calories
-    const mealName = smartInput;
+    setUploading(true);
 
-    const lowerInput = smartInput.toLowerCase();
-    if (lowerInput.includes("egg")) {
-      cal = 140;
-    } else if (lowerInput.includes("salad")) {
-      cal = 320;
-    } else if (lowerInput.includes("shake") || lowerInput.includes("smoothie")) {
-      cal = 280;
-    } else if (lowerInput.includes("chicken")) {
-      cal = 450;
-    } else if (lowerInput.includes("banana")) {
-      cal = 90;
-    } else if (lowerInput.includes("steak") || lowerInput.includes("beef")) {
-      cal = 550;
-    }
-
-    const imageUrl = imagePreview || "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=10&w=100";
+    // AI estimations
+    const estimate = parseSmartLogText(smartInput);
+    const imageUrl = imagePreview || DEFAULT_MEAL_IMAGE;
 
     const newMeal = {
       id: "m_" + Date.now(),
-      name: mealName.charAt(0).toUpperCase() + mealName.slice(1),
-      type: "Logged",
-      kcal: cal,
+      name: smartInput.charAt(0).toUpperCase() + smartInput.slice(1),
+      type: "AI Logged",
+      kcal: estimate.kcal,
+      protein: estimate.protein,
+      carbs: estimate.carbs,
+      fat: estimate.fat,
       image: imageUrl,
       createdAt: new Date().toISOString()
     };
 
-    const updatedList = [newMeal, ...recentMealsList];
-    setRecentMealsList(updatedList);
-    
-    const nextKcal = kcalEaten + cal;
-    setKcalEaten(nextKcal);
-
-    // Calculate macros dynamically based on calorie content
-    const mealP = Math.round(cal * 0.08);
-    const mealC = Math.round(cal * 0.12);
-    const mealF = Math.round(cal * 0.04);
-
-    const nextP = protein + mealP;
-    const nextC = carbs + mealC;
-    const nextF = fat + mealF;
-
-    setProtein(nextP);
-    setCarbs(nextC);
-    setFat(nextF);
-
-    if (user) {
-      await syncToFirestore(waterIntake, updatedList, nextKcal, nextP, nextC, nextF);
-    }
+    await logMeal(newMeal);
 
     setSmartInput("");
     clearSelectedImage();
+    setUploading(false);
     setShowLogEffect(true);
     setTimeout(() => setShowLogEffect(false), 2000);
   };
 
-  const addCupOfWater = async () => {
-    if (waterIntake < 12) {
-      const nextWater = waterIntake + 1;
-      setWaterIntake(nextWater);
-      if (user) {
-        await syncToFirestore(nextWater, recentMealsList, kcalEaten, protein, carbs, fat);
-      }
-    }
-  };
+  // Direct manual parameter input form handler
+  const handleManualLog = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!manualName.trim() || uploading) return;
 
-  const removeCupOfWater = async () => {
-    if (waterIntake > 0) {
-      const nextWater = waterIntake - 1;
-      setWaterIntake(nextWater);
-      if (user) {
-        await syncToFirestore(nextWater, recentMealsList, kcalEaten, protein, carbs, fat);
-      }
-    }
-  };
+    setUploading(true);
 
-  const deleteMeal = async (mealId: string) => {
-    const mealToDelete = recentMealsList.find(m => m.id === mealId);
-    if (!mealToDelete) return;
+    const kcalVal = Math.max(0, parseInt(manualKcal) || 0);
+    const pVal = Math.max(0, parseInt(manualProtein) || 0);
+    const cVal = Math.max(0, parseInt(manualCarbs) || 0);
+    const fVal = Math.max(0, parseInt(manualFat) || 0);
+    const imageUrl = imagePreview || DEFAULT_MEAL_IMAGE;
 
-    const updatedList = recentMealsList.filter(m => m.id !== mealId);
-    setRecentMealsList(updatedList);
+    const newMeal = {
+      id: "m_" + Date.now(),
+      name: manualName.charAt(0).toUpperCase() + manualName.slice(1),
+      type: "Manual Logged",
+      kcal: kcalVal,
+      protein: pVal,
+      carbs: cVal,
+      fat: fVal,
+      image: imageUrl,
+      createdAt: new Date().toISOString()
+    };
 
-    const nextKcal = Math.max(0, kcalEaten - mealToDelete.kcal);
-    setKcalEaten(nextKcal);
+    await logMeal(newMeal);
 
-    // Subtract macro calculations based on calorie ratio
-    const mealP = Math.round(mealToDelete.kcal * 0.08);
-    const mealC = Math.round(mealToDelete.kcal * 0.12);
-    const mealF = Math.round(mealToDelete.kcal * 0.04);
-
-    const nextP = Math.max(0, protein - mealP);
-    const nextC = Math.max(0, carbs - mealC);
-    const nextF = Math.max(0, fat - mealF);
-
-    setProtein(nextP);
-    setCarbs(nextC);
-    setFat(nextF);
-
-    if (user) {
-      await syncToFirestore(waterIntake, updatedList, nextKcal, nextP, nextC, nextF);
-    }
+    // Reset manual form fields
+    setManualName("");
+    setManualKcal("");
+    setManualProtein("");
+    setManualCarbs("");
+    setManualFat("");
+    clearSelectedImage();
+    
+    setUploading(false);
+    setShowLogEffect(true);
+    setTimeout(() => setShowLogEffect(false), 2000);
   };
 
   useEffect(() => {
@@ -282,9 +270,11 @@ export default function TrackingPage() {
     return () => clearTimeout(timer);
   }, []);
 
+  const calorieGoal = profile?.kcalGoal || 2000;
+
   const chartData = [
     { name: "Eaten", value: kcalEaten },
-    { name: "Remaining", value: Math.max(0, userProgress.kcalGoal - kcalEaten) },
+    { name: "Remaining", value: Math.max(0, calorieGoal - kcalEaten) },
   ];
 
   return (
@@ -295,49 +285,255 @@ export default function TrackingPage() {
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6">
           <div className="space-y-1">
             <h1 className="text-3xl md:text-4xl font-black tracking-tight">Daily Nutrition Desk</h1>
-            <p className="text-secondary font-semibold">{formattedDate}</p>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <p className="text-secondary font-semibold">{formattedDate}</p>
+              <span className="w-1.5 h-1.5 rounded-full bg-border/80 hidden sm:inline" />
+              <button 
+                type="button"
+                onClick={async () => {
+                  if (confirm("Are you sure you want to reset today's water, calorie, and meal logs to zero?")) {
+                    await resetDailyTracking();
+                  }
+                }}
+                className="text-xs text-rose-500 hover:text-rose-600 hover:underline font-bold transition-all cursor-pointer"
+              >
+                Reset Today's Progress
+              </button>
+            </div>
           </div>
           
-          {/* Smart Logging Bar (High interactive value!) */}
-          <div className="flex flex-col items-stretch sm:items-end gap-2">
-            <form onSubmit={handleSmartLog} className="flex flex-col sm:flex-row items-stretch gap-3">
-              <div className="relative flex-1 sm:flex-initial flex items-center">
-                <input 
-                  type="text" 
-                  value={smartInput}
-                  onChange={(e) => setSmartInput(e.target.value)}
-                  placeholder="Smart log: '2 scrambled eggs'..." 
-                  className="bg-card border border-border/60 pl-12 pr-10 py-3 rounded-2xl w-full sm:w-72 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-sm"
-                />
-                
-                {/* Photo Upload camera trigger */}
-                <label 
-                  htmlFor="food-image-upload" 
-                  className="absolute left-3.5 p-1 bg-primary/5 hover:bg-primary/10 rounded-lg text-primary transition-all cursor-pointer flex items-center justify-center"
-                  title="Upload custom food photo"
-                >
-                  <Camera size={16} />
-                </label>
-                <input 
-                  type="file" 
-                  id="food-image-upload" 
-                  accept="image/*" 
-                  onChange={handleImageChange} 
-                  className="hidden" 
-                />
-
-                <ChefHat size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-primary opacity-60 pointer-events-none" />
-              </div>
-              <motion.button 
-                whileTap={{ scale: 0.95 }}
-                type="submit"
-                disabled={uploading}
-                className={`flex items-center justify-center space-x-2 bg-primary text-white px-6 py-3 rounded-2xl font-extrabold hover:bg-primary/95 transition-all shadow-md shadow-primary/10 cursor-pointer ${uploading ? "opacity-60 cursor-not-allowed" : ""}`}
+          {/* Smart Logging double-mode desk (High interactive value!) */}
+          <div className="bg-card border border-border/50 p-5 rounded-3xl shadow-md w-full md:max-w-md flex flex-col gap-4">
+            
+            {/* Segmented Tab Controller */}
+            <div className="grid grid-cols-2 p-1 bg-background rounded-2xl border border-border/60">
+              <button
+                type="button"
+                onClick={() => setActiveLogMode("ai")}
+                className={`flex items-center justify-center space-x-2 py-2 rounded-xl text-xs font-black tracking-tight transition-all cursor-pointer ${
+                  activeLogMode === "ai"
+                    ? "bg-primary text-white shadow-sm"
+                    : "text-secondary hover:text-foreground"
+                }`}
               >
-                {uploading ? <Loader2 size={18} className="animate-spin" /> : <Plus size={18} />}
-                <span>{uploading ? "Uploading..." : "Log"}</span>
-              </motion.button>
-            </form>
+                <Sparkles size={14} />
+                <span>🤖 AI Smart Log</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveLogMode("manual")}
+                className={`flex items-center justify-center space-x-2 py-2 rounded-xl text-xs font-black tracking-tight transition-all cursor-pointer ${
+                  activeLogMode === "manual"
+                    ? "bg-primary text-white shadow-sm"
+                    : "text-secondary hover:text-foreground"
+                }`}
+              >
+                <ListPlus size={14} />
+                <span>📝 Manual Form</span>
+              </button>
+            </div>
+
+            {/* AI AUTO ESTIMATE MODE */}
+            {activeLogMode === "ai" ? (
+              <form onSubmit={handleSmartLog} className="flex flex-col gap-3">
+                <div className="relative flex items-center">
+                  <input 
+                    type="text" 
+                    value={smartInput}
+                    onChange={(e) => setSmartInput(e.target.value)}
+                    placeholder="Smart log: '2 eggs and banana'..." 
+                    className="bg-background border border-border/60 pl-16 pr-10 py-3 rounded-2xl w-full outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-sm"
+                  />
+                  
+                  {/* Photo Upload Gallery & Capture triggers */}
+                  <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center space-x-1 z-10">
+                    {/* Gallery input */}
+                    <label 
+                      htmlFor="food-image-gallery-ai" 
+                      className="p-1 bg-accent/5 hover:bg-accent/15 rounded-lg text-accent transition-all cursor-pointer flex items-center justify-center border border-accent/10"
+                      title="Upload from Gallery"
+                    >
+                      <Image size={13} />
+                    </label>
+                    <input 
+                      type="file" 
+                      id="food-image-gallery-ai" 
+                      accept="image/*" 
+                      onChange={handleImageChange} 
+                      className="hidden" 
+                    />
+
+                    {/* Camera capture input */}
+                    <label 
+                      htmlFor="food-image-capture-ai" 
+                      className="p-1 bg-primary/5 hover:bg-primary/15 rounded-lg text-primary transition-all cursor-pointer flex items-center justify-center border border-primary/10"
+                      title="Direct Camera Capture"
+                    >
+                      <Camera size={13} />
+                    </label>
+                    <input 
+                      type="file" 
+                      id="food-image-capture-ai" 
+                      accept="image/*" 
+                      capture="environment"
+                      onChange={handleImageChange} 
+                      className="hidden" 
+                    />
+                  </div>
+
+                  <ChefHat size={15} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-primary opacity-60 pointer-events-none" />
+                </div>
+
+                {/* AI Real-time estimation drawer */}
+                {smartInput.trim() && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-primary/5 border border-primary/10 rounded-2xl p-3 flex flex-col gap-1.5"
+                  >
+                    <div className="flex items-center space-x-1.5 text-[10px] font-black uppercase tracking-wider text-primary">
+                      <Sparkles size={11} className="animate-spin text-primary" />
+                      <span>Live AI Estimation</span>
+                    </div>
+                    {(() => {
+                      const est = parseSmartLogText(smartInput);
+                      return (
+                        <div className="space-y-1">
+                          <p className="text-sm font-black text-foreground">{est.kcal} kcal</p>
+                          <div className="flex items-center gap-2 text-[10px] text-secondary font-bold">
+                            <span className="bg-background border border-border/40 px-2 py-0.5 rounded-lg">P: {est.protein}g</span>
+                            <span className="bg-background border border-border/40 px-2 py-0.5 rounded-lg">C: {est.carbs}g</span>
+                            <span className="bg-background border border-border/40 px-2 py-0.5 rounded-lg">F: {est.fat}g</span>
+                          </div>
+                          {est.ingredients.length > 0 && (
+                            <p className="text-[9px] text-primary/80 font-semibold pt-1">Parsed: {est.ingredients.join(", ")}</p>
+                          )}
+                        </div>
+                      );
+                    })()}
+                  </motion.div>
+                )}
+
+                <motion.button 
+                  whileTap={{ scale: 0.95 }}
+                  type="submit"
+                  disabled={uploading || !smartInput.trim()}
+                  className={`flex items-center justify-center space-x-2 bg-primary text-white w-full py-3 rounded-2xl font-extrabold hover:bg-primary/95 transition-all shadow-md shadow-primary/10 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
+                >
+                  {uploading ? <Loader2 size={16} className="animate-spin" /> : <Plus size={16} />}
+                  <span>{uploading ? "Analyzing & Logging..." : "AI Auto Log Meal"}</span>
+                </motion.button>
+              </form>
+            ) : (
+              // MANUAL DETAILED FORM MODE
+              <form onSubmit={handleManualLog} className="flex flex-col gap-3">
+                <div className="flex items-center gap-2">
+                  {/* Photo Gallery & Capture selectors side-by-side */}
+                  <div className="flex gap-1 flex-shrink-0">
+                    {/* Gallery input */}
+                    <label 
+                      htmlFor="food-image-gallery-manual" 
+                      className="flex flex-col items-center justify-center w-10 h-14 bg-background border border-border/60 hover:border-accent/50 hover:bg-accent/5 rounded-2xl text-accent transition-all cursor-pointer"
+                      title="Upload from Gallery"
+                    >
+                      <Image size={15} />
+                      <span className="text-[7px] font-black mt-0.5">Gallery</span>
+                    </label>
+                    <input 
+                      type="file" 
+                      id="food-image-gallery-manual" 
+                      accept="image/*" 
+                      onChange={handleImageChange} 
+                      className="hidden" 
+                    />
+
+                    {/* Camera capture input */}
+                    <label 
+                      htmlFor="food-image-capture-manual" 
+                      className="flex flex-col items-center justify-center w-10 h-14 bg-background border border-border/60 hover:border-primary/50 hover:bg-primary/5 rounded-2xl text-primary transition-all cursor-pointer"
+                      title="Direct Camera Capture"
+                    >
+                      <Camera size={15} />
+                      <span className="text-[7px] font-black mt-0.5">Capture</span>
+                    </label>
+                    <input 
+                      type="file" 
+                      id="food-image-capture-manual" 
+                      accept="image/*" 
+                      capture="environment"
+                      onChange={handleImageChange} 
+                      className="hidden" 
+                    />
+                  </div>
+
+                  <input 
+                    type="text" 
+                    required
+                    value={manualName}
+                    onChange={(e) => setManualName(e.target.value)}
+                    placeholder="Meal name: 'Grilled salmon'..." 
+                    className="flex-1 bg-background border border-border/60 px-4 py-3.5 rounded-2xl outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-sm"
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black uppercase text-secondary tracking-widest pl-1">Calories (kcal)</label>
+                    <input 
+                      type="number" 
+                      required
+                      value={manualKcal}
+                      onChange={(e) => setManualKcal(e.target.value)}
+                      placeholder="e.g. 450" 
+                      className="bg-background border border-border/60 px-3.5 py-2.5 rounded-xl w-full outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-xs"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black uppercase text-secondary tracking-widest pl-1">Protein (g)</label>
+                    <input 
+                      type="number" 
+                      value={manualProtein}
+                      onChange={(e) => setManualProtein(e.target.value)}
+                      placeholder="e.g. 35" 
+                      className="bg-background border border-border/60 px-3.5 py-2.5 rounded-xl w-full outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-xs"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black uppercase text-secondary tracking-widest pl-1">Carbs (g)</label>
+                    <input 
+                      type="number" 
+                      value={manualCarbs}
+                      onChange={(e) => setManualCarbs(e.target.value)}
+                      placeholder="e.g. 20" 
+                      className="bg-background border border-border/60 px-3.5 py-2.5 rounded-xl w-full outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-xs"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-black uppercase text-secondary tracking-widest pl-1">Fat (g)</label>
+                    <input 
+                      type="number" 
+                      value={manualFat}
+                      onChange={(e) => setManualFat(e.target.value)}
+                      placeholder="e.g. 10" 
+                      className="bg-background border border-border/60 px-3.5 py-2.5 rounded-xl w-full outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-xs"
+                    />
+                  </div>
+                </div>
+
+                <motion.button 
+                  whileTap={{ scale: 0.95 }}
+                  type="submit"
+                  disabled={uploading || !manualName.trim()}
+                  className={`flex items-center justify-center space-x-2 bg-primary text-white w-full py-3 rounded-2xl font-extrabold hover:bg-primary/95 transition-all shadow-md shadow-primary/10 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
+                >
+                  {uploading ? <Loader2 size={16} className="animate-spin" /> : <Plus size={16} />}
+                  <span>{uploading ? "Logging..." : "Log Manual Meal"}</span>
+                </motion.button>
+              </form>
+            )}
 
             {/* Dynamic Image Preview Drawer */}
             <AnimatePresence>
@@ -346,7 +542,7 @@ export default function TrackingPage() {
                   initial={{ opacity: 0, y: 5, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 5, scale: 0.95 }}
-                  className="flex items-center space-x-3 bg-card border border-border/50 p-2 rounded-2xl shadow-sm w-full sm:w-72"
+                  className="flex items-center space-x-3 bg-background border border-border/60 p-2 rounded-2xl shadow-sm"
                 >
                   <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-border flex-shrink-0">
                     <img src={imagePreview} className="w-full h-full object-cover" alt="Custom meal preview" />
@@ -365,7 +561,7 @@ export default function TrackingPage() {
                   <button 
                     type="button"
                     onClick={clearSelectedImage}
-                    className="p-1 px-2.5 rounded-lg text-secondary hover:text-destructive hover:bg-destructive/10 transition-all font-bold text-[10px]"
+                    className="p-1 px-2.5 rounded-lg text-secondary hover:text-destructive hover:bg-destructive/10 transition-all font-bold text-[10px] cursor-pointer"
                   >
                     Remove
                   </button>
@@ -431,7 +627,7 @@ export default function TrackingPage() {
               <div className="space-y-1">
                 <div className="flex justify-between items-center text-xs font-bold uppercase tracking-wider text-secondary">
                   <span>Daily Calorie Goal</span>
-                  <span className="text-foreground font-black">{userProgress.kcalGoal.toLocaleString()} kcal</span>
+                  <span className="text-foreground font-black">{calorieGoal.toLocaleString()} kcal</span>
                 </div>
                 <div className="h-1.5 bg-border/40 rounded-full overflow-hidden">
                   <div className="h-full bg-primary/40" style={{ width: '100%' }} />
@@ -441,14 +637,14 @@ export default function TrackingPage() {
               <div className="space-y-1">
                 <div className="flex justify-between items-center text-xs font-bold uppercase tracking-wider text-secondary">
                   <span>Net Remaining</span>
-                  <span className={`font-black ${kcalEaten >= userProgress.kcalGoal ? "text-rose-500" : "text-primary"}`}>
-                    {Math.max(0, userProgress.kcalGoal - kcalEaten).toLocaleString()} kcal
+                  <span className={`font-black ${kcalEaten >= calorieGoal ? "text-rose-500" : "text-primary"}`}>
+                    {Math.max(0, calorieGoal - kcalEaten).toLocaleString()} kcal
                   </span>
                 </div>
                 <div className="h-1.5 bg-border/40 rounded-full overflow-hidden">
                   <motion.div 
                     initial={{ width: 0 }}
-                    animate={{ width: `${Math.min(100, (kcalEaten / userProgress.kcalGoal) * 100)}%` }}
+                    animate={{ width: `${Math.min(100, (kcalEaten / calorieGoal) * 100)}%` }}
                     className="h-full bg-primary"
                   />
                 </div>
@@ -471,7 +667,8 @@ export default function TrackingPage() {
 
           {/* Macro Cards Block (High visual premium feel) */}
           <div className="flex flex-col gap-4">
-            {Object.entries(userProgress.macros).map(([key, value], idx) => {
+            {Object.entries(userProgress.macros).map(([key, rawValue], idx) => {
+              const value = rawValue as { current: number; goal: number };
               const macroColors = {
                 protein: "bg-primary",
                 carbs: "bg-accent",
@@ -569,12 +766,12 @@ export default function TrackingPage() {
                 <span>Hydration</span>
               </h2>
               <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-black">
-                {Math.round((waterIntake / 8) * 100)}% Done
+                {Math.min(100, Math.round((waterIntake / 2500) * 100))}% of 2.5L
               </span>
             </div>
 
             {/* Animated Interactive Cup */}
-            <div className="flex items-center justify-center py-4">
+            <div className="flex items-center justify-center py-2">
               <div className="relative w-28 h-36 border-4 border-foreground/10 rounded-b-3xl rounded-t-lg overflow-hidden flex items-end bg-background shadow-inner">
                 {/* Wave/Liquid overlay */}
                 <motion.div 
@@ -588,7 +785,7 @@ export default function TrackingPage() {
                     ease: "easeInOut" 
                   }}
                   className="absolute left-[-20%] right-[-20%] bg-primary/20 w-[140%] h-[140%] origin-bottom"
-                  style={{ bottom: `${(waterIntake / 8) * 100 - 100}%` }}
+                  style={{ bottom: `${Math.min(100, (waterIntake / 2500) * 100) - 100}%` }}
                 />
                 <motion.div 
                   animate={{ 
@@ -601,35 +798,75 @@ export default function TrackingPage() {
                     ease: "easeInOut" 
                   }}
                   className="absolute left-[-20%] right-[-20%] bg-primary/80 w-[140%] h-[140%] origin-bottom"
-                  style={{ bottom: `${(waterIntake / 8) * 100 - 100}%` }}
+                  style={{ bottom: `${Math.min(100, (waterIntake / 2500) * 100) - 100}%` }}
                 />
                 
                 {/* Water Count Label */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none z-10">
-                  <span className={`text-3xl font-black transition-colors duration-300 ${waterIntake >= 5 ? 'text-white' : 'text-foreground'}`}>
+                  <span className={`text-2xl font-black tracking-tight transition-colors duration-300 ${waterIntake >= 1200 ? 'text-white' : 'text-foreground'}`}>
                     {waterIntake}
                   </span>
-                  <span className={`text-[9px] font-black uppercase tracking-widest transition-colors duration-300 ${waterIntake >= 5 ? 'text-white/80' : 'text-secondary'}`}>
-                    Cups Logged
+                  <span className={`text-[8px] font-black uppercase tracking-widest transition-colors duration-300 ${waterIntake >= 1200 ? 'text-white/80' : 'text-secondary'}`}>
+                    mL Logged
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Cup Control Buttons */}
-            <div className="flex items-center space-x-3 w-full">
-              <button 
-                onClick={removeCupOfWater}
-                className="flex-1 py-2.5 rounded-xl border border-border/60 bg-background font-bold text-xs hover:border-primary/40 hover:text-primary transition-all cursor-pointer text-center"
-              >
-                - 1 Cup
-              </button>
-              <button 
-                onClick={addCupOfWater}
-                className="flex-1 py-2.5 bg-primary text-white rounded-xl font-bold text-xs hover:bg-primary/95 transition-all shadow-md shadow-primary/10 cursor-pointer text-center"
-              >
-                + 1 Cup
-              </button>
+            {/* mL Presets Layout with interactive UI icons */}
+            <div className="space-y-4">
+              <span className="text-[10px] uppercase font-black tracking-widest text-secondary block text-center">Tap to Log Volume</span>
+              <div className="grid grid-cols-5 gap-1.5">
+                {[
+                  { label: "1 cup", vol: 150, desc: "150ml", icon: Coffee },
+                  { label: "Cup", vol: 300, desc: "300ml", icon: GlassWater },
+                  { label: "Big cup", vol: 500, desc: "500ml", icon: CupSoda },
+                  { label: "1 bottle", vol: 800, desc: "800ml", icon: Milk },
+                  { label: "Big bot", vol: 1000, desc: "1 L", icon: Droplet },
+                ].map((preset) => {
+                  const Icon = preset.icon;
+                  return (
+                    <motion.button
+                      key={preset.vol}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => addCupOfWater(preset.vol)}
+                      type="button"
+                      className="flex flex-col items-center justify-center p-2 rounded-xl bg-background border border-border/50 hover:border-primary/40 hover:bg-primary/5 transition-all cursor-pointer group"
+                      title={`Add ${preset.desc}`}
+                    >
+                      <Icon size={16} className="text-primary group-hover:animate-bounce" />
+                      <span className="text-[8px] font-black mt-1 text-foreground">{preset.desc}</span>
+                    </motion.button>
+                  );
+                })}
+              </div>
+
+              {/* Deduct options to easily remove mistakes */}
+              <div className="flex items-center justify-between border-t border-border/40 pt-3 text-[10px] font-bold text-secondary">
+                <button
+                  type="button"
+                  onClick={() => removeCupOfWater(150)}
+                  className="hover:text-rose-500 cursor-pointer flex items-center space-x-0.5"
+                >
+                  <span>-150ml</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => removeCupOfWater(300)}
+                  className="hover:text-rose-500 cursor-pointer flex items-center space-x-0.5"
+                >
+                  <span>-300ml</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setWaterIntake(0)}
+                  className="hover:text-rose-600 font-extrabold cursor-pointer flex items-center space-x-0.5"
+                >
+                  <RotateCcw size={10} />
+                  <span>Clear</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

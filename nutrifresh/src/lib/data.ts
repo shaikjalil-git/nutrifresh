@@ -167,9 +167,9 @@ export const recipes = [
       { category: "BASE", items: ["2 large Zucchinis, spiralized", "1 tbsp Olive Oil"] },
       { category: "PESTO", items: ["2 cups Fresh Basil", "1/4 cup Pine Nuts", "1/2 cup Parmesan", "1/3 cup Olive Oil", "2 cloves Garlic"] }
     ],
-    nutrition: { 
-      perServing: "1 Bowl", calories: 310, protein: 5, carbs: 10, fat: 25, 
-      vitamins: [{ name: "Vitamin A", value: "30% DV" }, { name: "Vitamin C", value: "45% DV" }] 
+    nutrition: {
+      perServing: "1 Bowl", calories: 310, protein: 5, carbs: 10, fat: 25,
+      vitamins: [{ name: "Vitamin A", value: "30% DV" }, { name: "Vitamin C", value: "45% DV" }]
     },
     instructions: [
       { step: 1, title: "Make Pesto", description: "Blend basil, pine nuts, parmesan, and garlic in a food processor. Slowly drizzle in olive oil until smooth." },
@@ -193,9 +193,9 @@ export const recipes = [
       { category: "MAIN", items: ["2 Salmon Fillets (6oz each)", "Salt and Pepper to taste", "1 tbsp Olive Oil"] },
       { category: "GLAZE", items: ["3 cloves Garlic, minced", "1/3 cup Honey", "1/4 cup Soy Sauce", "1 tbsp Lemon Juice"] }
     ],
-    nutrition: { 
-      perServing: "1 Fillet", calories: 480, protein: 42, carbs: 15, fat: 28, 
-      vitamins: [{ name: "Vitamin D", value: "110% DV" }, { name: "Vitamin B12", value: "80% DV" }] 
+    nutrition: {
+      perServing: "1 Fillet", calories: 480, protein: 42, carbs: 15, fat: 28,
+      vitamins: [{ name: "Vitamin D", value: "110% DV" }, { name: "Vitamin B12", value: "80% DV" }]
     },
     instructions: [
       { step: 1, title: "Prep Salmon", description: "Pat salmon fillets dry with a paper towel. Season generously with salt and pepper." },
@@ -219,9 +219,9 @@ export const recipes = [
       { category: "SALAD", items: ["1 can Chickpeas, rinsed", "1 Cucumber, diced", "1 cup Cherry Tomatoes, halved", "1/2 Red Onion, finely chopped", "1/2 cup Feta Cheese"] },
       { category: "DRESSING", items: ["3 tbsp Olive Oil", "2 tbsp Lemon Juice", "1 tsp Dried Oregano", "Salt and Pepper"] }
     ],
-    nutrition: { 
-      perServing: "1 Bowl", calories: 320, protein: 12, carbs: 45, fat: 10, 
-      vitamins: [{ name: "Vitamin C", value: "25% DV" }, { name: "Iron", value: "15% DV" }] 
+    nutrition: {
+      perServing: "1 Bowl", calories: 320, protein: 12, carbs: 45, fat: 10,
+      vitamins: [{ name: "Vitamin C", value: "25% DV" }, { name: "Iron", value: "15% DV" }]
     },
     instructions: [
       { step: 1, title: "Prep Veggies", description: "Dice the cucumber, halve the cherry tomatoes, and finely chop the red onion." },
@@ -245,9 +245,9 @@ export const recipes = [
       { category: "BASE", items: ["1 Sweet Potato, cubed", "1 cup Quinoa, cooked", "2 cups Kale or Spinach"] },
       { category: "TOPPINGS", items: ["1/2 Avocado, sliced", "2 tbsp Pumpkin Seeds", "1/4 cup Tahini Dressing"] }
     ],
-    nutrition: { 
-      perServing: "1 Bowl", calories: 410, protein: 10, carbs: 60, fat: 15, 
-      vitamins: [{ name: "Vitamin A", value: "200% DV" }, { name: "Potassium", value: "15% DV" }] 
+    nutrition: {
+      perServing: "1 Bowl", calories: 410, protein: 10, carbs: 60, fat: 15,
+      vitamins: [{ name: "Vitamin A", value: "200% DV" }, { name: "Potassium", value: "15% DV" }]
     },
     instructions: [
       { step: 1, title: "Roast Sweet Potato", description: "Toss sweet potato cubes in olive oil and roast at 400°F for 25 minutes until tender." },
@@ -271,9 +271,9 @@ export const recipes = [
       { category: "SMOOTHIE", items: ["1 frozen Acai Packet", "1/2 frozen Banana", "1/2 cup Mixed Berries", "1/2 cup Almond Milk"] },
       { category: "TOPPINGS", items: ["1/4 cup Granola", "1 tbsp Chia Seeds", "Fresh Strawberries"] }
     ],
-    nutrition: { 
-      perServing: "1 Bowl", calories: 250, protein: 4, carbs: 45, fat: 5, 
-      vitamins: [{ name: "Vitamin C", value: "60% DV" }, { name: "Antioxidants", value: "High" }] 
+    nutrition: {
+      perServing: "1 Bowl", calories: 250, protein: 4, carbs: 45, fat: 5,
+      vitamins: [{ name: "Vitamin C", value: "60% DV" }, { name: "Antioxidants", value: "High" }]
     },
     instructions: [
       { step: 1, title: "Blend Base", description: "Add the frozen acai packet, banana, mixed berries, and almond milk to a high-speed blender." },
@@ -286,7 +286,7 @@ export const recipes = [
     id: "10",
     name: "Steak & Asparagus Skillet",
     description: "Juicy steak bites pan-seared with tender asparagus spears.",
-    image: "https://images.unsplash.com/photo-1544025162-8111f4a761e2?auto=format&fit=crop&q=80&w=800",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mhrjY8z6MwA58cgd4ixqYO7KWmeqA7LbIQ&s",
     kcal: 550,
     prepTime: "10m",
     cookTime: "15m",
@@ -297,9 +297,9 @@ export const recipes = [
       { category: "MAIN", items: ["1 lb Sirloin Steak, cut into bite-sized pieces", "1 bunch Asparagus, trimmed and cut into 2-inch pieces"] },
       { category: "SEASONING", items: ["2 tbsp Butter", "3 cloves Garlic, minced", "1 tsp Soy Sauce", "Salt and Pepper"] }
     ],
-    nutrition: { 
-      perServing: "1 Plate", calories: 550, protein: 45, carbs: 8, fat: 38, 
-      vitamins: [{ name: "Iron", value: "35% DV" }, { name: "Zinc", value: "40% DV" }] 
+    nutrition: {
+      perServing: "1 Plate", calories: 550, protein: 45, carbs: 8, fat: 38,
+      vitamins: [{ name: "Iron", value: "35% DV" }, { name: "Zinc", value: "40% DV" }]
     },
     instructions: [
       { step: 1, title: "Prep Ingredients", description: "Cut the steak into cubes and season well with salt and pepper. Trim and chop the asparagus." },
@@ -323,9 +323,9 @@ export const recipes = [
       { category: "BURGER", items: ["2 Beef Patties", "2 Burger Buns", "2 slices Cheddar Cheese"] },
       { category: "TOPPINGS", items: ["1 Tomato, sliced", "1 cup Lettuce", "2 tbsp Ketchup"] }
     ],
-    nutrition: { 
-      perServing: "1 Burger", calories: 600, protein: 30, carbs: 40, fat: 35, 
-      vitamins: [{ name: "Iron", value: "25% DV" }] 
+    nutrition: {
+      perServing: "1 Burger", calories: 600, protein: 30, carbs: 40, fat: 35,
+      vitamins: [{ name: "Iron", value: "25% DV" }]
     },
     instructions: [
       { step: 1, title: "Cook Meat", description: "Put a pan on the stove on high heat. Cook the beef patties for 4 minutes on each side." },
@@ -349,9 +349,9 @@ export const recipes = [
       { category: "BASE", items: ["2 cups Cooked Rice", "1 Chicken Breast, cut small", "2 Eggs"] },
       { category: "VEGGIES & SAUCE", items: ["1 cup Mixed Peas and Carrots", "3 tbsp Soy Sauce", "1 tbsp Oil"] }
     ],
-    nutrition: { 
-      perServing: "1 Bowl", calories: 450, protein: 28, carbs: 55, fat: 12, 
-      vitamins: [{ name: "Vitamin A", value: "40% DV" }] 
+    nutrition: {
+      perServing: "1 Bowl", calories: 450, protein: 28, carbs: 55, fat: 12,
+      vitamins: [{ name: "Vitamin A", value: "40% DV" }]
     },
     instructions: [
       { step: 1, title: "Cook Chicken", description: "Put oil in a big pan. Cook the chicken pieces until they are white inside." },
@@ -375,9 +375,9 @@ export const recipes = [
       { category: "BATTER", items: ["1 cup Flour", "1 cup Milk", "1 Egg", "2 tbsp Sugar"] },
       { category: "TOPPINGS", items: ["1 tbsp Butter", "3 tbsp Maple Syrup"] }
     ],
-    nutrition: { 
-      perServing: "3 Pancakes", calories: 350, protein: 10, carbs: 60, fat: 8, 
-      vitamins: [{ name: "Calcium", value: "20% DV" }] 
+    nutrition: {
+      perServing: "3 Pancakes", calories: 350, protein: 10, carbs: 60, fat: 8,
+      vitamins: [{ name: "Calcium", value: "20% DV" }]
     },
     instructions: [
       { step: 1, title: "Mix Ingredients", description: "Put flour, milk, egg, and sugar in a big bowl. Mix them together until smooth." },
@@ -401,9 +401,9 @@ export const recipes = [
       { category: "PASTA", items: ["8 oz Spaghetti", "Water for boiling"] },
       { category: "SAUCE", items: ["2 cups Tomato Sauce", "10 Fresh Basil Leaves", "1 tbsp Olive Oil"] }
     ],
-    nutrition: { 
-      perServing: "1 Plate", calories: 400, protein: 12, carbs: 70, fat: 8, 
-      vitamins: [{ name: "Vitamin C", value: "30% DV" }] 
+    nutrition: {
+      perServing: "1 Plate", calories: 400, protein: 12, carbs: 70, fat: 8,
+      vitamins: [{ name: "Vitamin C", value: "30% DV" }]
     },
     instructions: [
       { step: 1, title: "Boil Water", description: "Put a big pot of water on the stove. Turn the heat to high and wait for it to boil." },
@@ -431,9 +431,9 @@ export const userProgress = {
 };
 
 export const userProfile = {
-  firstName: "UNKNOWN",
-  lastName: "",
-  email: "",
+  firstName: "Jane",
+  lastName: "Doe",
+  email: "jane.doe@example.com",
   dietaryPreferences: ["Vegan", "Gluten-Free"],
   allergies: ["Peanuts", "Shellfish"]
 };

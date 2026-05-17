@@ -4,7 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Bell, Home, BookOpen, Activity, User, X, Check, Apple, Palette } from "lucide-react";
+import { Search, Bell, Home, BookOpen, Activity, User, X, Check, Apple, Palette, Save } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
 
 const navLinks = [
   { name: "Feed", href: "/", icon: Home },
@@ -14,12 +15,14 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const { user, profile, saveTrackingToCloud, isTrackingDirty } = useAuth();
   const pathname = usePathname();
   const [searchOpen, setSearchOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
   const [activeTheme, setActiveTheme] = useState("theme-cream");
+  const [saveSuccess, setSaveSuccess] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -102,6 +105,37 @@ export default function Navbar() {
             <Search size={18} />
           </motion.button>
 
+          {/* Save Changes Button */}
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={async () => {
+              try {
+                await saveTrackingToCloud();
+                setSaveSuccess(true);
+                setTimeout(() => setSaveSuccess(false), 2000);
+              } catch (e) {
+                console.error("Save error: ", e);
+              }
+            }}
+            className={`p-2.5 rounded-full border transition-all cursor-pointer relative flex items-center justify-center ${
+              saveSuccess 
+                ? "bg-emerald-500/10 text-emerald-500 border-emerald-500/30" 
+                : isTrackingDirty
+                  ? "bg-amber-500/10 text-amber-500 border-amber-500/30 animate-pulse"
+                  : "bg-background hover:bg-primary/5 hover:text-primary border border-border/40 text-foreground"
+            }`}
+            title={isTrackingDirty ? "Unsaved tracking changes! Click to save." : "Save tracking data"}
+          >
+            {saveSuccess ? (
+              <Check size={18} />
+            ) : (
+              <Save size={18} />
+            )}
+            {isTrackingDirty && !saveSuccess && (
+              <span className="absolute top-2 right-2 w-2.5 h-2.5 bg-amber-500 rounded-full border border-card animate-ping" />
+            )}
+          </motion.button>
+
           {/* Notifications Button */}
           <motion.button
             whileTap={{ scale: 0.9 }}
@@ -164,12 +198,19 @@ export default function Navbar() {
           </div>
 
           {/* Profile Quick Link */}
-          <Link href="/profile" className="hidden md:block w-9 h-9 rounded-full overflow-hidden border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm">
-            <img 
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" 
-              alt="Profile" 
-              className="w-full h-full object-cover"
-            />
+          <Link 
+            href="/profile" 
+            className="hidden md:flex w-9 h-9 rounded-full overflow-hidden border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm items-center justify-center bg-secondary/10"
+          >
+            {user?.photoURL || profile?.avatarUrl ? (
+              <img 
+                src={user?.photoURL || profile?.avatarUrl} 
+                alt="Profile" 
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <User size={16} className="text-secondary" />
+            )}
           </Link>
         </div>
       </nav>
