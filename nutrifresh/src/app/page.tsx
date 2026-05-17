@@ -6,13 +6,22 @@ import { Heart, Clock, ChefHat, Flame, Sparkles, TrendingUp, Filter } from "luci
 import { recipes, userProfile, userProgress } from "@/lib/data";
 import NextLink from "next/link";
 import PageTransition from "@/components/PageTransition";
+import { useAuth } from "@/context/AuthContext";
+import React from "react";
 
 const filters = ["All", "Breakfast", "Vegan", "Quick & Easy", "High Protein", "Keto"];
 
 export default function FeedPage() {
+  const { profile } = useAuth();
   const [activeFilter, setActiveFilter] = useState("All");
   const [savedRecipes, setSavedRecipes] = useState<string[]>([]);
   const [waterCups, setWaterCups] = useState(4);
+
+  // Fallback properties
+  const displayName = profile?.firstName || userProfile.firstName;
+  const activePreferences = profile?.dietaryPreferences && profile.dietaryPreferences.length > 0
+    ? profile.dietaryPreferences
+    : userProfile.dietaryPreferences;
 
   const toggleSave = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
@@ -43,7 +52,7 @@ export default function FeedPage() {
             className="lg:col-span-2 space-y-2"
           >
             <h1 className="text-3xl md:text-5xl font-black tracking-tight text-foreground flex items-center space-x-3">
-              <span>Good Morning, {userProfile.firstName}!</span>
+              <span>Good Morning, {displayName}!</span>
               <motion.span
                 animate={{ rotate: [0, 15, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
@@ -53,7 +62,13 @@ export default function FeedPage() {
               </motion.span>
             </h1>
             <p className="text-secondary text-base md:text-lg font-medium leading-relaxed max-w-2xl">
-              We&apos;ve curated customized nutrition goals and gourmet recipes tailored specifically to your <span className="text-primary font-bold">Vegan</span> and <span className="text-primary font-bold">Gluten-Free</span> preferences.
+              We&apos;ve curated customized nutrition goals and gourmet recipes tailored specifically to your{" "}
+              {activePreferences.map((pref, idx) => (
+                <React.Fragment key={pref}>
+                  {idx > 0 && " and "}
+                  <span className="text-primary font-bold">{pref}</span>
+                </React.Fragment>
+              ))} preferences.
             </p>
           </motion.div>
 
@@ -72,12 +87,12 @@ export default function FeedPage() {
               <div className="space-y-1">
                 <div className="flex items-baseline space-x-1">
                   <span className="text-2xl font-black tracking-tight">{userProgress.kcalEaten}</span>
-                  <span className="text-xs font-medium text-secondary">/ {userProgress.kcalGoal} kcal</span>
+                  <span className="text-xs font-medium text-secondary">/ {profile?.kcalGoal || userProgress.kcalGoal} kcal</span>
                 </div>
                 <div className="h-2 w-full bg-border/40 rounded-full overflow-hidden">
                   <motion.div 
                     initial={{ width: 0 }}
-                    animate={{ width: `${(userProgress.kcalEaten / userProgress.kcalGoal) * 100}%` }}
+                    animate={{ width: `${(userProgress.kcalEaten / (profile?.kcalGoal || userProgress.kcalGoal)) * 100}%` }}
                     className="h-full bg-primary rounded-full"
                     transition={{ duration: 1.2, ease: "easeOut" }}
                   />

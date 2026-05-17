@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   User, 
@@ -12,10 +12,11 @@ import {
   Camera,
   Check,
   Sparkles,
-  Save
+  Save,
+  Loader2
 } from "lucide-react";
-import { userProfile } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
+import { useAuth } from "@/context/AuthContext";
 
 const sidebarItems = [
   { id: "profile", label: "Profile", icon: User },
@@ -28,11 +29,31 @@ const dietOptions = [
 ];
 
 export default function ProfilePage() {
+  const { profile, saveProfile, logout } = useAuth();
+  
   const [activeTab, setActiveTab] = useState("profile");
-  const [allergies, setAllergies] = useState(userProfile.allergies);
-  const [selectedDiets, setSelectedDiets] = useState(userProfile.dietaryPreferences);
+  
+  // Editable profile state
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [allergies, setAllergies] = useState<string[]>([]);
+  const [selectedDiets, setSelectedDiets] = useState<string[]>([]);
+  
   const [searchQuery, setSearchQuery] = useState("");
   const [showSaveMessage, setShowSaveMessage] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+
+  // Sync edits from the persistent Firestore profile once loaded
+  useEffect(() => {
+    if (profile) {
+      setFirstName(profile.firstName || "");
+      setLastName(profile.lastName || "");
+      setEmail(profile.email || "");
+      setAllergies(profile.allergies || []);
+      setSelectedDiets(profile.dietaryPreferences || []);
+    }
+  }, [profile]);
 
   const removeAllergy = (allergy: string) => {
     setAllergies(prev => prev.filter(a => a !== allergy));
@@ -41,8 +62,9 @@ export default function ProfilePage() {
   const addAllergy = (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchQuery.trim()) return;
-    if (!allergies.includes(searchQuery)) {
-      setAllergies(prev => [...prev, searchQuery.trim()]);
+    const clean = searchQuery.trim();
+    if (!allergies.includes(clean)) {
+      setAllergies(prev => [...prev, clean]);
     }
     setSearchQuery("");
   };
@@ -53,9 +75,23 @@ export default function ProfilePage() {
     );
   };
 
-  const handleSave = () => {
-    setShowSaveMessage(true);
-    setTimeout(() => setShowSaveMessage(false), 3000);
+  const handleSave = async () => {
+    setIsSaving(true);
+    try {
+      await saveProfile({
+        firstName,
+        lastName,
+        email,
+        allergies,
+        dietaryPreferences: selectedDiets
+      });
+      setShowSaveMessage(true);
+      setTimeout(() => setShowSaveMessage(false), 3000);
+    } catch (err) {
+      console.error("Error updating profile ledger: ", err);
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   return (
@@ -75,10 +111,10 @@ export default function ProfilePage() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="bg-emerald-500/10 border border-emerald-500/20 p-4 rounded-2xl flex items-center justify-between text-emerald-800 text-sm font-bold shadow-sm"
+              className="bg-[#10191e] border border-emerald-500/20 p-4 rounded-2xl flex items-center justify-between text-emerald-400 text-sm font-bold shadow-sm"
             >
               <span className="flex items-center space-x-2">
-                <Sparkles size={16} className="text-emerald-600" />
+                <Sparkles size={16} className="text-emerald-500 animate-pulse" />
                 <span>All modifications successfully synced to your profile ledger!</span>
               </span>
             </motion.div>
@@ -89,7 +125,6 @@ export default function ProfilePage() {
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           
           {/* Responsive Tab Panel */}
-          {/* On mobile, it scrolls horizontally; on desktop, it stacks vertically */}
           <aside className="w-full lg:w-64 bg-card border border-border/50 p-3 rounded-2.5xl shadow-sm flex flex-row lg:flex-col overflow-x-auto no-scrollbar gap-1.5 lg:space-y-1 flex-shrink-0">
             {sidebarItems.map((item) => {
               const isActive = activeTab === item.id;
@@ -115,7 +150,17 @@ export default function ProfilePage() {
                 </button>
               );
             })}
-            <button className="hidden lg:flex items-center space-x-3 px-4 py-3 rounded-xl font-bold text-xs text-secondary hover:bg-rose-50 hover:text-rose-500 transition-all mt-4 border border-transparent hover:border-rose-100">
+            <button
+              onClick={logout}
+              className="flex lg:hidden items-center space-x-3 px-4 py-3 rounded-xl font-bold text-xs text-rose-500 hover:bg-rose-500/5 transition-all cursor-pointer whitespace-nowrap flex-1 justify-center"
+            >
+              <LogOut size={16} />
+              <span>Log Out</span>
+            </button>
+            <button 
+              onClick={logout} 
+              className="hidden lg:flex items-center space-x-3 px-4 py-3 rounded-xl font-bold text-xs text-secondary hover:bg-rose-500/5 hover:text-rose-500 transition-all mt-4 border border-transparent hover:border-rose-500/10 cursor-pointer"
+            >
               <LogOut size={16} />
               <span>Log Out</span>
             </button>
@@ -142,7 +187,7 @@ export default function ProfilePage() {
                     <div className="relative group cursor-pointer flex-shrink-0">
                       <div className="w-24 h-24 rounded-3xl overflow-hidden border-4 border-background card-shadow">
                         <img 
-                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" 
+                          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" 
                           className="w-full h-full object-cover" 
                           alt="Avatar" 
                         />
@@ -157,7 +202,8 @@ export default function ProfilePage() {
                         <label className="text-[10px] font-black uppercase tracking-wider text-secondary">First Name</label>
                         <input 
                           type="text" 
-                          defaultValue={userProfile.firstName}
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
                           className="w-full bg-background border border-border/50 px-4 py-3 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-semibold text-sm"
                         />
                       </div>
@@ -165,7 +211,8 @@ export default function ProfilePage() {
                         <label className="text-[10px] font-black uppercase tracking-wider text-secondary">Last Name</label>
                         <input 
                           type="text" 
-                          defaultValue={userProfile.lastName}
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
                           className="w-full bg-background border border-border/50 px-4 py-3 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-semibold text-sm"
                         />
                       </div>
@@ -173,7 +220,8 @@ export default function ProfilePage() {
                         <label className="text-[10px] font-black uppercase tracking-wider text-secondary">Email Address</label>
                         <input 
                           type="email" 
-                          defaultValue={userProfile.email}
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           className="w-full bg-background border border-border/50 px-4 py-3 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-semibold text-sm"
                         />
                       </div>
@@ -210,7 +258,7 @@ export default function ProfilePage() {
                           }`}
                         >
                           <div className={`w-5 h-5 rounded-md border flex items-center justify-center transition-all ${
-                            isSelected ? "bg-primary border-primary" : "border-border/60 bg-white"
+                            isSelected ? "bg-primary border-primary" : "border-border/60 bg-[#0c1316]"
                           }`}>
                             {isSelected && <Check size={12} className="text-white" />}
                           </div>
@@ -237,20 +285,24 @@ export default function ProfilePage() {
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    {allergies.map((allergy) => (
-                      <div 
-                        key={allergy} 
-                        className="flex items-center space-x-2 px-3.5 py-1.5 bg-primary/5 text-primary rounded-xl text-xs font-bold border border-primary/20"
-                      >
-                        <span>{allergy}</span>
-                        <button 
-                          onClick={() => removeAllergy(allergy)}
-                          className="hover:text-rose-500 transition-colors cursor-pointer"
+                    {allergies.length === 0 ? (
+                      <span className="text-xs text-secondary font-semibold italic">No allergies added yet.</span>
+                    ) : (
+                      allergies.map((allergy) => (
+                        <div 
+                          key={allergy} 
+                          className="flex items-center space-x-2 px-3.5 py-1.5 bg-primary/5 text-primary rounded-xl text-xs font-bold border border-primary/20"
                         >
-                          <X size={12} />
-                        </button>
-                      </div>
-                    ))}
+                          <span>{allergy}</span>
+                          <button 
+                            onClick={() => removeAllergy(allergy)}
+                            className="hover:text-rose-500 transition-colors cursor-pointer"
+                          >
+                            <X size={12} />
+                          </button>
+                        </div>
+                      ))
+                    )}
                   </div>
 
                   <form onSubmit={addAllergy} className="relative flex items-center gap-2">
@@ -276,17 +328,15 @@ export default function ProfilePage() {
               )}
             </AnimatePresence>
 
-            {/* Inline Action Bar - NO STICKY OVERLAPPING ISSUES! */}
+            {/* Action Bar */}
             <div className="flex justify-end space-x-3 bg-card border border-border/50 p-4 rounded-2.5xl shadow-sm">
-              <button className="px-6 py-2.5 font-bold text-xs text-secondary hover:text-foreground transition-all cursor-pointer">
-                Cancel
-              </button>
               <motion.button 
                 whileTap={{ scale: 0.95 }}
+                disabled={isSaving}
                 onClick={handleSave}
                 className="px-6 py-2.5 bg-primary text-white rounded-xl font-extrabold text-xs hover:bg-primary/95 transition-all shadow-md shadow-primary/10 cursor-pointer flex items-center space-x-2"
               >
-                <Save size={14} />
+                {isSaving ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
                 <span>Save Changes</span>
               </motion.button>
             </div>

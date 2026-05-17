@@ -1,15 +1,13 @@
-"use client";
-
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import { 
   User, 
   signInWithPopup, 
   GoogleAuthProvider, 
-  signOut, 
-  onAuthStateChanged,
+  onAuthStateChanged, 
+  signOut,
   signInWithPhoneNumber,
-  RecaptchaVerifier,
-  ConfirmationResult
+  ConfirmationResult,
+  RecaptchaVerifier
 } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";

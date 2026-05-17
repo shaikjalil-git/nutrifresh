@@ -187,5 +187,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 <div align="center">
-  <p>Made with ❤️ by <a href="https://github.com/shaikjalil-git">Shaik Jalil</a></p>
+  <p>Made with ❤️ by <a href="https://github.com/shaikjalil">Shaik Jalil</a></p>
 </div>

@@ -1,12 +1,16 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, MoreHorizontal, ExternalLink, ChefHat, GlassWater, Trophy, Dumbbell, Sparkles } from "lucide-react";
+import { Plus, MoreHorizontal, ExternalLink, ChefHat, GlassWater, Trophy, Dumbbell, Sparkles, Camera, Loader2 } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { userProgress } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
 import { useState, useEffect } from "react";
 
+// Firebase integration imports
+import { db, storage } from "@/lib/firebase";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 // Weekly Mock Data for interactive progress bars
 const weeklyData = [
@@ -27,10 +31,57 @@ export default function TrackingPage() {
   const [smartInput, setSmartInput] = useState("");
   const [showLogEffect, setShowLogEffect] = useState(false);
 
+  // Custom Image Uploading states
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [uploading, setUploading] = useState(false);
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setSelectedImage(file);
+      setImagePreview(URL.createObjectURL(file));
+    }
+  };
+
+  const clearSelectedImage = () => {
+    setSelectedImage(null);
+    if (imagePreview) {
+      URL.revokeObjectURL(imagePreview);
+    }
+    setImagePreview(null);
+  };
+
+  // Fetch meals from Firestore on mount for true full-stack persistence
+  useEffect(() => {
+    const fetchMeals = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "meals"));
+        const meals: any[] = [];
+        let totalKcal = 0;
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          meals.push({ id: doc.id, ...data });
+          totalKcal += data.kcal || 0;
+        });
+
+        if (meals.length > 0) {
+          // Sort by newest first
+          meals.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+          setRecentMealsList(meals);
+          setKcalEaten(totalKcal);
+        }
+      } catch (err) {
+        console.error("Firestore Fetch Error: ", err);
+      }
+    };
+    fetchMeals();
+  }, []);
+
   // Parse smart logs (e.g. typing "1 bowl of oatmeal" or just adding a numeric calorie)
-  const handleSmartLog = (e: React.FormEvent) => {
+  const handleSmartLog = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!smartInput.trim()) return;
+    if (!smartInput.trim() || uploading) return;
 
     let cal = 250; // default estimated calories
     const mealName = smartInput;
@@ -51,17 +102,46 @@ export default function TrackingPage() {
       cal = 550;
     }
 
-    const newMeal = {
-      id: "m_" + Date.now(),
+    let imageUrl = "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=10&w=100";
+
+    // Upload selected custom image to Firebase Storage
+    if (selectedImage) {
+      setUploading(true);
+      try {
+        const storageRef = ref(storage, `meals/${Date.now()}_${selectedImage.name}`);
+        const snapshot = await uploadBytes(storageRef, selectedImage);
+        imageUrl = await getDownloadURL(snapshot.ref);
+      } catch (err) {
+        console.error("Firebase Storage Upload Error: ", err);
+      } finally {
+        setUploading(false);
+      }
+    }
+
+    const mealData = {
       name: mealName.charAt(0).toUpperCase() + mealName.slice(1),
       type: "Logged",
       kcal: cal,
-      image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=10&w=100"
+      image: imageUrl,
+      createdAt: new Date().toISOString()
     };
 
-    setRecentMealsList(prev => [newMeal, ...prev]);
-    setKcalEaten(prev => prev + cal);
+    // Save to Firestore
+    try {
+      const docRef = await addDoc(collection(db, "meals"), mealData);
+      const newMeal = { id: docRef.id, ...mealData };
+      setRecentMealsList(prev => [newMeal, ...prev]);
+      setKcalEaten(prev => prev + cal);
+    } catch (err) {
+      console.error("Firestore Add Error: ", err);
+      // Local fallback in case of Firestore error/offline
+      const newMeal = { id: "m_" + Date.now(), ...mealData };
+      setRecentMealsList(prev => [newMeal, ...prev]);
+      setKcalEaten(prev => prev + cal);
+    }
+
     setSmartInput("");
+    clearSelectedImage();
     setShowLogEffect(true);
     setTimeout(() => setShowLogEffect(false), 2000);
   };
@@ -107,26 +187,80 @@ export default function TrackingPage() {
           </div>
           
           {/* Smart Logging Bar (High interactive value!) */}
-          <form onSubmit={handleSmartLog} className="flex flex-col sm:flex-row items-stretch gap-3">
-            <div className="relative flex-1 sm:flex-initial">
-              <input 
-                type="text" 
-                value={smartInput}
-                onChange={(e) => setSmartInput(e.target.value)}
-                placeholder="Smart log: '2 scrambled eggs'..." 
-                className="bg-card border border-border/60 px-4 py-3 rounded-2xl w-full sm:w-72 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all pr-10 font-semibold text-sm"
-              />
-              <ChefHat size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-primary opacity-60" />
-            </div>
-            <motion.button 
-              whileTap={{ scale: 0.95 }}
-              type="submit"
-              className="flex items-center justify-center space-x-2 bg-primary text-white px-6 py-3 rounded-2xl font-extrabold hover:bg-primary/95 transition-all shadow-md shadow-primary/10 cursor-pointer"
-            >
-              <Plus size={18} />
-              <span>Log</span>
-            </motion.button>
-          </form>
+          <div className="flex flex-col items-stretch sm:items-end gap-2">
+            <form onSubmit={handleSmartLog} className="flex flex-col sm:flex-row items-stretch gap-3">
+              <div className="relative flex-1 sm:flex-initial flex items-center">
+                <input 
+                  type="text" 
+                  value={smartInput}
+                  onChange={(e) => setSmartInput(e.target.value)}
+                  placeholder="Smart log: '2 scrambled eggs'..." 
+                  className="bg-card border border-border/60 pl-12 pr-10 py-3 rounded-2xl w-full sm:w-72 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-semibold text-sm"
+                />
+                
+                {/* Photo Upload camera trigger */}
+                <label 
+                  htmlFor="food-image-upload" 
+                  className="absolute left-3.5 p-1 bg-primary/5 hover:bg-primary/10 rounded-lg text-primary transition-all cursor-pointer flex items-center justify-center"
+                  title="Upload custom food photo"
+                >
+                  <Camera size={16} />
+                </label>
+                <input 
+                  type="file" 
+                  id="food-image-upload" 
+                  accept="image/*" 
+                  onChange={handleImageChange} 
+                  className="hidden" 
+                />
+
+                <ChefHat size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-primary opacity-60 pointer-events-none" />
+              </div>
+              <motion.button 
+                whileTap={{ scale: 0.95 }}
+                type="submit"
+                disabled={uploading}
+                className={`flex items-center justify-center space-x-2 bg-primary text-white px-6 py-3 rounded-2xl font-extrabold hover:bg-primary/95 transition-all shadow-md shadow-primary/10 cursor-pointer ${uploading ? "opacity-60 cursor-not-allowed" : ""}`}
+              >
+                {uploading ? <Loader2 size={18} className="animate-spin" /> : <Plus size={18} />}
+                <span>{uploading ? "Uploading..." : "Log"}</span>
+              </motion.button>
+            </form>
+
+            {/* Dynamic Image Preview Drawer */}
+            <AnimatePresence>
+              {imagePreview && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 5, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 5, scale: 0.95 }}
+                  className="flex items-center space-x-3 bg-card border border-border/50 p-2 rounded-2xl shadow-sm w-full sm:w-72"
+                >
+                  <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-border flex-shrink-0">
+                    <img src={imagePreview} className="w-full h-full object-cover" alt="Custom meal preview" />
+                    {uploading && (
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <Loader2 size={14} className="text-white animate-spin" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-black truncate text-foreground">Custom Photo Attached</p>
+                    <p className="text-[10px] text-secondary font-semibold">
+                      {uploading ? "Uploading..." : "Ready to log"}
+                    </p>
+                  </div>
+                  <button 
+                    type="button"
+                    onClick={clearSelectedImage}
+                    className="p-1 px-2.5 rounded-lg text-secondary hover:text-destructive hover:bg-destructive/10 transition-all font-bold text-[10px]"
+                  >
+                    Remove
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Dynamic Log Notifications */}

@@ -1,137 +1,158 @@
 "use client";
 
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth, UserProfileData } from "@/context/AuthContext";
 import { 
   Sparkles, 
   ChevronRight, 
   ChevronLeft, 
   Loader2, 
-  Utensils, 
-  Scale, 
-  ShieldAlert, 
   Check, 
-  Search,
-  X 
+  Scale, 
+  Ruler, 
+  Flame, 
+  ShieldAlert,
+  Bot
 } from "lucide-react";
+
+interface WizardFormInputs {
+  firstName: string;
+  lastName: string;
+  weight: number;
+  height: number;
+  dietaryPreferences: string[];
+  allergies: string[];
+}
+
+const dietOptions = [
+  "Vegetarian", "Vegan", "Keto", "Gluten-Free", "Paleo", "Mediterranean"
+];
+
+const commonAllergies = [
+  "Peanuts", "Tree Nuts", "Milk", "Eggs", "Wheat", "Soy", "Fish", "Shellfish"
+];
 
 export default function OnboardingWizard() {
   const { user, saveProfile } = useAuth();
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  // Profile data state
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState(user?.email || "");
-  const [weight, setWeight] = useState(70);
-  const [height, setHeight] = useState(175);
-  const [kcalGoal, setKcalGoal] = useState(2000);
-  
-  const [dietaryPreferences, setDietaryPreferences] = useState<string[]>([]);
-  const [allergies, setAllergies] = useState<string[]>([]);
-  const [allergyInput, setAllergyInput] = useState("");
-
-  const dietOptions = [
-    "Vegetarian", "Vegan", "Keto", "Gluten-Free", "Paleo", "Mediterranean"
-  ];
-
-  const handleToggleDiet = (diet: string) => {
-    setDietaryPreferences(prev => 
-      prev.includes(diet) ? prev.filter(d => d !== diet) : [...prev, diet]
-    );
-  };
-
-  const handleAddAllergy = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!allergyInput.trim()) return;
-    const clean = allergyInput.trim();
-    if (!allergies.includes(clean)) {
-      setAllergies(prev => [...prev, clean]);
+  const { register, handleSubmit: onSubmitWrapper, watch, setValue, formState: { errors } } = useForm<WizardFormInputs>({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      weight: 70,
+      height: 175,
+      dietaryPreferences: [],
+      allergies: []
     }
-    setAllergyInput("");
-  };
+  });
 
-  const handleRemoveAllergy = (item: string) => {
-    setAllergies(prev => prev.filter(a => a !== item));
-  };
+  // Real-time watchers for dynamic calculation screens
+  const watchedName = watch("firstName");
+  const watchedWeight = watch("weight");
+  const watchedHeight = watch("height");
+  const watchedDiets = watch("dietaryPreferences") || [];
+  const watchedAllergies = watch("allergies") || [];
+
+  // Compute recommended baseline caloric intake dynamically in real-time
+  const computedCalories = Math.round(
+    10 * Number(watchedWeight || 70) + 6.25 * Number(watchedHeight || 175) - 5 * 25 + 5
+  );
 
   const handleNextStep = () => {
-    if (step === 1) {
-      if (!firstName.trim() || !lastName.trim()) {
-        setError("Please enter your first and last name to configure your card.");
-        return;
-      }
-      setError(null);
+    if (step < 3) {
+      setStep(prev => prev + 1);
     }
-    setStep(prev => prev + 1);
   };
 
   const handlePrevStep = () => {
-    setError(null);
-    setStep(prev => prev - 1);
-  };
-
-  const handleSubmit = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      await saveProfile({
-        firstName,
-        lastName,
-        email,
-        weight,
-        height,
-        kcalGoal,
-        dietaryPreferences,
-        allergies,
-        setupComplete: true
-      });
-    } catch (err: any) {
-      setError(err?.message || "Failed to finalize profile ledger. Please try again.");
-    } finally {
-      setLoading(false);
+    if (step > 1) {
+      setStep(prev => prev - 1);
     }
   };
 
-  return (
-    <div className="fixed inset-0 z-[150] flex items-center justify-center bg-[#090f12] text-foreground p-4 overflow-y-auto select-none">
-      
-      {/* Decorative background orbs (toned down) */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/5 blur-[130px] pointer-events-none" />
+  const toggleDiet = (diet: string) => {
+    const current = watchedDiets;
+    if (current.includes(diet)) {
+      setValue("dietaryPreferences", current.filter(d => d !== diet));
+    } else {
+      setValue("dietaryPreferences", [...current, diet]);
+    }
+  };
 
+  const toggleAllergy = (allergy: string) => {
+    const current = watchedAllergies;
+    if (current.includes(allergy)) {
+      setValue("allergies", current.filter(a => a !== allergy));
+    } else {
+      setValue("allergies", [...current, allergy]);
+    }
+  };
+
+  const handleSubmit = onSubmitWrapper(async (data) => {
+    setLoading(true);
+    try {
+      // Formulate final structure for Firestore profile synchronization
+      const finalProfile: Partial<UserProfileData> = {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: user?.email || "",
+        weight: Number(data.weight),
+        height: Number(data.height),
+        kcalGoal: computedCalories,
+        dietaryPreferences: data.dietaryPreferences,
+        allergies: data.allergies,
+        setupComplete: true
+      };
+
+      await saveProfile(finalProfile);
+    } catch (err) {
+      console.error("Failed to commit profile ledger setup: ", err);
+    } finally {
+      setLoading(false);
+    }
+  });
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#090f12] text-foreground p-4 overflow-y-auto">
+      
+      {/* Background decorations */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-accent/5 blur-[120px] pointer-events-none" />
+
+      {/* Wizard Form Frame */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="w-full max-w-2xl bg-[#10191e]/90 border border-border/40 rounded-lg p-6 md:p-8 backdrop-blur-md shadow-lg flex flex-col justify-between min-h-[480px]"
+        className="w-full max-w-2xl bg-[#10191e]/90 border border-border/40 rounded-lg p-6 md:p-8 backdrop-blur-md shadow-xl flex flex-col justify-between min-h-[520px]"
       >
-        {/* Wizard Progress Header */}
+        {/* Progress Bar & Header */}
         <div className="space-y-4">
-          <div className="flex justify-between items-center text-xs font-black uppercase text-secondary tracking-widest">
-            <span className="flex items-center space-x-1.5 text-foreground/80">
-              <Sparkles size={14} className="animate-spin" />
-              <span>Personalizing NutriFresh</span>
-            </span>
-            <span>Step {step} of 3</span>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2 text-foreground/80">
+              <Sparkles size={20} className="fill-current" />
+              <span className="text-sm font-black uppercase tracking-widest">Setup Wizard</span>
+            </div>
+            <span className="text-xs font-black text-secondary">Step {step} of 3</span>
           </div>
 
-          {/* Glowing slider bar */}
           <div className="h-1.5 w-full bg-[#0c1316] rounded-full overflow-hidden border border-border/20">
             <motion.div 
-              className="h-full bg-primary rounded-full"
-              initial={{ width: "33%" }}
-              animate={{ width: step === 1 ? "33%" : step === 2 ? "66%" : "100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="h-full bg-primary" 
+              animate={{ width: `${(step / 3) * 100}%` }}
+              transition={{ type: "spring", stiffness: 200, damping: 25 }}
             />
           </div>
         </div>
 
-        {/* Dynamic Form Contents */}
-        <div className="flex-1 my-8">
+        {/* Dynamic Multi-Step Pages */}
+        <div className="my-8 flex-1 flex flex-col justify-center">
           <AnimatePresence mode="wait">
+            
+            {/* STEP 1: Basic Identity & Biometrics */}
             {step === 1 && (
               <motion.div
                 key="step1"
@@ -140,82 +161,68 @@ export default function OnboardingWizard() {
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-5"
               >
-                <div className="space-y-1">
-                  <h2 className="text-xl font-black flex items-center space-x-2">
-                    <Scale className="text-foreground/80" size={18} />
-                    <span>Identity & Target Biometrics</span>
-                  </h2>
-                  <p className="text-xs text-secondary font-semibold">Let&apos;s calculate your daily caloric limits based on your stats.</p>
+                <div className="text-center md:text-left space-y-1.5">
+                  <h2 className="text-xl font-black">Configure Personal Specs</h2>
+                  <p className="text-xs text-secondary font-semibold">Inputs will be used to calibrate your ideal calorie levels and macro margins.</p>
                 </div>
 
-                {error && (
-                  <div className="p-3 bg-red-500/10 border border-red-500/20 text-red-400 rounded-md text-xs font-bold">
-                    {error}
-                  </div>
-                )}
-
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-[10px] font-black uppercase text-secondary">First Name</label>
                     <input 
                       type="text"
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
-                      placeholder="e.g. John"
+                      {...register("firstName", { required: true })}
+                      placeholder="e.g. Jane"
                       className="w-full bg-[#0c1316] border border-border/50 px-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-sm"
                     />
+                    {errors.firstName && <span className="text-[10px] text-red-400 font-bold flex items-center gap-1"><ShieldAlert size={10}/> First Name is required</span>}
                   </div>
+                  
                   <div className="space-y-1">
                     <label className="text-[10px] font-black uppercase text-secondary">Last Name</label>
                     <input 
                       type="text"
-                      value={lastName}
-                      onChange={(e) => setLastName(e.target.value)}
-                      placeholder="e.g. Smith"
+                      {...register("lastName", { required: true })}
+                      placeholder="e.g. Doe"
                       className="w-full bg-[#0c1316] border border-border/50 px-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-sm"
                     />
+                    {errors.lastName && <span className="text-[10px] text-red-400 font-bold flex items-center gap-1"><ShieldAlert size={10}/> Last Name is required</span>}
                   </div>
-                  <div className="col-span-2 space-y-1">
-                    <label className="text-[10px] font-black uppercase text-secondary">Email Ledger (optional)</label>
-                    <input 
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="e.g. john.smith@gmail.com"
-                      className="w-full bg-[#0c1316] border border-border/50 px-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-sm"
-                    />
-                  </div>
+
                   <div className="space-y-1">
-                    <label className="text-[10px] font-black uppercase text-secondary">Weight (kg)</label>
-                    <input 
-                      type="number"
-                      value={weight}
-                      onChange={(e) => setWeight(Number(e.target.value))}
-                      className="w-full bg-[#0c1316] border border-border/50 px-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-sm"
-                    />
+                    <label className="text-[10px] font-black uppercase text-secondary flex justify-between">
+                      <span>Weight (kg)</span>
+                      <span className="text-primary font-black">{watchedWeight} kg</span>
+                    </label>
+                    <div className="relative flex items-center">
+                      <Scale size={16} className="absolute left-3.5 text-secondary" />
+                      <input 
+                        type="number"
+                        {...register("weight", { required: true, min: 30, max: 250 })}
+                        className="w-full bg-[#0c1316] border border-border/50 pl-11 pr-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-sm"
+                      />
+                    </div>
                   </div>
+
                   <div className="space-y-1">
-                    <label className="text-[10px] font-black uppercase text-secondary">Height (cm)</label>
-                    <input 
-                      type="number"
-                      value={height}
-                      onChange={(e) => setHeight(Number(e.target.value))}
-                      className="w-full bg-[#0c1316] border border-border/50 px-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-sm"
-                    />
-                  </div>
-                  <div className="col-span-2 space-y-1">
-                    <label className="text-[10px] font-black uppercase text-secondary">Target Daily Calories (kcal)</label>
-                    <input 
-                      type="number"
-                      value={kcalGoal}
-                      onChange={(e) => setKcalGoal(Number(e.target.value))}
-                      className="w-full bg-[#0c1316] border border-border/50 px-4 py-3.5 rounded-lg outline-none focus:border-primary transition-all font-black text-sm text-primary"
-                    />
+                    <label className="text-[10px] font-black uppercase text-secondary flex justify-between">
+                      <span>Height (cm)</span>
+                      <span className="text-primary font-black">{watchedHeight} cm</span>
+                    </label>
+                    <div className="relative flex items-center">
+                      <Ruler size={16} className="absolute left-3.5 text-secondary" />
+                      <input 
+                        type="number"
+                        {...register("height", { required: true, min: 100, max: 250 })}
+                        className="w-full bg-[#0c1316] border border-border/50 pl-11 pr-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-sm"
+                      />
+                    </div>
                   </div>
                 </div>
               </motion.div>
             )}
 
+            {/* STEP 2: Dietary Alignment & Exclusions */}
             {step === 2 && (
               <motion.div
                 key="step2"
@@ -224,40 +231,62 @@ export default function OnboardingWizard() {
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-5"
               >
-                <div className="space-y-1">
-                  <h2 className="text-xl font-black flex items-center space-x-2">
-                    <Utensils className="text-foreground/80" size={18} />
-                    <span>Select Dietary Preferences</span>
-                  </h2>
-                  <p className="text-xs text-secondary font-semibold">Align your custom feed options. Select all that apply.</p>
+                <div className="text-center md:text-left space-y-1.5">
+                  <h2 className="text-xl font-black">Preferences & Safety</h2>
+                  <p className="text-xs text-secondary font-semibold">Align recommended recipes to your diets and safely block allergens.</p>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {dietOptions.map((diet) => {
-                    const isSelected = dietaryPreferences.includes(diet);
-                    return (
-                      <button
-                        key={diet}
-                        onClick={() => handleToggleDiet(diet)}
-                        className={`flex items-center space-x-3 p-4 rounded-lg border transition-all cursor-pointer text-left ${
-                          isSelected
-                            ? "border-primary bg-primary/10 text-primary"
-                            : "border-border/50 bg-[#0c1316] hover:border-primary/40"
-                        }`}
-                      >
-                        <div className={`w-4 h-4 rounded border flex items-center justify-center transition-all ${
-                          isSelected ? "bg-primary border-primary" : "border-border/60"
-                        }`}>
-                          {isSelected && <Check size={10} className="text-white" />}
-                        </div>
-                        <span className="font-extrabold text-xs">{diet}</span>
-                      </button>
-                    );
-                  })}
+                <div className="space-y-3">
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-black uppercase text-secondary">Dietary Structures (Select all that apply)</label>
+                    <div className="flex flex-wrap gap-2">
+                      {dietOptions.map(diet => {
+                        const active = watchedDiets.includes(diet);
+                        return (
+                          <button
+                            type="button"
+                            key={diet}
+                            onClick={() => toggleDiet(diet)}
+                            className={`px-4 py-2.5 rounded-lg border font-bold text-xs transition-all cursor-pointer ${
+                              active 
+                                ? "bg-primary border-primary text-white" 
+                                : "bg-[#0c1316] border-border/50 text-secondary hover:text-foreground"
+                            }`}
+                          >
+                            {diet}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-black uppercase text-secondary">Allergies (Block from recommendations)</label>
+                    <div className="flex flex-wrap gap-2">
+                      {commonAllergies.map(allergy => {
+                        const active = watchedAllergies.includes(allergy);
+                        return (
+                          <button
+                            type="button"
+                            key={allergy}
+                            onClick={() => toggleAllergy(allergy)}
+                            className={`px-4 py-2.5 rounded-lg border font-bold text-xs transition-all cursor-pointer ${
+                              active 
+                                ? "bg-red-600/90 border-red-600/90 text-white" 
+                                : "bg-[#0c1316] border-border/50 text-secondary hover:text-foreground"
+                            }`}
+                          >
+                            {allergy}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             )}
 
+            {/* STEP 3: Calorie & Macro Target Computations */}
             {step === 3 && (
               <motion.div
                 key="step3"
@@ -266,73 +295,50 @@ export default function OnboardingWizard() {
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-5"
               >
-                <div className="space-y-1">
-                  <h2 className="text-xl font-black flex items-center space-x-2">
-                    <ShieldAlert className="text-foreground/80" size={18} />
-                    <span>Allergies & Exclusions</span>
-                  </h2>
-                  <p className="text-xs text-secondary font-semibold">Keep things safe. We will filter out elements containing these ingredients.</p>
+                <div className="text-center md:text-left space-y-1.5">
+                  <h2 className="text-xl font-black">Caloric Ledger Calibration</h2>
+                  <p className="text-xs text-secondary font-semibold">Your custom daily balance target computed via metabolic formulas.</p>
                 </div>
 
-                {error && (
-                  <div className="p-3 bg-red-500/10 border border-red-500/20 text-red-400 rounded-md text-xs font-bold">
-                    {error}
+                <div className="bg-[#0c1316] border border-border/40 p-5 rounded-lg flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div className="space-y-1 flex-shrink-0 text-center md:text-left">
+                    <span className="text-[9px] uppercase tracking-widest font-black text-primary bg-primary/10 px-2 py-0.5 rounded">
+                      Metabolic Target
+                    </span>
+                    <h3 className="text-2xl font-black tracking-tight flex items-center justify-center md:justify-start gap-1">
+                      <Flame className="text-accent" size={20} />
+                      <span>{computedCalories} kcal / day</span>
+                    </h3>
+                    <p className="text-[10px] text-secondary font-semibold">Tailored specifically to {watchedName || "your profile"}.</p>
                   </div>
-                )}
 
-                {/* Exclusions Tags */}
-                <div className="flex flex-wrap gap-2 min-h-[40px] bg-[#0c1316] p-3 rounded-lg border border-border/30">
-                  {allergies.length === 0 ? (
-                    <span className="text-[11px] text-secondary font-semibold italic">No allergies added yet. Safe to eat everything!</span>
-                  ) : (
-                    allergies.map((allergy) => (
-                      <div 
-                        key={allergy}
-                        className="flex items-center space-x-1.5 px-3 py-1 bg-primary/5 text-primary border border-primary/20 rounded-md text-xs font-bold"
-                      >
-                        <span>{allergy}</span>
-                        <button 
-                          type="button" 
-                          onClick={() => handleRemoveAllergy(allergy)}
-                          className="hover:text-rose-500 cursor-pointer"
-                        >
-                          <X size={10} />
-                        </button>
-                      </div>
-                    ))
-                  )}
+                  <div className="text-center md:text-right text-xs font-bold text-secondary space-y-1 leading-relaxed">
+                    <p>🎯 Targets automatically compiled.</p>
+                    <p>🍳 Excluded allergen filter active.</p>
+                    <p>📊 Nutrition charts ready in your dashboard.</p>
+                  </div>
                 </div>
 
-                <form onSubmit={handleAddAllergy} className="relative flex items-center gap-2">
-                  <div className="relative flex-1">
-                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-secondary" size={16} />
-                    <input 
-                      type="text" 
-                      value={allergyInput}
-                      onChange={(e) => setAllergyInput(e.target.value)}
-                      placeholder="Add an ingredient to exclude (e.g. Peanuts, Milk)..."
-                      className="w-full bg-[#0c1316] border border-border/50 pl-11 pr-4 py-3 rounded-lg outline-none focus:border-primary transition-all font-semibold text-xs"
-                    />
-                  </div>
-                  <button 
-                    type="submit"
-                    className="px-4 py-3 bg-primary text-white rounded-lg font-bold text-xs hover:bg-primary/95 cursor-pointer"
-                  >
-                    Exclude
-                  </button>
-                </form>
+                <div className="bg-[#10191e] border border-border/30 p-3.5 rounded-lg flex items-center gap-3 text-xs font-semibold text-foreground/80 leading-relaxed">
+                  <Bot size={24} className="text-primary flex-shrink-0" />
+                  <span>Your profile setup is complete! Press &quot;Begin Gourmet Journey&quot; below to launch your workspace.</span>
+                </div>
               </motion.div>
             )}
+
           </AnimatePresence>
         </div>
 
-        {/* Wizard Footer Controls */}
-        <div className="pt-5 border-t border-border/30 flex items-center justify-between">
+        {/* Wizard Footer Navigation */}
+        <div className="pt-4 border-t border-border/30 flex items-center justify-between">
           <button
+            type="button"
             onClick={handlePrevStep}
             disabled={step === 1 || loading}
-            className={`px-4 py-2.5 rounded-md font-bold text-xs flex items-center space-x-1 transition-all cursor-pointer ${
-              step === 1 ? "opacity-35 cursor-not-allowed" : "text-secondary hover:text-foreground"
+            className={`px-4 py-2.5 rounded-md text-xs font-black flex items-center space-x-1 transition-all ${
+              step === 1 || loading 
+                ? "text-secondary/40 cursor-not-allowed" 
+                : "text-secondary hover:text-foreground cursor-pointer"
             }`}
           >
             <ChevronLeft size={16} />
@@ -341,6 +347,7 @@ export default function OnboardingWizard() {
 
           {step < 3 ? (
             <button
+              type="button"
               onClick={handleNextStep}
               className="px-5 py-2.5 bg-[#0c1316] hover:bg-[#0c1316]/85 border border-border/40 text-foreground rounded-md font-bold text-xs flex items-center space-x-1 transition-all cursor-pointer"
             >
@@ -349,6 +356,7 @@ export default function OnboardingWizard() {
             </button>
           ) : (
             <button
+              type="button"
               onClick={handleSubmit}
               disabled={loading}
               className="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md font-black text-xs flex items-center space-x-2 transition-all cursor-pointer shadow-sm hover:scale-[1.01]"
@@ -362,7 +370,6 @@ export default function OnboardingWizard() {
             </button>
           )}
         </div>
-
       </motion.div>
     </div>
   );
