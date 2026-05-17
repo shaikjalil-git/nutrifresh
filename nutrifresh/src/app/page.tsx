@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Heart, Clock, ChefHat, Flame, Sparkles, TrendingUp, Filter } from "lucide-react";
 import { recipes, userProfile, userProgress } from "@/lib/data";
 import NextLink from "next/link";
@@ -16,6 +16,10 @@ export default function FeedPage() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [savedRecipes, setSavedRecipes] = useState<string[]>([]);
   const [waterCups, setWaterCups] = useState(4);
+
+  const { scrollY } = useScroll();
+  const yParallax = useTransform(scrollY, [0, 300], [0, 40]);
+  const opacityParallax = useTransform(scrollY, [0, 300], [1, 0.7]);
 
   // Fallback properties
   const displayName = profile?.firstName || userProfile.firstName;
@@ -45,7 +49,10 @@ export default function FeedPage() {
       <div className="space-y-10">
         
         {/* Greeting Header & Personalization Banner */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <motion.div 
+          style={{ y: yParallax, opacity: opacityParallax }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+        >
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -122,7 +129,7 @@ export default function FeedPage() {
               </div>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Filter Pill Row with sliding background indicator */}
         <div className="space-y-4">

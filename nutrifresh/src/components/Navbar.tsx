@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Bell, Home, BookOpen, Activity, User, X, Check, Apple } from "lucide-react";
+import { Search, Bell, Home, BookOpen, Activity, User, X, Check, Apple, Palette } from "lucide-react";
 
 const navLinks = [
   { name: "Feed", href: "/", icon: Home },
@@ -18,6 +18,30 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [themeMenuOpen, setThemeMenuOpen] = useState(false);
+  const [activeTheme, setActiveTheme] = useState("theme-cream");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("nutrifresh_theme") || "theme-cream";
+      setActiveTheme(stored);
+    }
+  }, []);
+
+  const handleSelectTheme = (themeId: string) => {
+    setActiveTheme(themeId);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("nutrifresh_theme", themeId);
+      window.dispatchEvent(new CustomEvent("themechange", { detail: themeId }));
+    }
+    setThemeMenuOpen(false);
+  };
+
+  const themes = [
+    { id: "theme-cream", name: "Cream Forest", preview: "bg-[#F2F2EE] border-[#1A6B45]" },
+    { id: "theme-obsidian", name: "Obsidian Dark", preview: "bg-[#090E11] border-[#10B981]" },
+    { id: "theme-royal", name: "Royal Navy", preview: "bg-[#0F172A] border-[#3B82F6]" },
+  ];
 
   const mockNotifications = [
     { id: 1, text: "Your daily protein goal is 70% complete! 💪", time: "2h ago", unread: true },
@@ -87,6 +111,57 @@ export default function Navbar() {
             <Bell size={18} />
             <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-accent rounded-full border border-card animate-pulse" />
           </motion.button>
+
+          {/* Theme Palette Button */}
+          <div className="relative">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setThemeMenuOpen(!themeMenuOpen)}
+              className="p-2.5 rounded-full bg-background hover:bg-primary/5 hover:text-primary border border-border/40 transition-colors cursor-pointer flex items-center justify-center text-foreground"
+            >
+              <Palette size={18} />
+            </motion.button>
+
+            <AnimatePresence>
+              {themeMenuOpen && (
+                <>
+                  <div className="fixed inset-0 z-40 bg-transparent" onClick={() => setThemeMenuOpen(false)} />
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute right-0 top-12 z-50 w-52 bg-card border border-border/60 rounded-2xl shadow-xl p-3.5 space-y-2.5"
+                  >
+                    <p className="text-[10px] font-black uppercase tracking-wider text-secondary border-b border-border/40 pb-1.5 px-1.5">
+                      Select Theme
+                    </p>
+                    <div className="space-y-1">
+                      {themes.map((t) => {
+                        const isSelected = activeTheme === t.id;
+                        return (
+                          <button
+                            key={t.id}
+                            onClick={() => handleSelectTheme(t.id)}
+                            className={`w-full flex items-center justify-between p-2.5 rounded-xl text-xs font-bold transition-all border cursor-pointer ${
+                              isSelected
+                                ? "bg-primary/10 border-primary/20 text-primary"
+                                : "bg-transparent border-transparent hover:bg-background text-foreground"
+                            }`}
+                          >
+                            <div className="flex items-center space-x-2.5">
+                              <span className={`w-3.5 h-3.5 rounded-full border ${t.preview}`} />
+                              <span>{t.name}</span>
+                            </div>
+                            {isSelected && <Check size={12} className="text-primary" />}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* Profile Quick Link */}
           <Link href="/profile" className="hidden md:block w-9 h-9 rounded-full overflow-hidden border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm">
