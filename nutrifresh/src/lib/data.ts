@@ -431,9 +431,9 @@ export const userProgress = {
 };
 
 export const userProfile = {
-  firstName: "Jane",
-  lastName: "Doe",
-  email: "jane.doe@example.com",
+  firstName: "UNKNOWN",
+  lastName: "",
+  email: "",
   dietaryPreferences: ["Vegan", "Gluten-Free"],
   allergies: ["Peanuts", "Shellfish"]
 };

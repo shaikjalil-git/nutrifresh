@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
+import SurveyModal from "@/components/SurveyModal";
 
 export default function AppContentLayout({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState("theme-cream");
@@ -32,6 +33,7 @@ export default function AppContentLayout({ children }: { children: React.ReactNo
   return (
     <>
       <Navbar />
+      <SurveyModal />
       <main className="flex-1 w-full max-w-7xl mx-auto px-6 md:px-12 py-8 pb-24 md:pb-8">
         {children}
       </main>
