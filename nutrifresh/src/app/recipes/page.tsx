@@ -7,10 +7,6 @@ import NextLink from "next/link";
 import { Clock, Heart, ChefHat, Loader2, AlertCircle, Search, Filter, Sparkles, Flame, X, CheckCircle, Award, ListPlus } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 
-// Live Firebase AI / Gemini SDK imports
-import { app } from "@/lib/firebase";
-import { getAI, getGenerativeModel, GoogleAIBackend } from "firebase/ai";
-
 const availableFilters = ["All", "Vegan", "Gluten-Free", "High Protein", "Keto", "Quick & Easy", "Breakfast"];
 
 export default function RecipesPage() {
@@ -69,48 +65,6 @@ export default function RecipesPage() {
 
     try {
       let recipeJson: any = null;
-      
-      // Initialize Firebase Generative AI
-      if (typeof window !== "undefined" && app) {
-        try {
-          const aiInstance = getAI(app, { backend: new GoogleAIBackend() });
-          const modelInstance = getGenerativeModel(aiInstance, { model: "gemini-3-flash-preview" });
-          
-          const prompt = `Act as an elite Michelin star culinary chef. Create a premium healthy recipe based on these inputs:
-          - Ingredients in kitchen: ${aiIngredients}
-          - Dietary limitation: ${aiDiet}
-          - Target prep time: ${aiTime}
-          - Desired culinary style: ${aiStyle}
-
-          You MUST respond ONLY with a single valid JSON block matching this EXACT format. Do not write any markdown code blocks, do not add prefixes or suffixes, just the raw JSON text:
-          {
-            "name": "Appetizing Recipe Title",
-            "description": "Appetizing 1-2 sentence description",
-            "kcal": 380,
-            "prepTime": "15 mins",
-            "cookTime": "10 mins",
-            "difficulty": "Easy",
-            "servings": 2,
-            "macros": {
-              "protein": "26g",
-              "carbs": "14g",
-              "fat": "18g"
-            },
-            "tags": ["Tag1", "Tag2"],
-            "ingredients": ["ingredient A", "ingredient B"],
-            "instructions": ["Step 1", "Step 2"]
-          }`;
-
-          const result = await modelInstance.generateContent(prompt);
-          const resultText = result.response.text();
-          
-          // Clean the generated text in case markdown wrapper wraps it
-          const cleanedText = resultText.replace(/```json/gi, "").replace(/```/g, "").trim();
-          recipeJson = JSON.parse(cleanedText);
-        } catch (sdkError) {
-          console.warn("Direct Firebase AI SDK call failed, falling back to smart local culinary builder:", sdkError);
-        }
-      }
 
       // If SDK didn't return a parsed recipe, execute high-fidelity intelligent local generation
       if (!recipeJson) {

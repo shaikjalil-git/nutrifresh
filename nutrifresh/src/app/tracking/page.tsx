@@ -7,10 +7,8 @@ import { userProgress } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
 import { useState, useEffect } from "react";
 
-// Firebase integration imports
-import { db, storage } from "@/lib/firebase";
-import { collection, addDoc, getDocs } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+// Local storage keys
+const STORAGE_KEY = "nutrifresh_meals";
 
 // Weekly Mock Data for interactive progress bars
 const weeklyData = [
@@ -52,30 +50,23 @@ export default function TrackingPage() {
     setImagePreview(null);
   };
 
-  // Fetch meals from Firestore on mount for true full-stack persistence
+  // Fetch meals from local storage on mount
   useEffect(() => {
-    const fetchMeals = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "meals"));
-        const meals: any[] = [];
-        let totalKcal = 0;
-        querySnapshot.forEach((doc) => {
-          const data = doc.data();
-          meals.push({ id: doc.id, ...data });
-          totalKcal += data.kcal || 0;
-        });
-
-        if (meals.length > 0) {
-          // Sort by newest first
-          meals.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-          setRecentMealsList(meals);
-          setKcalEaten(totalKcal);
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try {
+          const meals = JSON.parse(stored);
+          if (meals && meals.length > 0) {
+            setRecentMealsList(meals);
+            const total = meals.reduce((sum: number, m: any) => sum + (m.kcal || 0), 0);
+            setKcalEaten(total);
+          }
+        } catch (e) {
+          console.error("Local load meals error: ", e);
         }
-      } catch (err) {
-        console.error("Firestore Fetch Error: ", err);
       }
-    };
-    fetchMeals();
+    }
   }, []);
 
   // Parse smart logs (e.g. typing "1 bowl of oatmeal" or just adding a numeric calorie)
@@ -102,23 +93,11 @@ export default function TrackingPage() {
       cal = 550;
     }
 
-    let imageUrl = "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=10&w=100";
+    // Since we don't use Firebase, preview URL is directly used
+    const imageUrl = imagePreview || "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=10&w=100";
 
-    // Upload selected custom image to Firebase Storage
-    if (selectedImage) {
-      setUploading(true);
-      try {
-        const storageRef = ref(storage, `meals/${Date.now()}_${selectedImage.name}`);
-        const snapshot = await uploadBytes(storageRef, selectedImage);
-        imageUrl = await getDownloadURL(snapshot.ref);
-      } catch (err) {
-        console.error("Firebase Storage Upload Error: ", err);
-      } finally {
-        setUploading(false);
-      }
-    }
-
-    const mealData = {
+    const newMeal = {
+      id: "m_" + Date.now(),
       name: mealName.charAt(0).toUpperCase() + mealName.slice(1),
       type: "Logged",
       kcal: cal,
@@ -126,18 +105,12 @@ export default function TrackingPage() {
       createdAt: new Date().toISOString()
     };
 
-    // Save to Firestore
-    try {
-      const docRef = await addDoc(collection(db, "meals"), mealData);
-      const newMeal = { id: docRef.id, ...mealData };
-      setRecentMealsList(prev => [newMeal, ...prev]);
-      setKcalEaten(prev => prev + cal);
-    } catch (err) {
-      console.error("Firestore Add Error: ", err);
-      // Local fallback in case of Firestore error/offline
-      const newMeal = { id: "m_" + Date.now(), ...mealData };
-      setRecentMealsList(prev => [newMeal, ...prev]);
-      setKcalEaten(prev => prev + cal);
+    const updatedList = [newMeal, ...recentMealsList];
+    setRecentMealsList(updatedList);
+    setKcalEaten(prev => prev + cal);
+
+    if (typeof window !== "undefined") {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedList));
     }
 
     setSmartInput("");
