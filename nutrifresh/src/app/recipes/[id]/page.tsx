@@ -106,33 +106,30 @@ export default function RecipeDetailPage() {
           <p className="text-secondary text-base md:text-lg font-semibold max-w-3xl leading-relaxed">{recipe.description}</p>
         </div>
 
-        {/* Fully Responsive Image Grid */}
-        {/* On mobile, it shows a neat hero image, on tablet/desktop it expands to a gorgeous 5-column collage */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 h-[250px] sm:h-[350px] md:h-[450px] w-full">
-          <div className="col-span-1 md:col-span-3 h-full rounded-3xl overflow-hidden shadow-sm border border-border/40 relative">
+        {/* Fully Responsive Image Collage (Flex layout for absolute layout stability) */}
+        <div className="flex flex-col md:flex-row gap-4 h-[250px] sm:h-[350px] md:h-[450px] w-full overflow-hidden rounded-3xl">
+          {/* Main Hero Image */}
+          <div className="w-full md:w-[60%] h-full rounded-3xl overflow-hidden shadow-sm border border-border/40 relative">
             <img src={recipe.image} className="w-full h-full object-cover" alt={recipe.name} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
           
-          <div className="hidden md:col-span-2 md:grid grid-rows-2 gap-4 h-full">
-            {recipe.sideImages?.map((img, idx) => (
-              <div key={idx} className="rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card h-full">
-                <img src={img} className="w-full h-full object-cover" alt={`${recipe.name} side angle ${idx + 1}`} />
-              </div>
-            )) || [
+          {/* Side Images */}
+          <div className="hidden md:flex md:w-[40%] flex-col gap-4 h-full">
+            {(recipe.sideImages && recipe.sideImages.length > 0 ? recipe.sideImages : [
               "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400",
               "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=400"
-            ].map((img, idx) => (
-              <div key={idx} className="rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card h-full">
-                <img src={img} className="w-full h-full object-cover" alt="Complementary view" />
+            ]).map((img, idx) => (
+              <div key={idx} className="flex-1 rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card">
+                <img src={img} className="w-full h-full object-cover" alt={`${recipe.name} side angle ${idx + 1}`} />
               </div>
             ))}
           </div>
         </div>
 
         {/* Structured Spec Bar (Highly responsive layout) */}
-        <div className="bg-card border border-border/50 rounded-2.5xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 shadow-sm hover:border-primary/10 transition-all duration-300">
-          <div className="flex items-center space-x-3.5 border-r border-border/30 last:border-0 pr-4">
+        <div className="bg-card border border-border/50 rounded-3xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 shadow-sm hover:border-primary/10 transition-all duration-300">
+          <div className="flex items-center space-x-3.5 md:border-r border-border/30 md:last:border-0 pr-4">
             <div className="p-2.5 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
               <Clock size={20} />
             </div>
@@ -141,7 +138,7 @@ export default function RecipeDetailPage() {
               <p className="font-extrabold text-sm sm:text-base text-foreground">{recipe.prepTime || "15m"}</p>
             </div>
           </div>
-          <div className="flex items-center space-x-3.5 border-r border-border/30 last:border-0 pr-4">
+          <div className="flex items-center space-x-3.5 md:border-r border-border/30 md:last:border-0 pr-4">
             <div className="p-2.5 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
               <Clock size={20} />
             </div>
@@ -150,7 +147,7 @@ export default function RecipeDetailPage() {
               <p className="font-extrabold text-sm sm:text-base text-foreground">{recipe.cookTime || "25m"}</p>
             </div>
           </div>
-          <div className="flex items-center space-x-3.5 border-r border-border/30 last:border-0 pr-4">
+          <div className="flex items-center space-x-3.5 md:border-r border-border/30 md:last:border-0 pr-4">
             <div className="p-2.5 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
               <Users size={20} />
             </div>
@@ -159,7 +156,7 @@ export default function RecipeDetailPage() {
               <p className="font-extrabold text-sm sm:text-base text-foreground">{recipe.serves || 2} Persons</p>
             </div>
           </div>
-          <div className="flex items-center space-x-3.5 border-r border-border/30 last:border-0 pr-4">
+          <div className="flex items-center space-x-3.5 pr-4">
             <div className="p-2.5 bg-primary/10 text-primary rounded-2xl flex-shrink-0">
               <Flame size={20} />
             </div>

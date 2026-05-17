@@ -42,30 +42,115 @@ export const recipes = [
     name: "Avocado Toast & Eggs",
     description: "Classic healthy breakfast with sourdough, creamy avocado, and poached eggs.",
     image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+    sideImages: [
+      "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+      "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&q=80&w=400"
+    ],
     kcal: 420,
-    time: "10m",
+    prepTime: "5m",
+    cookTime: "5m",
+    serves: 1,
     difficulty: "Easy",
-    tags: ["Quick & Easy", "Vegetarian"]
+    tags: ["Quick & Easy", "Vegetarian", "High Protein"],
+    ingredients: [
+      { category: "BASE", items: ["2 slices Sourdough Bread", "1 ripe Avocado", "1/2 tsp Lemon Juice", "Pinch of Red Pepper Flakes", "Salt and Pepper"] },
+      { category: "EGGS", items: ["2 large Eggs", "1 tsp Vinegar", "Water for poaching"] }
+    ],
+    nutrition: {
+      perServing: "1 Plate",
+      calories: 420,
+      protein: 18,
+      carbs: 32,
+      fat: 24,
+      vitamins: [
+        { name: "Vitamin E", value: "20% DV" },
+        { name: "Folate", value: "30% DV" },
+        { name: "Dietary Fiber", value: "8g" }
+      ]
+    },
+    instructions: [
+      { step: 1, title: "Toast & Prep Avocado", description: "Toast the sourdough bread slices to your desired crispness. In a small bowl, mash the avocado with lemon juice, salt, pepper, and red pepper flakes." },
+      { step: 2, title: "Poach the Eggs", description: "Bring a pot of water to a gentle simmer. Add a splash of vinegar. Swirl the water to create a whirlpool, slide in the eggs one by one, and poach for 3 minutes." },
+      { step: 3, title: "Spread Avocado", description: "Spread the mashed avocado mixture evenly over both slices of toasted sourdough." },
+      { step: 4, title: "Assemble and Serve", description: "Carefully place the poached eggs on top of the avocado toast. Season with fresh ground pepper and microgreens if desired. Serve warm." }
+    ]
   },
   {
     id: "3",
     name: "Grilled Chicken Salad",
     description: "Fresh mediterranean style salad with lean grilled chicken breast.",
     image: "https://images.unsplash.com/photo-1546069901-eacef0df6022?auto=format&fit=crop&q=80&w=800",
+    sideImages: [
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400",
+      "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=400"
+    ],
     kcal: 380,
-    time: "20m",
+    prepTime: "10m",
+    cookTime: "15m",
+    serves: 2,
     difficulty: "Medium",
-    tags: ["High Protein", "Keto"]
+    tags: ["High Protein", "Keto", "Low Carb"],
+    ingredients: [
+      { category: "CHICKEN", items: ["2 Chicken Breasts (boneless)", "1 tbsp Olive Oil", "1 tsp Dried Oregano", "1 clove Garlic, minced", "Salt and Pepper"] },
+      { category: "SALAD BASE", items: ["4 cups Romaine Lettuce, chopped", "1 cup Cherry Tomatoes, halved", "1 Cucumber, sliced", "1/4 cup Kalamata Olives", "1/4 cup Feta Cheese"] },
+      { category: "DRESSING", items: ["3 tbsp Olive Oil", "1 tbsp Red Wine Vinegar", "1 tsp Dijon Mustard", "Salt and Pepper"] }
+    ],
+    nutrition: {
+      perServing: "1 Large Bowl",
+      calories: 380,
+      protein: 38,
+      carbs: 8,
+      fat: 22,
+      vitamins: [
+        { name: "Vitamin A", value: "85% DV" },
+        { name: "Vitamin C", value: "45% DV" },
+        { name: "Iron", value: "15% DV" }
+      ]
+    },
+    instructions: [
+      { step: 1, title: "Marinate Chicken", description: "Toss the chicken breasts with olive oil, minced garlic, oregano, salt, and pepper in a bowl. Let sit for 10 minutes." },
+      { step: 2, title: "Grill Chicken", description: "Heat a grill pan or outdoor grill to medium-high. Grill chicken for 6-7 minutes per side until the internal temperature reaches 165°F (74°C)." },
+      { step: 3, title: "Prepare Vegetables", description: "Chop the romaine lettuce, halve the cherry tomatoes, slice the cucumber, and place them in a large salad bowl." },
+      { step: 4, title: "Dress and Toss", description: "Whisk dressing ingredients. Slice the grilled chicken, place on top of the greens, sprinkle feta and olives, drizzle with dressing, and toss." }
+    ]
   },
   {
     id: "4",
     name: "Berry Protein Smoothie",
     description: "Refreshing antioxidant-rich smoothie with whey protein.",
     image: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=800",
+    sideImages: [
+      "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+      "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+    ],
     kcal: 290,
-    time: "5m",
+    prepTime: "5m",
+    cookTime: "0m",
+    serves: 1,
     difficulty: "Easy",
-    tags: ["Quick & Easy", "Vegetarian"]
+    tags: ["Quick & Easy", "Vegetarian", "High Protein"],
+    ingredients: [
+      { category: "SMOOTHIE BASE", items: ["1 scoop Whey Protein Powder (Vanilla)", "1/2 cup Frozen Blueberries", "1/2 cup Frozen Strawberries", "1 cup Unsweetened Almond Milk", "1/2 cup Greek Yogurt"] },
+      { category: "OPTIONAL BOOST", items: ["1 tbsp Chia Seeds", "1 tsp Honey (optional)"] }
+    ],
+    nutrition: {
+      perServing: "1 Large Glass",
+      calories: 290,
+      protein: 26,
+      carbs: 28,
+      fat: 6,
+      vitamins: [
+        { name: "Calcium", value: "35% DV" },
+        { name: "Vitamin C", value: "70% DV" },
+        { name: "Antioxidants", value: "Very High" }
+      ]
+    },
+    instructions: [
+      { step: 1, title: "Add Liquids First", description: "Pour the almond milk into the blender first to prevent the protein powder from sticking to the bottom." },
+      { step: 2, title: "Add Proteins & Base", description: "Add the vanilla protein powder and greek yogurt to the blender." },
+      { step: 3, title: "Add Berries & Seeds", description: "Add the frozen strawberries, blueberries, chia seeds, and optional honey to the mix." },
+      { step: 4, title: "Blend and Serve", description: "Blend on high speed for 45-60 seconds until perfectly smooth and creamy. Pour into a tall glass and enjoy immediately." }
+    ]
   },
   {
     id: "5",
