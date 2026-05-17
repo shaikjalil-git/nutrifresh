@@ -109,21 +109,21 @@ export default function RecipeDetailPage() {
         {/* Fully Responsive Image Grid */}
         {/* On mobile, it shows a neat hero image, on tablet/desktop it expands to a gorgeous 5-column collage */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 h-[250px] sm:h-[350px] md:h-[450px] w-full">
-          <div className="col-span-1 md:col-span-3 rounded-3xl overflow-hidden shadow-sm border border-border/40 relative">
+          <div className="col-span-1 md:col-span-3 h-full rounded-3xl overflow-hidden shadow-sm border border-border/40 relative">
             <img src={recipe.image} className="w-full h-full object-cover" alt={recipe.name} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
           
-          <div className="hidden md:col-span-2 md:grid grid-rows-2 gap-4">
+          <div className="hidden md:col-span-2 md:grid grid-rows-2 gap-4 h-full">
             {recipe.sideImages?.map((img, idx) => (
-              <div key={idx} className="rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card">
+              <div key={idx} className="rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card h-full">
                 <img src={img} className="w-full h-full object-cover" alt={`${recipe.name} side angle ${idx + 1}`} />
               </div>
             )) || [
               "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400",
               "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=400"
             ].map((img, idx) => (
-              <div key={idx} className="rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card">
+              <div key={idx} className="rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card h-full">
                 <img src={img} className="w-full h-full object-cover" alt="Complementary view" />
               </div>
             ))}
