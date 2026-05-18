@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from "framer-motion";
 import { Plus, MoreHorizontal, ExternalLink, ChefHat, GlassWater, Trophy, Dumbbell, Sparkles, Camera, Loader2, Trash2, Coffee, CupSoda, Milk, Droplet, RotateCcw, ListPlus, Info, Image } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import PageTransition from "@/components/PageTransition";
@@ -153,6 +153,10 @@ export default function TrackingPage() {
   const [smartInput, setSmartInput] = useState("");
   const [showLogEffect, setShowLogEffect] = useState(false);
 
+  const { scrollY } = useScroll();
+  const yParallax = useTransform(scrollY, [0, 400], [0, 60]);
+  const opacityParallax = useTransform(scrollY, [0, 300], [1, 0.4]);
+
   // Tab control: "ai" (Smart Log) or "manual" (Direct Input Form)
   const [activeLogMode, setActiveLogMode] = useState<"ai" | "manual">("ai");
 
@@ -282,7 +286,10 @@ export default function TrackingPage() {
       <div className="space-y-10 pb-24">
         
         {/* Header Block */}
-        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6">
+        <motion.div 
+          style={{ y: yParallax, opacity: opacityParallax }}
+          className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6"
+        >
           <div className="space-y-1">
             <h1 className="text-3xl md:text-4xl font-black tracking-tight">Daily Nutrition Desk</h1>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -569,7 +576,7 @@ export default function TrackingPage() {
               )}
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
 
         {/* Dynamic Log Notifications */}
         <AnimatePresence>
@@ -609,7 +616,7 @@ export default function TrackingPage() {
                     startAngle={90}
                     endAngle={450}
                   >
-                    <Cell fill="#1A6B45" stroke="none" />
+                    <Cell fill="var(--primary)" stroke="none" />
                     <Cell fill="var(--border)" stroke="none" />
                   </Pie>
                 </PieChart>
@@ -682,9 +689,10 @@ export default function TrackingPage() {
               return (
                 <motion.div 
                   key={key}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   className="bg-card p-5 rounded-2.5xl border border-border/50 shadow-sm space-y-3 hover:border-primary/20 transition-all duration-300"
                 >
                   <div className="flex justify-between items-center capitalize">
@@ -740,8 +748,9 @@ export default function TrackingPage() {
                       {/* Active Fill Bar */}
                       <motion.div 
                         initial={{ height: 0 }}
-                        animate={{ height: `${ratio}%` }}
-                        transition={{ delay: index * 0.05, duration: 0.8 }}
+                        whileInView={{ height: `${ratio}%` }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05, duration: 0.8, ease: "easeOut" }}
                         className={`w-4 sm:w-6 rounded-full relative z-0 ${
                           d.kcal === 0 
                             ? "bg-transparent" 
@@ -886,8 +895,10 @@ export default function TrackingPage() {
               {recentMealsList.map((meal) => (
                 <motion.div 
                   key={meal.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 25, scale: 0.98 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-30px" }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   exit={{ opacity: 0, x: -10 }}
                   whileHover={{ scale: 1.008 }}
                   className="bg-card p-4 rounded-2xl border border-border/50 shadow-sm flex items-center justify-between group hover:border-primary/20 transition-all duration-300"

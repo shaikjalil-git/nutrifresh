@@ -1,33 +1,23 @@
 @import "tailwindcss";
 
-:root, .theme-cream {
-  --background: #F2F2EE;
-  --foreground: #111111;
-  --primary: #1A6B45;
-  --secondary: #6B7280;
-  --border: #E2E8F0;
+:root, .theme-light, .theme-cream {
+  --background: #F7F9F6;
+  --foreground: #0F1711;
+  --primary: #15803D;
+  --secondary: #5F7365;
+  --border: #E1E8E3;
   --card: #FFFFFF;
-  --accent: #F97316;
+  --accent: #D97706;
 }
 
-.theme-obsidian {
-  --background: #090E11;
-  --foreground: #F3F4F6;
+.theme-dark, .theme-obsidian, .theme-royal {
+  --background: #080C09;
+  --foreground: #ECF2EE;
   --primary: #10B981;
-  --secondary: #9CA3AF;
-  --border: #1F2937;
-  --card: #111827;
+  --secondary: #93A89A;
+  --border: #16221A;
+  --card: #0E1410;
   --accent: #F59E0B;
-}
-
-.theme-royal {
-  --background: #0F172A;
-  --foreground: #F8FAFC;
-  --primary: #3B82F6;
-  --secondary: #94A3B8;
-  --border: #334155;
-  --card: #1E293B;
-  --accent: #EC4899;
 }
 
 @theme inline {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { 
   Heart, 
   Clock, 
@@ -16,6 +16,7 @@ import {
 import { recipes } from "@/lib/data";
 import { useState } from "react";
 import PageTransition from "@/components/PageTransition";
+import ParallaxImage from "@/components/ParallaxImage";
 
 interface InstructionStep {
   step: number;
@@ -28,6 +29,42 @@ interface Micronutrient {
   value: string;
 }
 
+const getStepIngredients = (description: string, categories: { category: string; items: string[] }[]) => {
+  if (!categories) return [];
+  const words = description.toLowerCase().split(/\s+/);
+  const found: string[] = [];
+  
+  // Clean up punctuation from description words
+  const cleanWords = words.map(w => w.replace(/[.,;:()]/g, ""));
+
+  categories.forEach(categoryObj => {
+    categoryObj.items.forEach(item => {
+      const itemLower = item.toLowerCase();
+      // Remove common measurement/modifier words to extract the core ingredient names
+      const stopwords = new Set([
+        "tbsp", "tsp", "cup", "cups", "large", "sliced", "cubed", "rinsed", 
+        "divided", "cloves", "minced", "boneless", "can", "fresh", "ripe", 
+        "pinch", "organic", "cooked", "frozen", "plain", "unsweetened", 
+        "scoop", "thick", "of", "and", "or", "for", "with", "freshly", 
+        "cracked", "coarse", "to", "taste", "about", "small", "medium", 
+        "half", "slices", "leaves", "flakes", "breast", "breasts", "fillets",
+        "fillet", "peeled", "diced", "chopped", "finely"
+      ]);
+      
+      const itemWords = itemLower.split(/[\s,]+/);
+      const isMatch = itemWords.some(word => {
+        if (word.length <= 2 || stopwords.has(word) || /^\d+$/.test(word)) return false;
+        return cleanWords.some(descWord => descWord.includes(word) || word.includes(descWord));
+      });
+
+      if (isMatch && !found.includes(item)) {
+        found.push(item);
+      }
+    });
+  });
+  return found;
+};
+
 export default function RecipeDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -36,6 +73,8 @@ export default function RecipeDetailPage() {
   const [checkedIngredients, setCheckedIngredients] = useState<string[]>([]);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
   const [isSaved, setIsSaved] = useState(false);
+
+  // States
 
   const toggleIngredient = (ingredient: string) => {
     setCheckedIngredients(prev => 
@@ -106,24 +145,35 @@ export default function RecipeDetailPage() {
           <p className="text-secondary text-base md:text-lg font-semibold max-w-3xl leading-relaxed">{recipe.description}</p>
         </div>
 
-        {/* Fully Responsive Image Collage (Flex layout for absolute layout stability) */}
+        {/* Fully Responsive Image Collage with Linear Parallax Speeds (Design Principle: Rich Aesthetics) */}
         <div className="flex flex-col md:flex-row gap-4 h-[250px] sm:h-[350px] md:h-[450px] w-full overflow-hidden rounded-3xl">
           {/* Main Hero Image */}
-          <div className="w-full md:w-[60%] h-full rounded-3xl overflow-hidden shadow-sm border border-border/40 relative">
-            <img src={recipe.image} className="w-full h-full object-cover" alt={recipe.name} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-          </div>
+          <ParallaxImage 
+            src={recipe.image}
+            alt={recipe.name}
+            speed={18}
+            containerClassName="w-full md:w-[60%] h-full rounded-3xl shadow-sm border border-border/40"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+          </ParallaxImage>
           
           {/* Side Images */}
           <div className="hidden md:flex md:w-[40%] flex-col gap-4 h-full">
             {(recipe.sideImages && recipe.sideImages.length > 0 ? recipe.sideImages : [
               "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400",
               "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=400"
-            ]).map((img, idx) => (
-              <div key={idx} className="flex-1 rounded-3xl overflow-hidden shadow-sm border border-border/40 bg-card">
-                <img src={img} className="w-full h-full object-cover" alt={`${recipe.name} side angle ${idx + 1}`} />
-              </div>
-            ))}
+            ]).map((img, idx) => {
+              const speed = idx === 0 ? 12 : 24;
+              return (
+                <ParallaxImage 
+                  key={idx}
+                  src={img}
+                  alt={`${recipe.name} side angle ${idx + 1}`}
+                  speed={speed}
+                  containerClassName="flex-1 rounded-3xl shadow-sm border border-border/40"
+                />
+              );
+            })}
           </div>
         </div>
 
@@ -254,6 +304,7 @@ export default function RecipeDetailPage() {
               <div className="space-y-6 pt-2">
                 {recipe.instructions?.map((step: InstructionStep, idx: number) => {
                   const isDone = completedSteps.includes(step.step);
+                  const stepIngredients = getStepIngredients(step.description, recipe.ingredients || []);
                   return (
                     <motion.div 
                       key={idx} 
@@ -281,6 +332,24 @@ export default function RecipeDetailPage() {
                         <p className={`text-xs sm:text-sm font-semibold leading-relaxed transition-all duration-300 ${isDone ? 'text-secondary/70' : 'text-secondary'}`}>
                           {step.description}
                         </p>
+                        
+                        {/* Auto-extracted Step Ingredients with Quantities */}
+                        {stepIngredients.length > 0 && (
+                          <div className="flex flex-wrap gap-1.5 pt-2">
+                            {stepIngredients.map((ing, i) => (
+                              <span 
+                                key={i} 
+                                className={`text-[10px] font-bold px-2.5 py-0.5 rounded-lg border transition-all ${
+                                  isDone 
+                                    ? "bg-secondary/5 border-secondary/10 text-secondary/60" 
+                                    : "bg-primary/5 border-primary/10 text-primary"
+                                }`}
+                              >
+                                {ing}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   );

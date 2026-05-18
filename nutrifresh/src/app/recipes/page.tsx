@@ -1,16 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from "framer-motion";
 import { recipes } from "@/lib/data";
 import NextLink from "next/link";
 import { Clock, Heart, ChefHat, Loader2, AlertCircle, Search, Filter, Sparkles, Flame, X, CheckCircle, Award, ListPlus } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
+import ParallaxImage from "@/components/ParallaxImage";
 
 const availableFilters = ["All", "Vegan", "Gluten-Free", "High Protein", "Keto", "Quick & Easy", "Breakfast"];
 
 export default function RecipesPage() {
   const [activeRecipesList, setActiveRecipesList] = useState<any[]>(recipes);
+  
+  const { scrollY } = useScroll();
+  const cardsParallax = useTransform(scrollY, [0, 1500], ["0%", "15%"]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [savedRecipes, setSavedRecipes] = useState<string[]>([]);
@@ -293,21 +297,22 @@ export default function RecipesPage() {
                     <motion.div
                       layout
                       key={recipe.id}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ delay: index * 0.03 }}
+                      initial={{ opacity: 0, y: 50, scale: 0.92 }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                      viewport={{ once: true, margin: "-40px" }}
+                      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                       className="group"
                     >
                       <NextLink href={`/recipes/${recipe.id}`} className="block h-full">
                         <div className="bg-card rounded-2.5xl overflow-hidden shadow-sm border border-border/50 hover:shadow-lg transition-all duration-300 h-full flex flex-col group-hover:scale-[1.015]">
-                          <div className="relative h-48 w-full overflow-hidden">
-                            <img 
-                              src={recipe.image} 
-                              alt={recipe.name} 
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+                        <ParallaxImage
+                          src={recipe.image}
+                          alt={recipe.name}
+                          speed={12}
+                          containerClassName="h-48 w-full"
+                          className="group-hover:scale-105"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
                             
                             {/* Calories Badge Overlay */}
                             <div className="absolute bottom-3 left-3 flex space-x-1.5">
@@ -329,7 +334,7 @@ export default function RecipesPage() {
                             >
                               <Heart size={14} className={isSaved ? "fill-current" : ""} />
                             </motion.button>
-                          </div>
+                          </ParallaxImage>
                           
                           <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                             <div className="space-y-2">

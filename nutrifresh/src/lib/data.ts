@@ -411,7 +411,12023 @@ export const recipes = [
       { step: 3, title: "Warm Sauce", description: "Put the tomato sauce and olive oil in a small pan. Heat it for 5 minutes." },
       { step: 4, title: "Mix and Eat", description: "Put the pasta on a plate. Pour the warm sauce on top. Put basil leaves on top of the sauce." }
     ]
-  }
+  },
+  {
+  "id": "15",
+  "name": "Berry Almond Protein Oats #1",
+  "description": "Variant #1: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 340,
+    "protein": 26,
+    "carbs": 42,
+    "fat": 8,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "16",
+  "name": "Spinach & Feta Egg Scramble #2",
+  "description": "Variant #2: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 295,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 295,
+    "protein": 23,
+    "carbs": 4,
+    "fat": 21,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "17",
+  "name": "Classic Avocado Sourdough Toast #3",
+  "description": "Variant #3: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 340,
+    "protein": 9,
+    "carbs": 34,
+    "fat": 19,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "18",
+  "name": "Greek Yogurt & Chia Parfait #4",
+  "description": "Variant #4: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 305,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 305,
+    "protein": 20,
+    "carbs": 23,
+    "fat": 10,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "19",
+  "name": "Berry Almond Protein Oats #5",
+  "description": "Variant #5: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 400,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 400,
+    "protein": 27,
+    "carbs": 42,
+    "fat": 9,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "20",
+  "name": "Spinach & Feta Egg Scramble #6",
+  "description": "Variant #6: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 280,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 280,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 22,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "21",
+  "name": "Classic Avocado Sourdough Toast #7",
+  "description": "Variant #7: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 325,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 325,
+    "protein": 7,
+    "carbs": 34,
+    "fat": 17,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "22",
+  "name": "Greek Yogurt & Chia Parfait #8",
+  "description": "Variant #8: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 290,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 290,
+    "protein": 21,
+    "carbs": 23,
+    "fat": 11,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "23",
+  "name": "Berry Almond Protein Oats #9",
+  "description": "Variant #9: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 385,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 385,
+    "protein": 28,
+    "carbs": 42,
+    "fat": 10,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "24",
+  "name": "Spinach & Feta Egg Scramble #10",
+  "description": "Variant #10: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 340,
+    "protein": 22,
+    "carbs": 4,
+    "fat": 20,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "25",
+  "name": "Classic Avocado Sourdough Toast #11",
+  "description": "Variant #11: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 310,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 310,
+    "protein": 8,
+    "carbs": 34,
+    "fat": 18,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "26",
+  "name": "Greek Yogurt & Chia Parfait #12",
+  "description": "Variant #12: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 275,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 275,
+    "protein": 22,
+    "carbs": 23,
+    "fat": 12,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "27",
+  "name": "Berry Almond Protein Oats #13",
+  "description": "Variant #13: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 370,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 370,
+    "protein": 26,
+    "carbs": 42,
+    "fat": 8,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "28",
+  "name": "Spinach & Feta Egg Scramble #14",
+  "description": "Variant #14: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 325,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 325,
+    "protein": 23,
+    "carbs": 4,
+    "fat": 21,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "29",
+  "name": "Classic Avocado Sourdough Toast #15",
+  "description": "Variant #15: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 370,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 370,
+    "protein": 9,
+    "carbs": 34,
+    "fat": 19,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "30",
+  "name": "Greek Yogurt & Chia Parfait #16",
+  "description": "Variant #16: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 260,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 260,
+    "protein": 20,
+    "carbs": 23,
+    "fat": 10,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "31",
+  "name": "Berry Almond Protein Oats #17",
+  "description": "Variant #17: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 355,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 355,
+    "protein": 27,
+    "carbs": 42,
+    "fat": 9,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "32",
+  "name": "Spinach & Feta Egg Scramble #18",
+  "description": "Variant #18: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 310,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 310,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 22,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "33",
+  "name": "Classic Avocado Sourdough Toast #19",
+  "description": "Variant #19: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 355,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 355,
+    "protein": 7,
+    "carbs": 34,
+    "fat": 17,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "34",
+  "name": "Greek Yogurt & Chia Parfait #20",
+  "description": "Variant #20: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 320,
+    "protein": 21,
+    "carbs": 23,
+    "fat": 11,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "35",
+  "name": "Berry Almond Protein Oats #21",
+  "description": "Variant #21: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 340,
+    "protein": 28,
+    "carbs": 42,
+    "fat": 10,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "36",
+  "name": "Spinach & Feta Egg Scramble #22",
+  "description": "Variant #22: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 295,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 295,
+    "protein": 22,
+    "carbs": 4,
+    "fat": 20,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "37",
+  "name": "Classic Avocado Sourdough Toast #23",
+  "description": "Variant #23: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 340,
+    "protein": 8,
+    "carbs": 34,
+    "fat": 18,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "38",
+  "name": "Greek Yogurt & Chia Parfait #24",
+  "description": "Variant #24: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 305,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 305,
+    "protein": 22,
+    "carbs": 23,
+    "fat": 12,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "39",
+  "name": "Berry Almond Protein Oats #25",
+  "description": "Variant #25: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 400,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 400,
+    "protein": 26,
+    "carbs": 42,
+    "fat": 8,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "40",
+  "name": "Spinach & Feta Egg Scramble #26",
+  "description": "Variant #26: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 280,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 280,
+    "protein": 23,
+    "carbs": 4,
+    "fat": 21,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "41",
+  "name": "Classic Avocado Sourdough Toast #27",
+  "description": "Variant #27: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 325,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 325,
+    "protein": 9,
+    "carbs": 34,
+    "fat": 19,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "42",
+  "name": "Greek Yogurt & Chia Parfait #28",
+  "description": "Variant #28: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 290,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 290,
+    "protein": 20,
+    "carbs": 23,
+    "fat": 10,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "43",
+  "name": "Berry Almond Protein Oats #29",
+  "description": "Variant #29: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 385,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 385,
+    "protein": 27,
+    "carbs": 42,
+    "fat": 9,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "44",
+  "name": "Spinach & Feta Egg Scramble #30",
+  "description": "Variant #30: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 340,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 22,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "45",
+  "name": "Classic Avocado Sourdough Toast #31",
+  "description": "Variant #31: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 310,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 310,
+    "protein": 7,
+    "carbs": 34,
+    "fat": 17,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "46",
+  "name": "Greek Yogurt & Chia Parfait #32",
+  "description": "Variant #32: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 275,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 275,
+    "protein": 21,
+    "carbs": 23,
+    "fat": 11,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "47",
+  "name": "Berry Almond Protein Oats #33",
+  "description": "Variant #33: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 370,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 370,
+    "protein": 28,
+    "carbs": 42,
+    "fat": 10,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "48",
+  "name": "Spinach & Feta Egg Scramble #34",
+  "description": "Variant #34: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 325,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 325,
+    "protein": 22,
+    "carbs": 4,
+    "fat": 20,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "49",
+  "name": "Classic Avocado Sourdough Toast #35",
+  "description": "Variant #35: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 370,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 370,
+    "protein": 8,
+    "carbs": 34,
+    "fat": 18,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "50",
+  "name": "Greek Yogurt & Chia Parfait #36",
+  "description": "Variant #36: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 260,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 260,
+    "protein": 22,
+    "carbs": 23,
+    "fat": 12,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "51",
+  "name": "Berry Almond Protein Oats #37",
+  "description": "Variant #37: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 355,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 355,
+    "protein": 26,
+    "carbs": 42,
+    "fat": 8,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "52",
+  "name": "Spinach & Feta Egg Scramble #38",
+  "description": "Variant #38: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 310,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 310,
+    "protein": 23,
+    "carbs": 4,
+    "fat": 21,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "53",
+  "name": "Classic Avocado Sourdough Toast #39",
+  "description": "Variant #39: Thick sourdough toasted crispy, topped with mashed avocado, lemon juice, and chili flakes.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 355,
+  "prepTime": "5m",
+  "cookTime": "2m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "TOAST",
+      "items": [
+        "1 thick slice Sourdough Bread",
+        "1/2 ripe Avocado",
+        "1 tsp Lemon Juice"
+      ]
+    },
+    {
+      "category": "SEASONING",
+      "items": [
+        "1/2 tsp Chili Flakes",
+        "Coarse Sea Salt",
+        "Freshly cracked Pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Slice",
+    "calories": 355,
+    "protein": 9,
+    "carbs": 34,
+    "fat": 19,
+    "vitamins": [
+      {
+        "name": "Vitamin E",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Toast Bread",
+      "description": "Toast 1 thick slice of artisanal sourdough bread until crisp and golden brown on both sides."
+    },
+    {
+      "step": 2,
+      "title": "Mash Avocado",
+      "description": "Scoop out 1/2 ripe avocado. Mash with 1 tsp fresh lemon juice, coarse sea salt, and black pepper in a small bowl."
+    },
+    {
+      "step": 3,
+      "title": "Spread and Season",
+      "description": "Spread the creamy avocado mash evenly across the toasted sourdough. Sprinkle with 1/2 tsp red chili flakes."
+    }
+  ]
+},
+  {
+  "id": "54",
+  "name": "Greek Yogurt & Chia Parfait #40",
+  "description": "Variant #40: Thick, probiotic-rich Greek yogurt layered with organic chia seeds, honey, and fresh strawberries.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "5m",
+  "cookTime": "0m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1 cup Plain Greek Yogurt",
+        "1 tbsp Chia Seeds",
+        "1 tsp organic Honey"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "4 Fresh Strawberries, sliced",
+        "2 tbsp Pumpkin seeds"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Jar",
+    "calories": 320,
+    "protein": 20,
+    "carbs": 23,
+    "fat": 10,
+    "vitamins": [
+      {
+        "name": "Calcium",
+        "value": "25% DV"
+      },
+      {
+        "name": "Vitamin C",
+        "value": "35% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Mix Seeds",
+      "description": "Stir 1 cup plain Greek yogurt and 1 tbsp chia seeds together in a bowl or jar. Let rest for 2 minutes to thicken."
+    },
+    {
+      "step": 2,
+      "title": "Sweeten",
+      "description": "Drizzle 1 tsp of organic honey through the chia yogurt mixture and stir gently."
+    },
+    {
+      "step": 3,
+      "title": "Layer Strawberries",
+      "description": "Top with 4 sliced fresh strawberries and sprinkle 2 tbsp crunchy pumpkin seeds over the parfait."
+    }
+  ]
+},
+  {
+  "id": "55",
+  "name": "Berry Almond Protein Oats #41",
+  "description": "Variant #41: Creamy vanilla protein oats loaded with fresh berries and toasted almond slices.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "5m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "1/2 cup Rolled Oats",
+        "1 cup Unsweetened Almond Milk",
+        "1 scoop Vanilla Protein Powder"
+      ]
+    },
+    {
+      "category": "TOPPINGS",
+      "items": [
+        "1/4 cup Fresh Blueberries",
+        "1 tbsp Almond slices",
+        "1 tsp Maple syrup"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 340,
+    "protein": 27,
+    "carbs": 42,
+    "fat": 9,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "15% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "8g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Simmer Oats",
+      "description": "In a small saucepan, bring 1 cup almond milk to a gentle simmer. Stir in 1/2 cup rolled oats and cook for 5 minutes, stirring occasionally."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Protein",
+      "description": "Remove the saucepan from the heat. Whisk in 1 scoop vanilla protein powder rapidly until the oats are creamy and smooth."
+    },
+    {
+      "step": 3,
+      "title": "Serve & Top",
+      "description": "Pour oats into a bowl. Top with 1/4 cup fresh blueberries, 1 tbsp toasted almond slices, and drizzle with 1 tsp maple syrup."
+    }
+  ]
+},
+  {
+  "id": "56",
+  "name": "Spinach & Feta Egg Scramble #42",
+  "description": "Variant #42: Fluffy scrambled eggs loaded with baby spinach and crumbled Mediterranean feta.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 295,
+  "prepTime": "3m",
+  "cookTime": "5m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "Breakfast",
+    "Quick & Easy"
+  ],
+  "ingredients": [
+    {
+      "category": "EGGS",
+      "items": [
+        "3 large Eggs",
+        "1 tbsp unsweetened almond milk",
+        "1/2 cup Fresh Spinach",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "CHEESE & SEARING",
+      "items": [
+        "2 tbsp Crumbled Feta Cheese",
+        "1 tsp Butter or olive oil"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 295,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 22,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "45% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Whisk Eggs",
+      "description": "Whisk 3 large eggs, 1 tbsp almond milk, a pinch of salt, and pepper in a small bowl until completely bubbly."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Spinach",
+      "description": "Melt 1 tsp butter in a skillet over medium heat. Sauté 1/2 cup baby spinach for 1-2 minutes until slightly wilted."
+    },
+    {
+      "step": 3,
+      "title": "Scramble & Cheese",
+      "description": "Pour egg mixture into the skillet. Cook slowly for 3 minutes, folding gently. Fold in 2 tbsp crumbled feta right before serving."
+    }
+  ]
+},
+  {
+  "id": "57",
+  "name": "Crispy Sesame Tofu Bowl #1",
+  "description": "Variant #1: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 460,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 460,
+    "protein": 18,
+    "carbs": 54,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "58",
+  "name": "Mediterranean Chickpea Salad #2",
+  "description": "Variant #2: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 335,
+    "protein": 12,
+    "carbs": 39,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "59",
+  "name": "Creamy Cashew Broccoli Skillet #3",
+  "description": "Variant #3: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 410,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 410,
+    "protein": 14,
+    "carbs": 22,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "60",
+  "name": "Crispy Sesame Tofu Bowl #4",
+  "description": "Variant #4: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 505,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 505,
+    "protein": 18,
+    "carbs": 55,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "61",
+  "name": "Mediterranean Chickpea Salad #5",
+  "description": "Variant #5: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 380,
+    "protein": 12,
+    "carbs": 38,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "62",
+  "name": "Creamy Cashew Broccoli Skillet #6",
+  "description": "Variant #6: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 380,
+    "protein": 14,
+    "carbs": 23,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "63",
+  "name": "Crispy Sesame Tofu Bowl #7",
+  "description": "Variant #7: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 475,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 475,
+    "protein": 18,
+    "carbs": 54,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "64",
+  "name": "Mediterranean Chickpea Salad #8",
+  "description": "Variant #8: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 350,
+    "protein": 12,
+    "carbs": 39,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "65",
+  "name": "Creamy Cashew Broccoli Skillet #9",
+  "description": "Variant #9: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 425,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 425,
+    "protein": 14,
+    "carbs": 22,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "66",
+  "name": "Crispy Sesame Tofu Bowl #10",
+  "description": "Variant #10: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 520,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 520,
+    "protein": 18,
+    "carbs": 55,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "67",
+  "name": "Mediterranean Chickpea Salad #11",
+  "description": "Variant #11: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 320,
+    "protein": 12,
+    "carbs": 38,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "68",
+  "name": "Creamy Cashew Broccoli Skillet #12",
+  "description": "Variant #12: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 395,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 395,
+    "protein": 14,
+    "carbs": 23,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "69",
+  "name": "Crispy Sesame Tofu Bowl #13",
+  "description": "Variant #13: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 490,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 490,
+    "protein": 18,
+    "carbs": 54,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "70",
+  "name": "Mediterranean Chickpea Salad #14",
+  "description": "Variant #14: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 365,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 365,
+    "protein": 12,
+    "carbs": 39,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "71",
+  "name": "Creamy Cashew Broccoli Skillet #15",
+  "description": "Variant #15: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 440,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 440,
+    "protein": 14,
+    "carbs": 22,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "72",
+  "name": "Crispy Sesame Tofu Bowl #16",
+  "description": "Variant #16: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 460,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 460,
+    "protein": 18,
+    "carbs": 55,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "73",
+  "name": "Mediterranean Chickpea Salad #17",
+  "description": "Variant #17: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 335,
+    "protein": 12,
+    "carbs": 38,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "74",
+  "name": "Creamy Cashew Broccoli Skillet #18",
+  "description": "Variant #18: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 410,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 410,
+    "protein": 14,
+    "carbs": 23,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "75",
+  "name": "Crispy Sesame Tofu Bowl #19",
+  "description": "Variant #19: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 505,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 505,
+    "protein": 18,
+    "carbs": 54,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "76",
+  "name": "Mediterranean Chickpea Salad #20",
+  "description": "Variant #20: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 380,
+    "protein": 12,
+    "carbs": 39,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "77",
+  "name": "Creamy Cashew Broccoli Skillet #21",
+  "description": "Variant #21: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 380,
+    "protein": 14,
+    "carbs": 22,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "78",
+  "name": "Crispy Sesame Tofu Bowl #22",
+  "description": "Variant #22: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 475,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 475,
+    "protein": 18,
+    "carbs": 55,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "79",
+  "name": "Mediterranean Chickpea Salad #23",
+  "description": "Variant #23: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 350,
+    "protein": 12,
+    "carbs": 38,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "80",
+  "name": "Creamy Cashew Broccoli Skillet #24",
+  "description": "Variant #24: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 425,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 425,
+    "protein": 14,
+    "carbs": 23,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "81",
+  "name": "Crispy Sesame Tofu Bowl #25",
+  "description": "Variant #25: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 520,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 520,
+    "protein": 18,
+    "carbs": 54,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "82",
+  "name": "Mediterranean Chickpea Salad #26",
+  "description": "Variant #26: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 320,
+    "protein": 12,
+    "carbs": 39,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "83",
+  "name": "Creamy Cashew Broccoli Skillet #27",
+  "description": "Variant #27: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 395,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 395,
+    "protein": 14,
+    "carbs": 22,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "84",
+  "name": "Crispy Sesame Tofu Bowl #28",
+  "description": "Variant #28: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 490,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 490,
+    "protein": 18,
+    "carbs": 55,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "85",
+  "name": "Mediterranean Chickpea Salad #29",
+  "description": "Variant #29: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 365,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 365,
+    "protein": 12,
+    "carbs": 38,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "86",
+  "name": "Creamy Cashew Broccoli Skillet #30",
+  "description": "Variant #30: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 440,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 440,
+    "protein": 14,
+    "carbs": 23,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "87",
+  "name": "Crispy Sesame Tofu Bowl #31",
+  "description": "Variant #31: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 460,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 460,
+    "protein": 18,
+    "carbs": 54,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "88",
+  "name": "Mediterranean Chickpea Salad #32",
+  "description": "Variant #32: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 335,
+    "protein": 12,
+    "carbs": 39,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "89",
+  "name": "Creamy Cashew Broccoli Skillet #33",
+  "description": "Variant #33: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 410,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 410,
+    "protein": 14,
+    "carbs": 22,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "90",
+  "name": "Crispy Sesame Tofu Bowl #34",
+  "description": "Variant #34: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 505,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 505,
+    "protein": 18,
+    "carbs": 55,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "91",
+  "name": "Mediterranean Chickpea Salad #35",
+  "description": "Variant #35: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 380,
+    "protein": 12,
+    "carbs": 38,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "92",
+  "name": "Creamy Cashew Broccoli Skillet #36",
+  "description": "Variant #36: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 380,
+    "protein": 14,
+    "carbs": 23,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "93",
+  "name": "Crispy Sesame Tofu Bowl #37",
+  "description": "Variant #37: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 475,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 475,
+    "protein": 18,
+    "carbs": 54,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "94",
+  "name": "Mediterranean Chickpea Salad #38",
+  "description": "Variant #38: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 350,
+    "protein": 12,
+    "carbs": 39,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "95",
+  "name": "Creamy Cashew Broccoli Skillet #39",
+  "description": "Variant #39: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 425,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 425,
+    "protein": 14,
+    "carbs": 22,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "96",
+  "name": "Crispy Sesame Tofu Bowl #40",
+  "description": "Variant #40: Golden cubed tofu tossed in sesame soy glaze with warm brown rice and steamed broccoli.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 520,
+  "prepTime": "10m",
+  "cookTime": "15m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "TOFU",
+      "items": [
+        "1 block Extra Firm Tofu, pressed and cubed",
+        "1 tbsp Cornstarch",
+        "1 tbsp Sesame Oil"
+      ]
+    },
+    {
+      "category": "GLAZE & BASE",
+      "items": [
+        "2 tbsp Soy Sauce",
+        "1 tbsp Maple Syrup",
+        "1 cup Cooked Brown Rice",
+        "1 cup Broccoli florets"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 520,
+    "protein": 18,
+    "carbs": 55,
+    "fat": 16,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "20% DV"
+      },
+      {
+        "name": "Calcium",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Coat Tofu",
+      "description": "Toss cubed firm tofu with 1 tbsp cornstarch in a bowl until all pieces are lightly and evenly coated."
+    },
+    {
+      "step": 2,
+      "title": "Crisp Tofu",
+      "description": "Heat 1 sesame oil in a non-stick skillet. Sauté tofu cubes for 8-10 minutes until crispy and golden on all sides."
+    },
+    {
+      "step": 3,
+      "title": "Glaze & Assemble",
+      "description": "Pour in 2 tbsp soy sauce and 1 maple syrup; stir to coat tofu. Plate with 1 cup cooked brown rice and steamed broccoli."
+    }
+  ]
+},
+  {
+  "id": "97",
+  "name": "Mediterranean Chickpea Salad #41",
+  "description": "Variant #41: Protein-packed salad of garbanzo beans, fresh cucumbers, juicy cherry tomatoes, and red onion.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "8m",
+  "cookTime": "0m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "SALAD",
+      "items": [
+        "1 can Chickpeas, drained and rinsed",
+        "1 Cucumber, diced",
+        "1 cup Cherry Tomatoes, halved",
+        "1/4 cup Red Onion, chopped"
+      ]
+    },
+    {
+      "category": "DRESSING",
+      "items": [
+        "2 tbsp Extra Virgin Olive Oil",
+        "1 tbsp Lemon Juice",
+        "1 tsp Dried Oregano",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 320,
+    "protein": 12,
+    "carbs": 38,
+    "fat": 15,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "30% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "9g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Chop Veggies",
+      "description": "Chop 1 cucumber, halve 1 cup cherry tomatoes, and finely mince 1/4 cup red onion."
+    },
+    {
+      "step": 2,
+      "title": "Rinse Chickpeas",
+      "description": "Open 1 can chickpeas. Drain completely and rinse under cold water in a colander."
+    },
+    {
+      "step": 3,
+      "title": "Combine and Dress",
+      "description": "Combine chickpeas and chopped veggies in a bowl. Drizzle with 2 tbsp olive oil and 1 tbsp lemon juice; toss with oregano."
+    }
+  ]
+},
+  {
+  "id": "98",
+  "name": "Creamy Cashew Broccoli Skillet #42",
+  "description": "Variant #42: Crispy green broccoli florets stir-fried in a rich, buttery cashew cream sauce.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 395,
+  "prepTime": "10m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "Vegan",
+    "Gluten-Free"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "3 cups Broccoli florets",
+        "1 tbsp Olive Oil",
+        "2 cloves Garlic, minced"
+      ]
+    },
+    {
+      "category": "CASHEW CREAM",
+      "items": [
+        "1/2 cup Raw Cashews, soaked in hot water",
+        "1/4 cup Water",
+        "1 tbsp Nutritional Yeast",
+        "1/2 tsp Salt"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 395,
+    "protein": 14,
+    "carbs": 23,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin C",
+        "value": "150% DV"
+      },
+      {
+        "name": "Fiber",
+        "value": "6g"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Blend Cream",
+      "description": "Blend 1/2 cup soaked cashews, 1/4 cup fresh water, 1 nutritional yeast, and salt until smooth and creamy."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Broccoli",
+      "description": "Heat 1 olive oil in a skillet. Sauté 3 cups broccoli florets and garlic for 5 minutes until vibrant and tender-crisp."
+    },
+    {
+      "step": 3,
+      "title": "Simmer Sauce",
+      "description": "Pour the cashew cream over the broccoli. Turn heat to low and simmer for 2 minutes until hot and bubbly."
+    }
+  ]
+},
+  {
+  "id": "99",
+  "name": "Grilled Garlic-Herb Steak Bites #1",
+  "description": "Variant #1: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 540,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 540,
+    "protein": 46,
+    "carbs": 1,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "100",
+  "name": "Baked Honey Garlic Salmon Fillet #2",
+  "description": "Variant #2: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 495,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 495,
+    "protein": 39,
+    "carbs": 13,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "101",
+  "name": "Lemon Herb Grilled Chicken Breast #3",
+  "description": "Variant #3: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 350,
+    "protein": 44,
+    "carbs": 2,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "102",
+  "name": "Grilled Garlic-Herb Steak Bites #4",
+  "description": "Variant #4: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 585,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 585,
+    "protein": 46,
+    "carbs": 2,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "103",
+  "name": "Baked Honey Garlic Salmon Fillet #5",
+  "description": "Variant #5: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 540,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 540,
+    "protein": 39,
+    "carbs": 12,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "104",
+  "name": "Lemon Herb Grilled Chicken Breast #6",
+  "description": "Variant #6: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 320,
+    "protein": 44,
+    "carbs": 3,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "105",
+  "name": "Grilled Garlic-Herb Steak Bites #7",
+  "description": "Variant #7: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 555,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 555,
+    "protein": 46,
+    "carbs": 1,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "106",
+  "name": "Baked Honey Garlic Salmon Fillet #8",
+  "description": "Variant #8: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 510,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 510,
+    "protein": 39,
+    "carbs": 13,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "107",
+  "name": "Lemon Herb Grilled Chicken Breast #9",
+  "description": "Variant #9: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 365,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 365,
+    "protein": 44,
+    "carbs": 2,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "108",
+  "name": "Grilled Garlic-Herb Steak Bites #10",
+  "description": "Variant #10: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 600,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 600,
+    "protein": 46,
+    "carbs": 2,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "109",
+  "name": "Baked Honey Garlic Salmon Fillet #11",
+  "description": "Variant #11: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 480,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 480,
+    "protein": 39,
+    "carbs": 12,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "110",
+  "name": "Lemon Herb Grilled Chicken Breast #12",
+  "description": "Variant #12: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 335,
+    "protein": 44,
+    "carbs": 3,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "111",
+  "name": "Grilled Garlic-Herb Steak Bites #13",
+  "description": "Variant #13: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 570,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 570,
+    "protein": 46,
+    "carbs": 1,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "112",
+  "name": "Baked Honey Garlic Salmon Fillet #14",
+  "description": "Variant #14: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 525,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 525,
+    "protein": 39,
+    "carbs": 13,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "113",
+  "name": "Lemon Herb Grilled Chicken Breast #15",
+  "description": "Variant #15: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 380,
+    "protein": 44,
+    "carbs": 2,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "114",
+  "name": "Grilled Garlic-Herb Steak Bites #16",
+  "description": "Variant #16: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 540,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 540,
+    "protein": 46,
+    "carbs": 2,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "115",
+  "name": "Baked Honey Garlic Salmon Fillet #17",
+  "description": "Variant #17: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 495,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 495,
+    "protein": 39,
+    "carbs": 12,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "116",
+  "name": "Lemon Herb Grilled Chicken Breast #18",
+  "description": "Variant #18: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 350,
+    "protein": 44,
+    "carbs": 3,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "117",
+  "name": "Grilled Garlic-Herb Steak Bites #19",
+  "description": "Variant #19: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 585,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 585,
+    "protein": 46,
+    "carbs": 1,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "118",
+  "name": "Baked Honey Garlic Salmon Fillet #20",
+  "description": "Variant #20: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 540,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 540,
+    "protein": 39,
+    "carbs": 13,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "119",
+  "name": "Lemon Herb Grilled Chicken Breast #21",
+  "description": "Variant #21: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 320,
+    "protein": 44,
+    "carbs": 2,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "120",
+  "name": "Grilled Garlic-Herb Steak Bites #22",
+  "description": "Variant #22: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 555,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 555,
+    "protein": 46,
+    "carbs": 2,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "121",
+  "name": "Baked Honey Garlic Salmon Fillet #23",
+  "description": "Variant #23: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 510,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 510,
+    "protein": 39,
+    "carbs": 12,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "122",
+  "name": "Lemon Herb Grilled Chicken Breast #24",
+  "description": "Variant #24: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 365,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 365,
+    "protein": 44,
+    "carbs": 3,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "123",
+  "name": "Grilled Garlic-Herb Steak Bites #25",
+  "description": "Variant #25: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 600,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 600,
+    "protein": 46,
+    "carbs": 1,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "124",
+  "name": "Baked Honey Garlic Salmon Fillet #26",
+  "description": "Variant #26: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 480,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 480,
+    "protein": 39,
+    "carbs": 13,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "125",
+  "name": "Lemon Herb Grilled Chicken Breast #27",
+  "description": "Variant #27: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 335,
+    "protein": 44,
+    "carbs": 2,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "126",
+  "name": "Grilled Garlic-Herb Steak Bites #28",
+  "description": "Variant #28: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 570,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 570,
+    "protein": 46,
+    "carbs": 2,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "127",
+  "name": "Baked Honey Garlic Salmon Fillet #29",
+  "description": "Variant #29: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 525,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 525,
+    "protein": 39,
+    "carbs": 12,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "128",
+  "name": "Lemon Herb Grilled Chicken Breast #30",
+  "description": "Variant #30: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 380,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 380,
+    "protein": 44,
+    "carbs": 3,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "129",
+  "name": "Grilled Garlic-Herb Steak Bites #31",
+  "description": "Variant #31: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 540,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 540,
+    "protein": 46,
+    "carbs": 1,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "130",
+  "name": "Baked Honey Garlic Salmon Fillet #32",
+  "description": "Variant #32: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 495,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 495,
+    "protein": 39,
+    "carbs": 13,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "131",
+  "name": "Lemon Herb Grilled Chicken Breast #33",
+  "description": "Variant #33: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 350,
+    "protein": 44,
+    "carbs": 2,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "132",
+  "name": "Grilled Garlic-Herb Steak Bites #34",
+  "description": "Variant #34: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 585,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 585,
+    "protein": 46,
+    "carbs": 2,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "133",
+  "name": "Baked Honey Garlic Salmon Fillet #35",
+  "description": "Variant #35: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 540,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 540,
+    "protein": 39,
+    "carbs": 12,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "134",
+  "name": "Lemon Herb Grilled Chicken Breast #36",
+  "description": "Variant #36: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 320,
+    "protein": 44,
+    "carbs": 3,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "135",
+  "name": "Grilled Garlic-Herb Steak Bites #37",
+  "description": "Variant #37: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 555,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 555,
+    "protein": 46,
+    "carbs": 1,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "136",
+  "name": "Baked Honey Garlic Salmon Fillet #38",
+  "description": "Variant #38: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 510,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 510,
+    "protein": 39,
+    "carbs": 13,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "137",
+  "name": "Lemon Herb Grilled Chicken Breast #39",
+  "description": "Variant #39: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 365,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 365,
+    "protein": 44,
+    "carbs": 2,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "138",
+  "name": "Grilled Garlic-Herb Steak Bites #40",
+  "description": "Variant #40: Juicy sirloin steak cubes seared in garlic butter, rosemary, and thyme.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 600,
+  "prepTime": "5m",
+  "cookTime": "8m",
+  "serves": 2,
+  "difficulty": "Medium",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "STEAK",
+      "items": [
+        "1 lb Sirloin Steak, cut into 1-inch cubes",
+        "Salt and Black Pepper",
+        "1 tbsp Avocado oil"
+      ]
+    },
+    {
+      "category": "GARLIC HERB",
+      "items": [
+        "2 tbsp Butter",
+        "3 cloves Garlic, minced",
+        "1 stem fresh Rosemary",
+        "1 stem fresh Thyme"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Plate",
+    "calories": 600,
+    "protein": 46,
+    "carbs": 2,
+    "fat": 38,
+    "vitamins": [
+      {
+        "name": "Iron",
+        "value": "35% DV"
+      },
+      {
+        "name": "Zinc",
+        "value": "45% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Season Steak",
+      "description": "Pat 1 lb steak cubes dry with paper towels. Season generously on all sides with salt and black pepper."
+    },
+    {
+      "step": 2,
+      "title": "Sear Meat",
+      "description": "Heat 1 avocado oil in a heavy cast-iron skillet over high heat. Sear steak cubes for 2 minutes per side until browned."
+    },
+    {
+      "step": 3,
+      "title": "Baste Herb Butter",
+      "description": "Reduce heat to medium-low. Add 2 tbsp butter, minced garlic, rosemary, and thyme; spoon butter over steak for 2 minutes."
+    }
+  ]
+},
+  {
+  "id": "139",
+  "name": "Baked Honey Garlic Salmon Fillet #41",
+  "description": "Variant #41: Flaky wild-caught salmon baked in a glaze of sweet honey, garlic, and fresh citrus.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 480,
+  "prepTime": "5m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SALMON",
+      "items": [
+        "1 Wild Salmon Fillet (6oz)",
+        "1/2 tsp Lemon juice",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "GLAZE",
+      "items": [
+        "1 tbsp Honey",
+        "2 cloves Garlic, minced",
+        "1 tbsp Soy Sauce"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Fillet",
+    "calories": 480,
+    "protein": 39,
+    "carbs": 12,
+    "fat": 27,
+    "vitamins": [
+      {
+        "name": "Vitamin D",
+        "value": "120% DV"
+      },
+      {
+        "name": "B12",
+        "value": "85% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat your oven to 400°F (200°C). Place the salmon fillet on a sheet of tin foil on a baking tray."
+    },
+    {
+      "step": 2,
+      "title": "Glaze Salmon",
+      "description": "Mix honey, minced garlic, soy sauce, and lemon juice. Spoon dressing evenly over the salmon fillet."
+    },
+    {
+      "step": 3,
+      "title": "Bake through",
+      "description": "Bake salmon in the preheated oven for 12-14 minutes until the meat flakes easily with a fork."
+    }
+  ]
+},
+  {
+  "id": "140",
+  "name": "Lemon Herb Grilled Chicken Breast #42",
+  "description": "Variant #42: Lean, juicy grilled chicken breast marinated in fresh oregano, lemon, and olive oil.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "10m",
+  "cookTime": "12m",
+  "serves": 1,
+  "difficulty": "Easy",
+  "tags": [
+    "High Protein",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "CHICKEN",
+      "items": [
+        "1 boneless Chicken Breast (7oz)",
+        "1 tbsp Olive Oil",
+        "Salt and pepper"
+      ]
+    },
+    {
+      "category": "MARINADE",
+      "items": [
+        "1 tbsp Lemon juice",
+        "1 tsp Dried Oregano",
+        "1 clove Garlic, minced"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Breast",
+    "calories": 335,
+    "protein": 44,
+    "carbs": 3,
+    "fat": 14,
+    "vitamins": [
+      {
+        "name": "Niacin",
+        "value": "80% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "60% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Marinate Chicken",
+      "description": "Toss chicken breast with 1 olive oil, lemon juice, minced garlic, oregano, salt, and pepper. Let rest for 10 minutes."
+    },
+    {
+      "step": 2,
+      "title": "Grill Breast",
+      "description": "Heat a grill pan over medium-high heat. Grill chicken for 6 minutes per side until fully cooked through."
+    },
+    {
+      "step": 3,
+      "title": "Rest & Slice",
+      "description": "Remove the chicken breast from the heat. Let it rest for 3 minutes on a cutting board, then slice."
+    }
+  ]
+},
+  {
+  "id": "141",
+  "name": "Creamy Keto Garlic Butter Shrimp #1",
+  "description": "Variant #1: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 420,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 420,
+    "protein": 24,
+    "carbs": 3,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "142",
+  "name": "Classic Zucchini Pesto Noodles #2",
+  "description": "Variant #2: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 325,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 325,
+    "protein": 7,
+    "carbs": 9,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "143",
+  "name": "Bacon & Cheddar Egg Muffins #3",
+  "description": "Variant #3: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 320,
+    "protein": 20,
+    "carbs": 2,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "144",
+  "name": "Creamy Keto Garlic Butter Shrimp #4",
+  "description": "Variant #4: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 465,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 465,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "145",
+  "name": "Classic Zucchini Pesto Noodles #5",
+  "description": "Variant #5: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 370,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 370,
+    "protein": 7,
+    "carbs": 8,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "146",
+  "name": "Bacon & Cheddar Egg Muffins #6",
+  "description": "Variant #6: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 290,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 290,
+    "protein": 20,
+    "carbs": 3,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "147",
+  "name": "Creamy Keto Garlic Butter Shrimp #7",
+  "description": "Variant #7: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 435,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 435,
+    "protein": 24,
+    "carbs": 3,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "148",
+  "name": "Classic Zucchini Pesto Noodles #8",
+  "description": "Variant #8: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 340,
+    "protein": 7,
+    "carbs": 9,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "149",
+  "name": "Bacon & Cheddar Egg Muffins #9",
+  "description": "Variant #9: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 335,
+    "protein": 20,
+    "carbs": 2,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "150",
+  "name": "Creamy Keto Garlic Butter Shrimp #10",
+  "description": "Variant #10: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 480,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 480,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "151",
+  "name": "Classic Zucchini Pesto Noodles #11",
+  "description": "Variant #11: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 310,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 310,
+    "protein": 7,
+    "carbs": 8,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "152",
+  "name": "Bacon & Cheddar Egg Muffins #12",
+  "description": "Variant #12: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 305,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 305,
+    "protein": 20,
+    "carbs": 3,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "153",
+  "name": "Creamy Keto Garlic Butter Shrimp #13",
+  "description": "Variant #13: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 450,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 450,
+    "protein": 24,
+    "carbs": 3,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "154",
+  "name": "Classic Zucchini Pesto Noodles #14",
+  "description": "Variant #14: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 355,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 355,
+    "protein": 7,
+    "carbs": 9,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "155",
+  "name": "Bacon & Cheddar Egg Muffins #15",
+  "description": "Variant #15: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 350,
+    "protein": 20,
+    "carbs": 2,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "156",
+  "name": "Creamy Keto Garlic Butter Shrimp #16",
+  "description": "Variant #16: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 420,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 420,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "157",
+  "name": "Classic Zucchini Pesto Noodles #17",
+  "description": "Variant #17: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 325,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 325,
+    "protein": 7,
+    "carbs": 8,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "158",
+  "name": "Bacon & Cheddar Egg Muffins #18",
+  "description": "Variant #18: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 320,
+    "protein": 20,
+    "carbs": 3,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "159",
+  "name": "Creamy Keto Garlic Butter Shrimp #19",
+  "description": "Variant #19: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 465,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 465,
+    "protein": 24,
+    "carbs": 3,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "160",
+  "name": "Classic Zucchini Pesto Noodles #20",
+  "description": "Variant #20: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 370,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 370,
+    "protein": 7,
+    "carbs": 9,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "161",
+  "name": "Bacon & Cheddar Egg Muffins #21",
+  "description": "Variant #21: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 290,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 290,
+    "protein": 20,
+    "carbs": 2,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "162",
+  "name": "Creamy Keto Garlic Butter Shrimp #22",
+  "description": "Variant #22: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 435,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 435,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "163",
+  "name": "Classic Zucchini Pesto Noodles #23",
+  "description": "Variant #23: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 340,
+    "protein": 7,
+    "carbs": 8,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "164",
+  "name": "Bacon & Cheddar Egg Muffins #24",
+  "description": "Variant #24: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 335,
+    "protein": 20,
+    "carbs": 3,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "165",
+  "name": "Creamy Keto Garlic Butter Shrimp #25",
+  "description": "Variant #25: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 480,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 480,
+    "protein": 24,
+    "carbs": 3,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "166",
+  "name": "Classic Zucchini Pesto Noodles #26",
+  "description": "Variant #26: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 310,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 310,
+    "protein": 7,
+    "carbs": 9,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "167",
+  "name": "Bacon & Cheddar Egg Muffins #27",
+  "description": "Variant #27: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 305,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 305,
+    "protein": 20,
+    "carbs": 2,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "168",
+  "name": "Creamy Keto Garlic Butter Shrimp #28",
+  "description": "Variant #28: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 450,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 450,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "169",
+  "name": "Classic Zucchini Pesto Noodles #29",
+  "description": "Variant #29: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 355,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 355,
+    "protein": 7,
+    "carbs": 8,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "170",
+  "name": "Bacon & Cheddar Egg Muffins #30",
+  "description": "Variant #30: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 350,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 350,
+    "protein": 20,
+    "carbs": 3,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "171",
+  "name": "Creamy Keto Garlic Butter Shrimp #31",
+  "description": "Variant #31: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 420,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 420,
+    "protein": 24,
+    "carbs": 3,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "172",
+  "name": "Classic Zucchini Pesto Noodles #32",
+  "description": "Variant #32: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 325,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 325,
+    "protein": 7,
+    "carbs": 9,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "173",
+  "name": "Bacon & Cheddar Egg Muffins #33",
+  "description": "Variant #33: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 320,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 320,
+    "protein": 20,
+    "carbs": 2,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "174",
+  "name": "Creamy Keto Garlic Butter Shrimp #34",
+  "description": "Variant #34: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 465,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 465,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "175",
+  "name": "Classic Zucchini Pesto Noodles #35",
+  "description": "Variant #35: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 370,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 370,
+    "protein": 7,
+    "carbs": 8,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "176",
+  "name": "Bacon & Cheddar Egg Muffins #36",
+  "description": "Variant #36: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 290,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 290,
+    "protein": 20,
+    "carbs": 3,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "177",
+  "name": "Creamy Keto Garlic Butter Shrimp #37",
+  "description": "Variant #37: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 435,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 435,
+    "protein": 24,
+    "carbs": 3,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "178",
+  "name": "Classic Zucchini Pesto Noodles #38",
+  "description": "Variant #38: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 340,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 340,
+    "protein": 7,
+    "carbs": 9,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "179",
+  "name": "Bacon & Cheddar Egg Muffins #39",
+  "description": "Variant #39: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 335,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 335,
+    "protein": 20,
+    "carbs": 2,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+},
+  {
+  "id": "180",
+  "name": "Creamy Keto Garlic Butter Shrimp #40",
+  "description": "Variant #40: Plump pink shrimp sautéed in white wine garlic butter cream sauce.",
+  "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 480,
+  "prepTime": "5m",
+  "cookTime": "6m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "SHRIMP",
+      "items": [
+        "1/2 lb Peeled Shrimp",
+        "1 tbsp Avocado oil",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "GARLIC BUTTER",
+      "items": [
+        "2 tbsp Grass-fed Butter",
+        "3 cloves Garlic, minced",
+        "1/4 cup Heavy Cream",
+        "1 tbsp fresh Parsley"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 480,
+    "protein": 24,
+    "carbs": 4,
+    "fat": 34,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "60% DV"
+      },
+      {
+        "name": "Selenium",
+        "value": "50% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Sear Shrimp",
+      "description": "Heat 1 avocado oil in a pan. Season shrimp and sauté for 1-2 minutes per side until pink; set aside."
+    },
+    {
+      "step": 2,
+      "title": "Make Sauce",
+      "description": "Melt 2 butter in same pan. Cook garlic for 1 minute. Add cream and simmer for 2 minutes to thicken."
+    },
+    {
+      "step": 3,
+      "title": "Toss & Serve",
+      "description": "Return shrimp to the creamy garlic pan. Toss to coat for 1 minute. Garnish with 1 fresh parsley."
+    }
+  ]
+},
+  {
+  "id": "181",
+  "name": "Classic Zucchini Pesto Noodles #41",
+  "description": "Variant #41: Spiralized fresh zucchini noodles tossed in raw pine nut basil pesto.",
+  "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 310,
+  "prepTime": "10m",
+  "cookTime": "3m",
+  "serves": 2,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "NOODLES",
+      "items": [
+        "2 large fresh Zucchinis",
+        "1 tbsp Olive Oil"
+      ]
+    },
+    {
+      "category": "PESTO & CHEESE",
+      "items": [
+        "3 tbsp Basil Pesto",
+        "2 tbsp Grated Parmesan Cheese",
+        "Salt and pepper"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "1 Bowl",
+    "calories": 310,
+    "protein": 7,
+    "carbs": 8,
+    "fat": 30,
+    "vitamins": [
+      {
+        "name": "Vitamin A",
+        "value": "35% DV"
+      },
+      {
+        "name": "C",
+        "value": "40% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Spiralize Zucchini",
+      "description": "Spiralize 2 large fresh zucchinis into long noodles. Squeeze excess water using paper towels."
+    },
+    {
+      "step": 2,
+      "title": "Sauté Noodles",
+      "description": "Heat 1 olive oil in a skillet. Sauté zucchini noodles for 2-3 minutes until warm but still firm."
+    },
+    {
+      "step": 3,
+      "title": "Dress Pesto",
+      "description": "Remove skillet from heat. Stir in 3 tbsp basil pesto and toss thoroughly. Top with grated parmesan cheese."
+    }
+  ]
+},
+  {
+  "id": "182",
+  "name": "Bacon & Cheddar Egg Muffins #42",
+  "description": "Variant #42: Low-carb keto breakfast muffins loaded with crispy bacon and melted cheddar.",
+  "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800",
+  "sideImages": [
+    "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400",
+    "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&q=80&w=400"
+  ],
+  "kcal": 305,
+  "prepTime": "5m",
+  "cookTime": "15m",
+  "serves": 3,
+  "difficulty": "Easy",
+  "tags": [
+    "Keto",
+    "High Fat",
+    "Low Carb"
+  ],
+  "ingredients": [
+    {
+      "category": "BASE",
+      "items": [
+        "6 large Eggs",
+        "2 tbsp Heavy Cream",
+        "Salt and black pepper"
+      ]
+    },
+    {
+      "category": "FILLINGS",
+      "items": [
+        "4 slices Bacon, cooked and crumbled",
+        "1/2 cup Shredded Cheddar Cheese"
+      ]
+    }
+  ],
+  "nutrition": {
+    "perServing": "2 Muffins",
+    "calories": 305,
+    "protein": 20,
+    "carbs": 3,
+    "fat": 24,
+    "vitamins": [
+      {
+        "name": "B12",
+        "value": "30% DV"
+      },
+      {
+        "name": "Vitamin D",
+        "value": "15% DV"
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Preheat Oven",
+      "description": "Preheat oven to 375°F (190°C). Grease 6 muffin tin cups heavily with cooking spray or butter."
+    },
+    {
+      "step": 2,
+      "title": "Whisk Base",
+      "description": "Whisk 6 large eggs, 2 tbsp heavy cream, salt, and pepper in a medium bowl until blended."
+    },
+    {
+      "step": 3,
+      "title": "Assemble & Bake",
+      "description": "Divide crumbled bacon and shredded cheddar among muffin cups. Pour egg mixture over fill. Bake for 15-18 minutes."
+    }
+  ]
+}
 ];
 
 

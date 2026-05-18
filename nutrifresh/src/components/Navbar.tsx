@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Bell, Home, BookOpen, Activity, User, X, Check, Apple, Palette, Save } from "lucide-react";
+import { Search, Bell, Home, BookOpen, Activity, User, X, Check, Apple, Sun, Moon, Save } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 
 const navLinks = [
@@ -20,31 +20,27 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [themeMenuOpen, setThemeMenuOpen] = useState(false);
-  const [activeTheme, setActiveTheme] = useState("theme-cream");
+  const [activeTheme, setActiveTheme] = useState("theme-light");
   const [saveSuccess, setSaveSuccess] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("nutrifresh_theme") || "theme-cream";
-      setActiveTheme(stored);
+      const stored = localStorage.getItem("nutrifresh_theme") || "theme-light";
+      const normalized = stored === "theme-obsidian" || stored === "theme-royal" || stored === "theme-dark"
+        ? "theme-dark"
+        : "theme-light";
+      setActiveTheme(normalized);
     }
   }, []);
 
-  const handleSelectTheme = (themeId: string) => {
-    setActiveTheme(themeId);
+  const toggleTheme = () => {
+    const nextTheme = activeTheme === "theme-light" ? "theme-dark" : "theme-light";
+    setActiveTheme(nextTheme);
     if (typeof window !== "undefined") {
-      localStorage.setItem("nutrifresh_theme", themeId);
-      window.dispatchEvent(new CustomEvent("themechange", { detail: themeId }));
+      localStorage.setItem("nutrifresh_theme", nextTheme);
+      window.dispatchEvent(new CustomEvent("themechange", { detail: nextTheme }));
     }
-    setThemeMenuOpen(false);
   };
-
-  const themes = [
-    { id: "theme-cream", name: "Cream Forest", preview: "bg-[#F2F2EE] border-[#1A6B45]" },
-    { id: "theme-obsidian", name: "Obsidian Dark", preview: "bg-[#090E11] border-[#10B981]" },
-    { id: "theme-royal", name: "Royal Navy", preview: "bg-[#0F172A] border-[#3B82F6]" },
-  ];
 
   const mockNotifications = [
     { id: 1, text: "Your daily protein goal is 70% complete! 💪", time: "2h ago", unread: true },
@@ -146,55 +142,38 @@ export default function Navbar() {
             <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-accent rounded-full border border-card animate-pulse" />
           </motion.button>
 
-          {/* Theme Palette Button */}
+          {/* Animated Light/Dark Theme Toggle Button */}
           <div className="relative">
             <motion.button
               whileTap={{ scale: 0.9 }}
-              onClick={() => setThemeMenuOpen(!themeMenuOpen)}
+              onClick={toggleTheme}
               className="p-2.5 rounded-full bg-background hover:bg-primary/5 hover:text-primary border border-border/40 transition-colors cursor-pointer flex items-center justify-center text-foreground"
+              title={activeTheme === "theme-light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
             >
-              <Palette size={18} />
-            </motion.button>
-
-            <AnimatePresence>
-              {themeMenuOpen && (
-                <>
-                  <div className="fixed inset-0 z-40 bg-transparent" onClick={() => setThemeMenuOpen(false)} />
+              <AnimatePresence mode="wait" initial={false}>
+                {activeTheme === "theme-light" ? (
                   <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute right-0 top-12 z-50 w-52 bg-card border border-border/60 rounded-2xl shadow-xl p-3.5 space-y-2.5"
+                    key="moon"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.15 }}
                   >
-                    <p className="text-[10px] font-black uppercase tracking-wider text-secondary border-b border-border/40 pb-1.5 px-1.5">
-                      Select Theme
-                    </p>
-                    <div className="space-y-1">
-                      {themes.map((t) => {
-                        const isSelected = activeTheme === t.id;
-                        return (
-                          <button
-                            key={t.id}
-                            onClick={() => handleSelectTheme(t.id)}
-                            className={`w-full flex items-center justify-between p-2.5 rounded-xl text-xs font-bold transition-all border cursor-pointer ${
-                              isSelected
-                                ? "bg-primary/10 border-primary/20 text-primary"
-                                : "bg-transparent border-transparent hover:bg-background text-foreground"
-                            }`}
-                          >
-                            <div className="flex items-center space-x-2.5">
-                              <span className={`w-3.5 h-3.5 rounded-full border ${t.preview}`} />
-                              <span>{t.name}</span>
-                            </div>
-                            {isSelected && <Check size={12} className="text-primary" />}
-                          </button>
-                        );
-                      })}
-                    </div>
+                    <Moon size={18} className="text-secondary" />
                   </motion.div>
-                </>
-              )}
-            </AnimatePresence>
+                ) : (
+                  <motion.div
+                    key="sun"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <Sun size={18} className="text-amber-500 fill-amber-500/10" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
 
           {/* Profile Quick Link */}

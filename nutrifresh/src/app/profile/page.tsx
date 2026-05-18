@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from "framer-motion";
 import { 
   User, 
   Utensils, 
@@ -49,6 +49,10 @@ export default function ProfilePage() {
   const { profile, saveProfile, logout, user, loginWithGoogle } = useAuth();
   
   const [activeTab, setActiveTab] = useState("profile");
+  
+  const { scrollY } = useScroll();
+  const yParallax = useTransform(scrollY, [0, 400], [0, 50]);
+  const opacityParallax = useTransform(scrollY, [0, 300], [1, 0.4]);
   
   // Editable profile state
   const [firstName, setFirstName] = useState("");
@@ -153,161 +157,170 @@ export default function ProfilePage() {
     <PageTransition>
       <div className="max-w-6xl mx-auto space-y-8 pb-24">
         
-        {/* Settings Title */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="space-y-1">
-            <h1 className="text-3xl md:text-4xl font-black tracking-tight">Personal Hub</h1>
-            <p className="text-secondary font-medium">Fine-tune your dietary rules, search boundaries, and biometric specs.</p>
-          </div>
-          
-          {/* Quick Stats Summary badges */}
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1.5 bg-primary/10 border border-primary/20 text-primary rounded-xl text-[10px] font-black uppercase tracking-wider">
-              {selectedDiets.length} Preferences Active
-            </span>
-            <span className="px-3 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-500 rounded-xl text-[10px] font-black uppercase tracking-wider">
-              {allergies.length} Exclusions Listed
-            </span>
-          </div>
-        </div>
-
-        {/* Dynamic Save Alerts */}
-        <AnimatePresence>
-          {showSaveMessage && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="bg-[#10191e] border border-emerald-500/20 p-4 rounded-2xl flex items-center justify-between text-emerald-400 text-sm font-bold shadow-sm"
-            >
-              <span className="flex items-center space-x-2">
-                <Sparkles size={16} className="text-emerald-500 animate-pulse" />
-                <span>All modifications successfully synced to your profile ledger!</span>
+        {/* Settings Title & Header Preview Banner container */}
+        <motion.div style={{ y: yParallax, opacity: opacityParallax }} className="space-y-8">
+          {/* Settings Title */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <h1 className="text-3xl md:text-4xl font-black tracking-tight">Personal Hub</h1>
+              <p className="text-secondary font-medium">Fine-tune your dietary rules, search boundaries, and biometric specs.</p>
+            </div>
+            
+            {/* Quick Stats Summary badges */}
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1.5 bg-primary/10 border border-primary/20 text-primary rounded-xl text-[10px] font-black uppercase tracking-wider">
+                {selectedDiets.length} Preferences Active
               </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Header Preview Banner (Design Principle: Visual Excellence) */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary/15 via-accent/10 to-transparent border border-border/40 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-12 w-48 h-48 bg-accent/5 rounded-full blur-2xl pointer-events-none" />
-
-          <div className="relative z-10 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
-            {/* Interactive Profile Avatar Container with dual gallery/camera capture option */}
-            <div className="relative group">
-              <div className="w-24 h-24 rounded-3xl overflow-hidden border-4 border-background bg-secondary/15 flex items-center justify-center relative shadow-md">
-                {uploadingAvatar ? (
-                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                    <Loader2 size={24} className="text-white animate-spin" />
-                  </div>
-                ) : user?.photoURL || avatarUrl ? (
-                  <img 
-                    src={user?.photoURL || avatarUrl} 
-                    className="w-full h-full object-cover" 
-                    alt="Avatar" 
-                  />
-                ) : (
-                  <div className="text-2xl font-black text-secondary uppercase">
-                    {(firstName || "U").charAt(0)}
-                  </div>
-                )}
-              </div>
-
-              {/* Avatar Multi-upload Actions Overlay */}
-              <div className="absolute -bottom-2 -right-2 flex items-center gap-1.5 z-20">
-                {/* Camera upload input */}
-                <label 
-                  htmlFor="profile-avatar-camera"
-                  className="p-1.5 bg-primary text-white rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center border border-background"
-                  title="Direct Camera Capture"
-                >
-                  <Camera size={12} />
-                </label>
-                <input 
-                  type="file" 
-                  id="profile-avatar-camera" 
-                  accept="image/*" 
-                  capture="user"
-                  onChange={handleAvatarFileChange} 
-                  className="hidden" 
-                />
-
-                {/* Gallery upload input */}
-                <label 
-                  htmlFor="profile-avatar-gallery"
-                  className="p-1.5 bg-accent text-white rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center border border-background"
-                  title="Upload from Gallery"
-                >
-                  <Image size={12} />
-                </label>
-                <input 
-                  type="file" 
-                  id="profile-avatar-gallery" 
-                  accept="image/*" 
-                  onChange={handleAvatarFileChange} 
-                  className="hidden" 
-                />
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-xl sm:text-2xl font-black tracking-tight text-foreground">
-                {firstName || "UNKNOWN"} {lastName}
-              </h2>
-              <p className="text-xs text-secondary font-semibold mt-1">
-                {email || user?.email || "No email linked"}
-              </p>
-              
-              <div className="mt-2.5 flex flex-wrap gap-2 items-center justify-center sm:justify-start">
-                <span className="px-2.5 py-1 bg-background/60 border border-border/50 rounded-lg text-[9px] font-black uppercase text-secondary">
-                  BMI: <span className="text-foreground">{bmi}</span>
-                </span>
-                <span className={`text-[9px] font-black uppercase ${bmiCat.color}`}>
-                  {bmiCat.label}
-                </span>
-              </div>
+              <span className="px-3 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-500 rounded-xl text-[10px] font-black uppercase tracking-wider">
+                {allergies.length} Exclusions Listed
+              </span>
             </div>
           </div>
 
-          <div className="relative z-10 flex flex-col items-center md:items-end gap-2.5 w-full md:w-auto">
-            {/* Cloud Connection Badge */}
-            {user ? (
-              <div className="flex items-center space-x-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-2xl w-full sm:w-auto justify-center">
-                <Check size={14} />
-                <span className="text-[10px] font-black uppercase tracking-wider">Cloud Connected</span>
-              </div>
-            ) : (
-              <button
-                onClick={loginWithGoogle}
-                className="flex items-center space-x-2 px-4 py-2.5 bg-foreground text-background font-extrabold text-[10px] uppercase tracking-wider rounded-2xl hover:opacity-90 active:scale-98 transition-all cursor-pointer shadow-sm w-full sm:w-auto justify-center"
+          {/* Dynamic Save Alerts */}
+          <AnimatePresence>
+            {showSaveMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="bg-[#10191e] border border-emerald-500/20 p-4 rounded-2xl flex items-center justify-between text-emerald-400 text-sm font-bold shadow-sm"
               >
-                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05" />
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335" />
-                </svg>
-                <span>Google Sync</span>
-              </button>
+                <span className="flex items-center space-x-2">
+                  <Sparkles size={16} className="text-emerald-500 animate-pulse" />
+                  <span>All modifications successfully synced to your profile ledger!</span>
+                </span>
+              </motion.div>
             )}
+          </AnimatePresence>
 
-            <button
-              onClick={logout}
-              className="flex items-center justify-center space-x-1.5 px-4 py-2 border border-rose-500/20 text-rose-500 hover:bg-rose-500/5 rounded-2xl text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer w-full sm:w-auto"
-            >
-              <LogOut size={12} />
-              <span>Log Out</span>
-            </button>
+          {/* Header Preview Banner (Design Principle: Visual Excellence) */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary/15 via-accent/10 to-transparent border border-border/40 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-12 w-48 h-48 bg-accent/5 rounded-full blur-2xl pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+              {/* Interactive Profile Avatar Container with dual gallery/camera capture option */}
+              <div className="relative group">
+                <div className="w-24 h-24 rounded-3xl overflow-hidden border-4 border-background bg-secondary/15 flex items-center justify-center relative shadow-md">
+                  {uploadingAvatar ? (
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                      <Loader2 size={24} className="text-white animate-spin" />
+                    </div>
+                  ) : user?.photoURL || avatarUrl ? (
+                    <img 
+                      src={user?.photoURL || avatarUrl} 
+                      className="w-full h-full object-cover" 
+                      alt="Avatar" 
+                    />
+                  ) : (
+                    <div className="text-2xl font-black text-secondary uppercase">
+                      {(firstName || "U").charAt(0)}
+                    </div>
+                  )}
+                </div>
+
+                {/* Avatar Multi-upload Actions Overlay */}
+                <div className="absolute -bottom-2 -right-2 flex items-center gap-1.5 z-20">
+                  {/* Camera upload input */}
+                  <label 
+                    htmlFor="profile-avatar-camera"
+                    className="p-1.5 bg-primary text-white rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center border border-background"
+                    title="Direct Camera Capture"
+                  >
+                    <Camera size={12} />
+                  </label>
+                  <input 
+                    type="file" 
+                    id="profile-avatar-camera" 
+                    accept="image/*" 
+                    capture="user"
+                    onChange={handleAvatarFileChange} 
+                    className="hidden" 
+                  />
+
+                  {/* Gallery upload input */}
+                  <label 
+                    htmlFor="profile-avatar-gallery"
+                    className="p-1.5 bg-accent text-white rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center border border-background"
+                    title="Upload from Gallery"
+                  >
+                    <Image size={12} />
+                  </label>
+                  <input 
+                    type="file" 
+                    id="profile-avatar-gallery" 
+                    accept="image/*" 
+                    onChange={handleAvatarFileChange} 
+                    className="hidden" 
+                  />
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-xl sm:text-2xl font-black tracking-tight text-foreground">
+                  {firstName || "UNKNOWN"} {lastName}
+                </h2>
+                <p className="text-xs text-secondary font-semibold mt-1">
+                  {email || user?.email || "No email linked"}
+                </p>
+                
+                <div className="mt-2.5 flex flex-wrap gap-2 items-center justify-center sm:justify-start">
+                  <span className="px-2.5 py-1 bg-background/60 border border-border/50 rounded-lg text-[9px] font-black uppercase text-secondary">
+                    BMI: <span className="text-foreground">{bmi}</span>
+                  </span>
+                  <span className={`text-[9px] font-black uppercase ${bmiCat.color}`}>
+                    {bmiCat.label}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center md:items-end gap-2.5 w-full md:w-auto">
+              {/* Cloud Connection Badge */}
+              {user ? (
+                <div className="flex items-center space-x-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-2xl w-full sm:w-auto justify-center">
+                  <Check size={14} />
+                  <span className="text-[10px] font-black uppercase tracking-wider">Cloud Connected</span>
+                </div>
+              ) : (
+                <button
+                  onClick={loginWithGoogle}
+                  className="flex items-center space-x-2 px-4 py-2.5 bg-foreground text-background font-extrabold text-[10px] uppercase tracking-wider rounded-2xl hover:opacity-90 active:scale-98 transition-all cursor-pointer shadow-sm w-full sm:w-auto justify-center"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05" />
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335" />
+                  </svg>
+                  <span>Google Sync</span>
+                </button>
+              )}
+
+              <button
+                onClick={logout}
+                className="flex items-center justify-center space-x-1.5 px-4 py-2 border border-rose-500/20 text-rose-500 hover:bg-rose-500/5 rounded-2xl text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer w-full sm:w-auto"
+              >
+                <LogOut size={12} />
+                <span>Log Out</span>
+              </button>
+            </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Tab & Form Desk */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* LEFT COLUMN: Biometrics Calculator Dashboard Widget (Design Principle: Rich Functionalities) */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="bg-card border border-border/50 p-6 rounded-3xl shadow-sm space-y-6 hover:border-primary/10 transition-all duration-300">
+            <motion.div 
+              initial={{ opacity: 0, y: 40, scale: 0.98 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-card border border-border/50 p-6 rounded-3xl shadow-sm space-y-6 hover:border-primary/10 transition-all duration-300"
+            >
               <div className="border-b border-border/40 pb-3 flex items-center space-x-2">
                 <HeartPulse className="text-primary" size={18} />
                 <h2 className="text-base font-black text-foreground uppercase tracking-wider">Target Biometrics</h2>
@@ -386,7 +399,7 @@ export default function ProfilePage() {
               <div className="bg-background/40 border border-border/50 p-4 rounded-2xl text-[11px] text-secondary font-medium leading-relaxed">
                 ⚖️ Adjusting your biometric sliders instantly updates your custom caloric target calculation. Remember to click <span className="font-extrabold text-foreground">Save Changes</span> to lock these in!
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* RIGHT COLUMN: Interactive Tab Panel & Active Tab Forms */}

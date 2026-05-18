@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from "framer-motion";
 import { Heart, Clock, ChefHat, Flame, Sparkles, TrendingUp, Filter } from "lucide-react";
 import { recipes, userProfile, userProgress } from "@/lib/data";
 import NextLink from "next/link";
 import PageTransition from "@/components/PageTransition";
 import { useAuth } from "@/context/AuthContext";
 import React from "react";
+import ParallaxImage from "@/components/ParallaxImage";
 
 const filters = ["All", "Breakfast", "Vegan", "Quick & Easy", "High Protein", "Keto"];
 
@@ -17,8 +18,12 @@ export default function FeedPage() {
   const [savedRecipes, setSavedRecipes] = useState<string[]>([]);
 
   const { scrollY } = useScroll();
-  const yParallax = useTransform(scrollY, [0, 300], [0, 40]);
-  const opacityParallax = useTransform(scrollY, [0, 300], [1, 0.7]);
+  
+  // Real-time zero-lag layout transforms
+  const yParallax = useTransform(scrollY, [0, 500], [0, 80]);
+  const opacityParallax = useTransform(scrollY, [0, 300], [1, 0.4]);
+  const imageParallax = useTransform(scrollY, [0, 1000], ["0%", "20%"]);
+  const cardsParallax = useTransform(scrollY, [0, 1500], ["0%", "15%"]);
 
   // Fallback properties
   const displayName = profile?.firstName || userProfile.firstName;
@@ -41,7 +46,9 @@ export default function FeedPage() {
   });
 
   const featuredRecipe = recipes[0];
-  const displayRecipes = filteredRecipes.filter(r => r.id !== featuredRecipe.id || activeFilter !== "All");
+  const displayRecipes = filteredRecipes
+    .filter(r => r.id !== featuredRecipe.id || activeFilter !== "All")
+    .slice(0, 8);
 
   return (
     <PageTransition>
@@ -168,9 +175,10 @@ export default function FeedPage() {
               <motion.div 
                 layout
                 key="featured-recipe"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, y: 60, scale: 0.96 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="group"
               >
                 <NextLink href={`/recipes/${featuredRecipe.id}`} className="block h-full">
@@ -200,15 +208,16 @@ export default function FeedPage() {
                       <Heart size={18} className={savedRecipes.includes(featuredRecipe.id) ? "fill-current animate-ping-once" : ""} />
                     </motion.button>
 
-                    {/* Left/Top Image Block - Fully Responsive Aspect Aspect Ratio */}
-                    <div className="relative w-full md:w-1/2 min-h-[250px] md:min-h-full overflow-hidden">
-                      <img 
-                        src={featuredRecipe.image} 
-                        alt={featuredRecipe.name} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/40 via-black/10 to-transparent" />
-                    </div>
+                    {/* Left/Top Image Block - Fully Responsive Aspect Ratio */}
+                    <ParallaxImage
+                      src={featuredRecipe.image}
+                      alt={featuredRecipe.name}
+                      speed={15}
+                      containerClassName="w-full md:w-1/2 min-h-[250px] md:min-h-full"
+                      className="group-hover:scale-[1.03]"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/40 via-black/10 to-transparent pointer-events-none" />
+                    </ParallaxImage>
 
                     {/* Right/Bottom Content Block */}
                     <div className="p-6 md:p-10 w-full md:w-1/2 flex flex-col justify-between space-y-6">
@@ -264,21 +273,22 @@ export default function FeedPage() {
                   <motion.div
                     layout
                     key={recipe.id}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ delay: index * 0.05 }}
+                    initial={{ opacity: 0, y: 50, scale: 0.92 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                     className="group"
                   >
                     <NextLink href={`/recipes/${recipe.id}`} className="block h-full">
                       <div className="bg-card rounded-2.5xl overflow-hidden shadow-sm border border-border/50 hover:shadow-lg transition-all duration-300 h-full flex flex-col group-hover:scale-[1.015]">
-                        <div className="relative h-48 w-full overflow-hidden">
-                          <img 
-                            src={recipe.image} 
-                            alt={recipe.name} 
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+                        <ParallaxImage
+                          src={recipe.image}
+                          alt={recipe.name}
+                          speed={12}
+                          containerClassName="h-48 w-full"
+                          className="group-hover:scale-105"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
                           
                           {/* Tags overlay */}
                           <div className="absolute bottom-3 left-3 flex space-x-1.5">
@@ -302,7 +312,7 @@ export default function FeedPage() {
                           >
                             <Heart size={14} className={isSaved ? "fill-current" : ""} />
                           </motion.button>
-                        </div>
+                        </ParallaxImage>
                         
                         <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                           <div className="space-y-2">
