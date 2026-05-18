@@ -8,6 +8,10 @@
   </p>
 
   <p align="center">
+    🌐 <strong>Live Website:</strong> <a href="https://nutrifresh.netlify.app/" target="_blank">https://nutrifresh.netlify.app/</a>
+  </p>
+
+  <p align="center">
     <a href="#-key-features">Features</a> •
     <a href="#-tech-stack">Tech Stack</a> •
     <a href="#-folder-structure">Folder Structure</a> •
